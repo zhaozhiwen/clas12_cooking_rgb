@@ -1,0 +1,161 @@
+==use slurm farm ===========================
+setenv PATH /site/scicomp/auger-slurm/bin:$PATH
+
+==install clara and coatjava  ===========================
+cd /work/clas12/rg-b
+
+setenv clara_version 4.3.8
+setenv coatjava_version 5.9.0
+
+setenv WORK /work/clas12/rg-b/clas12_clara${clara_version}_coatjava${coatjava_version}
+setenv CLARA_HOME ${WORK}/clara
+
+mkdir ${WORK}
+cd ${WORK}
+
+wget https://claraweb.jlab.org/clara/_downloads/install-claracre-clas.sh   
+chmod 755 install-claracre-clas.sh
+./install-claracre-clas.sh -f ${clara_version} -v ${coatjava_version}
+
+setenv CLARA_OUTPUT ${WORK}/output
+setenv CLARA_LOG ${WORK}/log
+
+mkdir $CLARA_OUTPUT
+mkdir $CLARA_LOG
+
+setenv CLARA_INPUT ${WORK}/input
+ln -s /lustre/expphy/farm_out/${USER} ${WORK}/farm_out
+ln -s /work/clas12/clas12/data/calib/decoded_single/ ${WORK}/input
+
+setenv COATJAVA ${CLARA_HOME}/plugins/clas12
+
+setenv PATH ${COATJAVA}/bin:$PATH
+
+setenv CLARA_USER_DATA ${WORK}
+
+==run clara and coatjava, and other tools ===========================
+
+cd /work/clas12/rg-b
+
+setenv coatjava_version 5b.7.8
+setenv clara_version 4.3.5
+setenv WORK /work/clas12/rg-b/clas12_clara${clara_version}_coatjava${coatjava_version}
+setenv CLARA_HOME ${WORK}/clara
+setenv COATJAVA ${CLARA_HOME}/plugins/clas12
+setenv PATH ${COATJAVA}/bin:$PATH
+setenv CLARA_OUTPUT ${WORK}/output
+setenv CLARA_LOG ${WORK}/log
+setenv PATH ${GROOVY_HOME}/bin:$PATH
+cd $WORK
+
+setenv coatjava_version 5.9.0
+setenv clara_version 4.3.8
+setenv WORK /work/clas12/rg-b/clas12_clara${clara_version}_coatjava${coatjava_version}
+setenv CLARA_HOME ${WORK}/clara
+setenv COATJAVA ${CLARA_HOME}/plugins/clas12
+setenv PATH ${COATJAVA}/bin:$PATH
+setenv CLARA_USER_DATA ${WORK}
+cd $WORK
+
+$CLARA_HOME/bin/clara-shell /work/clas12/rg-b/clas12_cooking_rgb/script.clara_farm
+
+$CLARA_HOME/bin/clara-shell /work/clas12/rg-b/clas12_cooking_rgb/script.clara_local
+
+coatjava/bin/notsouseful-util
+
+hipo-utils -stats ../production/recon/pass0/tmp/dst_clas_006489.evio.00000.hipo
+hipo-utils -info ../production/recon/pass0/tmp/dst_clas_006489.evio.00000.hipo
+
+hipo writer overwrite existing file by default
+
+bash-4.2$ for xx in `/site/scicomp/auger-slurm/bin/slurmJobs -u clas12-1 | grep 'Feb-10 03:' | awk '{print$1'}`; do /site/scicomp/auger-slurm/bin/jkill $xx; done
+
+#create new filelist from filelist difference
+comm -23 allfile donefile | cat > leftfile
+
+#rename "calib_" of file name in filelist
+sed -i 's/calib_//g' filelist
+
+#check database
+https://clasweb.jlab.org/cgi-bin/ccdb/show_request?request=/calibration/htcc/gain:6213:default:2019-02-14_09-40-09
+
+farm.scaling  multiples of 4 for farm18 and multiples of 2 for other to match their NUMA sockets
+
+Does old pbs farm support exclusive beside slurm farm?
+>>>>> No. However one can achieve the same with a few parameter settings like cpu and mem
+
+for local job, will it use all memory by default?
+Yes. By default it will use all available cores. However, you can set the core count (thus limit the memory use) by `set threads #`
+
+for submitting a single job, don't set farm.scaling so it use default 0
+otherwise, clara will create more jobs and could miss files
+
+===============================================================
+ssh hallgw
+login with PIN+passcode
+ssh clondaq6
+cd /data/stage_in
+
+====decode with workflow  =============================================
+
+#decode simulation
+$CLARA_HOME/plugins/clas12/bin/evio2hipo -r 4310 -t -1 -s 1 -o $CLARA_INPUT/jpsi_gen_qf_1.hipo jpsi_gen_qf_1.evio
+t for torus field scale, negative is electron inbending, s for solenoid field scale. 
+They have to match what is defined in gcard by "SCALE_FIELD" option when evio file produced, otherwise reconstruction will be wrong !!!!!
+
+#decode raw data
+$CLARA_HOME/plugins/clas12/bin/decoder -t -1 -s -1 -o /work/clas12/rg-b/production/decoded/v1/006141/clas_006141.evio.00001.hipo /work/clas12/rg-b/data/clas_006141/clas_006141.evio.00001
+
+#use clas12-workflow to do decoding
+git clone --single-branch --branch hipo3 https://github.com/baltzell/clas12-workflow.git
+cd clas12-workflow
+
+mkdir output
+
+source env.sh
+
+./scripts/gen-decoding.py --runGroup rgb --workflow rgb_decode9 --task decode --run 6213 --inputs /cache/clas12/rg-b/data/clas_pin_006213 --fileRegex '.*_(\d+)\.evio\.(00[1-9]\d+)' --workDir /work/clas12/rg-b/clas12-workflow_hipo3/output  --outDir /work/clas12/rg-b/clas12-workflow_hipo3/output --coatjava /work/clas12/rg-b/clas12_clara4.3.5_coatjava5b.7.7/clara/plugins/clas12 --model 2
+
+./scripts/gen-decoding.py --runGroup rgb --workflow rgb_decode --task decode --run 6210,6211 --inputs /cache/clas12/rg-b/data/ --workDir /work/clas12/rg-b/clas12-workflow_hipo3/output  --outDir /work/clas12/rg-b/clas12-workflow_hipo3/output --coatjava /work/clas12/rg-b/clas12_clara4.3.5_coatjava5b.7.7/clara/plugins/clas12  --model 2
+
+by default it find all find under input 
+--fileRegex ".*clas[_A-Za-z]*_(\d+)\.evio\.0004(\d+)"
+
+import
+swif import -file jobs/rgb_decode_R6223x1_x1200.json
+
+run
+swif run -workflow rgb_decode_R6223x1_x1200
+
+check
+./scripts/swif-status.py 
+./scripts/swif-status.py --workflow workflowName
+./scripts/swif-status.py --details --workflow workflowName
+
+retry
+./scripts/swif-status.py --retry -workflow workflowName
+
+cancel jobs
+swif cancel -workflow workflowName
+
+sweep clean
+swif cancel -delete -workflow workflowName
+
+== skim ===================================
+
+compile code
+javac -cp "$COATJAVA/lib/clas/*:$COATJAVA/lib/utils/*:." filter_pid11.java
+
+run code
+java -DCLAS12DIR="$COATJAVA" -cp "$COATJAVA/lib/clas/*:$COATJAVA/lib/utils/*:." filter_pid11 file file_skim
+
+
+another way
+setenv  GROOVY_HOME /work/clas12/rg-b/groovy-2.5.6/
+setenv PATH ${GROOVY_HOME}/bin:$PATH
+run-groovy skim.groovy 
+
+=== make new schema =========================================
+mkdir hipo_20190424
+cp /work/clas12/rg-b/clas12_clara4.3.8_coatjava5.9.0/clara/plugins/clas12/etc/bankdefs/hipo/* hipo_20190424/
+python bankSplit_20190424.py hipo_20190424
