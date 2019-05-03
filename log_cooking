@@ -1,28 +1,4 @@
-== pass0v1 =============================
-by Zhiwen Zhao, during data taking from 2019/02 to 2019/03 
-
-use hipo3
-
-decode by coatjava5b.7.7, coatjava5b.7.8
-
-cooking by clara4.3.5 and coatjava5b.7.7, clara4.3.5 and coatjava5b.7.8, clara4.3.8 and coatjava5b.7.8
-
-schema 
-default in coatjava5b.7.7 and coatjava5b.7.8, $CLARA_HOME/plugins/clas12/etc/bankdefs/hipo/singles
-With all EC banks added to calibration schema
-
-yaml   
-rgb_calib_pass0v1_20190213.yaml  rgb_dst_pass0v1_20190313.yaml   rgb_mon_pass0v1_20190213.yaml
-rgb_calib_pass0v1_20190221.yaml  rgb_full_pass0v1_20190209.yaml  rgb_mon_pass0v1_20190221.yaml
-rgb_calib_pass0v1_20190313.yaml  rgb_full_pass0v1_20190213.yaml  rgb_mon_pass0v1_20190313.yaml
-
-run list of decoding and cooking condition
-https://jeffersonlab-my.sharepoint.com/:x:/g/personal/zwzhao_jlab_org/Ef0DF0RF5UpCvKrwZf5u4cAB3IYkCp8-vaXCk8NmjewvKw?e=cSQB3m
-
-timsstamp
-default, which means latest at run time
-
-== pass0v2 =============================
+== pass0v2 ==============================================================
 by Zhiwen Zhao, in 2018/05
 
 use hipo3
@@ -45,3 +21,32 @@ rgb_calib_pass0v2_20190501.yaml
 
 timestamp 
 05/01/2019, which means 0AM of the date
+
+== pass0v1 ====================================================================
+by Zhiwen Zhao, during data taking from 2019/02 to 2019/03 
+
+use hipo3
+
+decode by coatjava5b.7.7, coatjava5b.7.8
+
+cooking by clara4.3.5 and coatjava5b.7.7, clara4.3.5 and coatjava5b.7.8, clara4.3.8 and coatjava5b.7.8
+
+runlist
+runlist_2019spring, 235 production runs with full target and full current during 2019 spring run
+runlist_pass0v2, 226 of runlist_2019spring with at least 50 files, used for mon cooking
+
+schema 
+default in coatjava5b.7.7 and coatjava5b.7.8, $CLARA_HOME/plugins/clas12/etc/bankdefs/hipo/singles
+With all EC banks added to calibration schema
+
+yaml   
+rgb_calib_pass0v1_20190213.yaml  rgb_dst_pass0v1_20190313.yaml   rgb_mon_pass0v1_20190213.yaml
+rgb_calib_pass0v1_20190221.yaml  rgb_full_pass0v1_20190209.yaml  rgb_mon_pass0v1_20190221.yaml
+rgb_calib_pass0v1_20190313.yaml  rgb_full_pass0v1_20190213.yaml  rgb_mon_pass0v1_20190313.yaml
+
+run list of decoding and cooking condition
+https://jeffersonlab-my.sharepoint.com/:x:/g/personal/zwzhao_jlab_org/Ef0DF0RF5UpCvKrwZf5u4cAB3IYkCp8-vaXCk8NmjewvKw?e=cSQB3m
+
+timsstamp
+default, which means latest at run time
+

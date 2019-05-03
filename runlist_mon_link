@@ -1,0 +1,16 @@
+#!/bin/sh
+
+#link 40-49 files of a run list in a dir to be used for mon cooking
+#$1 for run list name
+
+mkdir $1_dir
+
+for xx in `cat $1`
+do 
+
+for i in {0..9}
+do ln -s /cache/clas12/rg-b/production/decoded/5b.7.8/00$xx/clas_00$xx.evio.0004$i.hipo $1_dir/
+done
+
+
+done
