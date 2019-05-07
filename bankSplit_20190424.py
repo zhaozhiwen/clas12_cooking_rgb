@@ -49,7 +49,7 @@ for filename in os.listdir("./"):
 print("Single json files saved in " + workdirectory + singledirectory)
 
 # create dst, calibration and monitoring directories
-#based on coatjava5.9.0 defined at https://github.com/JeffersonLab/clas12-offline-software/blob/9713018139f4ce751da343950afdf40d46c1f853/etc/bankdefs/util/bankSplit.py
+#based on coatjava5.9.0 defined at https://github.com/JeffersonLab/clas12-offline-software/blob/5.9.0/etc/bankdefs/util/bankSplit.py
 #dst = ["RUN::config","RAW::scaler","REC::Event","REC::Particle","REC::Calorimeter","REC::Cherenkov","REC::CovMat","REC::ForwardTagger","REC::Scintillator","REC::Track","REC::Traj","RICH::tdc","MC::Event","MC::Header","MC::Lund","MC::Particle","MC::True"]
 #new dst schema will add "BAND::adc","BAND::tdc","BAND:hits","CND::hits"
 dst = ["BAND::adc","BAND::tdc","BAND:hits","CND::hits","RUN::config","RAW::scaler","REC::Event","REC::Particle","REC::Calorimeter","REC::Cherenkov","REC::CovMat","REC::ForwardTagger","REC::Scintillator","REC::Track","REC::Traj","RICH::tdc","MC::Event","MC::Header","MC::Lund","MC::Particle","MC::True"]

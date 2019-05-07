@@ -7,6 +7,9 @@ cd /work/clas12/rg-b
 setenv clara_version 4.3.8
 setenv coatjava_version 5.9.0
 
+setenv clara_version 4.3.9
+setenv coatjava_version 6b.1.1
+
 setenv WORK /work/clas12/rg-b/clas12_clara${clara_version}_coatjava${coatjava_version}
 setenv CLARA_HOME ${WORK}/clara
 
@@ -15,7 +18,7 @@ cd ${WORK}
 
 wget https://claraweb.jlab.org/clara/_downloads/install-claracre-clas.sh   
 chmod 755 install-claracre-clas.sh
-./install-claracre-clas.sh -f ${clara_version} -v ${coatjava_version}
+./install-claracre-clas.sh -f ${clara_version} -v ${coatjava_version} -g 2.0
 
 setenv CLARA_OUTPUT ${WORK}/output
 setenv CLARA_LOG ${WORK}/log
@@ -159,3 +162,7 @@ run-groovy skim.groovy
 mkdir hipo_20190424
 cp /work/clas12/rg-b/clas12_clara4.3.8_coatjava5.9.0/clara/plugins/clas12/etc/bankdefs/hipo/* hipo_20190424/
 python bankSplit_20190424.py hipo_20190424
+
+mkdir hipo4_20190424
+cp /work/clas12/rg-b/clas12_clara4.3.9_coatjava6b.1.1/clara/plugins/clas12/etc/bankdefs/hipo4/* hipo4_20190424/
+python bankSplit_20190424.py hipo4_20190424

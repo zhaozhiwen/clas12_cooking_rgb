@@ -9,7 +9,7 @@ cooking by clara4.3.8, coatjava5.9.0
 
 schema 
 bankSplit_20190424.py
-     based on default schema in coatjava5.9.0 at https://github.com/JeffersonLab/clas12-offline-software/blob/9713018139f4ce751da343950afdf40d46c1f853/etc/bankdefs/util/bankSplit.py
+     based on default schema in coatjava5.9.0 at https://github.com/JeffersonLab/clas12-offline-software/blob/5.9.0/etc/bankdefs/util/bankSplit.py
     (0.25GB per file) new dst schema adds "BAND::adc","BAND::tdc","BAND:hits","CND::hits"
     (1GB per file) new calib schema adds "ECAL::adc","ECAL::moments","ECAL::tdc","ECAL::hits"
     (2GB per file) new mon schema adds "ECAL::adc","ECAL::moments","ECAL::tdc","HEL::adc","BMT::adc","BST::adc","BMTRec::Clusters","BSTRec::Clusters" and removes "BMTRec::Hits, BSTRec::Hits, BMTRec::LayerEffs, and BSTRec::LayerEffs" 
