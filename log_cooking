@@ -20,8 +20,8 @@ rgb_dst_pass0v2_20190501.yaml
 rgb_calib_pass0v2_20190501.yaml
 
 timestamp in yaml
-DCHB 05/01/2019, which means 0AM of the date
-all others default, which means latest at run time
+DCHB service, 05/01/2019, which means 0AM of the date
+all other services, default, which means latest at run time
 
 == pass0v1 ====================================================================
 by Zhiwen Zhao, during data taking from 2019/02 to 2019/03 
@@ -46,7 +46,7 @@ rgb_calib_pass0v1_20190221.yaml  rgb_full_pass0v1_20190209.yaml  rgb_mon_pass0v1
 rgb_calib_pass0v1_20190313.yaml  rgb_full_pass0v1_20190213.yaml  rgb_mon_pass0v1_20190313.yaml
 
 timsstamp in yaml
-all default, which means latest at run time
+all services, default, which means latest at run time
 
 run list of decoding and cooking condition
 https://jeffersonlab-my.sharepoint.com/:x:/g/personal/zwzhao_jlab_org/Ef0DF0RF5UpCvKrwZf5u4cAB3IYkCp8-vaXCk8NmjewvKw?e=cSQB3m
