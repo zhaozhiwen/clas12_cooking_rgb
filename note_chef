@@ -109,6 +109,9 @@ They have to match what is defined in gcard by "SCALE_FIELD" option when evio fi
 #decode raw data
 $CLARA_HOME/plugins/clas12/bin/decoder -t -1 -s -1 -o /work/clas12/rg-b/production/decoded/v1/006141/clas_006141.evio.00001.hipo /work/clas12/rg-b/data/clas_006141/clas_006141.evio.00001
 
+for filenum in {40..49}; do /work/clas12/rg-b/clas12_clara4.3.5_coatjava5b.7.8/clara/plugins/clas12/bin/decoder -t -1 -s -1 -o /cache/clas12/rg-b/production/decoded/v1/00$rnum/clas_00
+$rnum.evio.000$filenum.hipo /cache/clas12/rg-b/data/clas_00$rnum/clas_00$rnum.evio.000$filenum & ; done;
+
 #use clas12-workflow to do decoding
 git clone --single-branch --branch hipo3 https://github.com/baltzell/clas12-workflow.git
 cd clas12-workflow
@@ -163,6 +166,6 @@ mkdir hipo_20190424
 cp /work/clas12/rg-b/clas12_clara4.3.8_coatjava5.9.0/clara/plugins/clas12/etc/bankdefs/hipo/* hipo_20190424/
 python bankSplit_20190424.py hipo_20190424
 
-mkdir hipo4_20190424
-cp /work/clas12/rg-b/clas12_clara4.3.9_coatjava6b.1.1/clara/plugins/clas12/etc/bankdefs/hipo4/* hipo4_20190424/
-python bankSplit_20190424.py hipo4_20190424
+mkdir hipo4_20190508
+cp /work/clas12/rg-b/clas12_clara4.3.9_coatjava6b.1.1/clara/plugins/clas12/etc/bankdefs/hipo4/* hipo4_20190508/
+python bankSplit_20190508.py hipo4_20190508
