@@ -90,12 +90,12 @@ Does old pbs farm support exclusive beside slurm farm?
 for local job, will it use all memory by default?
 Yes. By default it will use all available cores. However, you can set the core count (thus limit the memory use) by `set threads #`
 
-for submitting a single job, don't set farm.scaling so it use default 0
+for submitting a single job, don't set farm.scaling and just use default 0
 otherwise, clara will create more jobs and could miss files
 
-===============================================================
+== access clas online data =============================================================
 ssh hallgw
-login with PIN+passcode
+login with PIN+passcode from the mobile app
 ssh clondaq6
 cd /data/stage_in
 
