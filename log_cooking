@@ -10,15 +10,15 @@ cooking by clara4.3.9 and coatjava6b.1.1
 schema 
 bankSplit_20190508.py
   based on default schema in coatjava6b.1.1 at https://github.com/JeffersonLab/clas12-offline-software/blob/6b.1.1/etc/bankdefs/util/bankSplit.py
-  #new dst schema will add "BAND::adc","BAND::tdc","BAND:hits","CND::hits","HEL::online","RAW::epics"
+  #new dst schema will add "BAND::adc","BAND::tdc","BAND::hits","CND::hits","HEL::online","RAW::epics"
   #new calib schema will add "HEL::online","RAW::epics"
   (3GB per file) new mon schema will add "HEL::online","RAW::epics","ECAL::moments","HEL::adc","RAW::epics" and remove "BMTRec::Hits, BSTRec::Hits, BMTRec::LayerEffs, and BSTRec::LayerEffs"
 
 yaml 
-rgb_mon_pass0v3_20190501.yaml
+rgb_mon_pass0v3_20190510.yaml
 
 timestamp in yaml
-all services, 05/01/2019, which means 2019 May 1 0AM ET
+all services, 05/10/2019, which means 2019 May 10 0AM ET
 
 == pass0v2 ==============================================================
 by Zhiwen Zhao, in 2018/05
