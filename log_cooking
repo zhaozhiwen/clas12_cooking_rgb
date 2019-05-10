@@ -18,7 +18,7 @@ yaml
 rgb_mon_pass0v3_20190501.yaml
 
 timestamp in yaml
-all services, 05/01/2019, which means 0AM of the date
+all services, 05/01/2019, which means 2019 May 1 0AM ET
 
 == pass0v2 ==============================================================
 by Zhiwen Zhao, in 2018/05
@@ -42,7 +42,7 @@ rgb_dst_pass0v2_20190501.yaml
 rgb_calib_pass0v2_20190501.yaml
 
 timestamp in yaml
-DCHB service, 05/01/2019, which means 0AM of the date
+DCHB service, 05/01/2019, which 2019 May 1 0AM ET
 all other services, default, which means latest at run time
 
 == pass0v1 ====================================================================
