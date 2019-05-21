@@ -51,8 +51,8 @@ setenv CLARA_LOG ${WORK}/log
 setenv PATH ${GROOVY_HOME}/bin:$PATH
 cd $WORK
 
-setenv coatjava_version 5.9.0
-setenv clara_version 4.3.8
+setenv coatjava_version 6b.1.1
+setenv clara_version 4.3.9
 setenv WORK /work/clas12/rg-b/clas12_clara${clara_version}_coatjava${coatjava_version}
 setenv CLARA_HOME ${WORK}/clara
 setenv COATJAVA ${CLARA_HOME}/plugins/clas12
@@ -78,6 +78,14 @@ comm -23 allfile donefile | cat > leftfile
 
 #rename "calib_" of file name in filelist
 sed -i 's/calib_//g' filelist
+
+#rename many file name
+for xx in `ls */* | grep "hipo"` ; 
+#do echo $xx
+#do mv $xx $xx; 
+do mv $xx `echo $xx | sed 's/0000/0004/g'`
+done
+
 
 #check database
 https://clasweb.jlab.org/cgi-bin/ccdb/show_request?request=/calibration/htcc/gain:6213:default:2019-02-14_09-40-09
@@ -108,6 +116,8 @@ They have to match what is defined in gcard by "SCALE_FIELD" option when evio fi
 
 #decode raw data
 $CLARA_HOME/plugins/clas12/bin/decoder -t -1 -s -1 -o /work/clas12/rg-b/production/decoded/v1/006141/clas_006141.evio.00001.hipo /work/clas12/rg-b/data/clas_006141/clas_006141.evio.00001
+
+ls -l && rm -f in.evio && /bin/dd bs=1M if=/cache/clas12/rg-b/data/clas_006233/clas_006233.evio.00037 of=in.evio && unalias -a ; /work/clas12/rg-b/clas12_clara4.3.9_coatjava6b.1.1/clara/plugins/clas12/bin/decoder -c 2 -s -1.0000 -t -1.0000 -o out.hipo in.evio && ls out.hipo && /work/clas12/rg-b/clas12_clara4.3.9_coatjava6b.1.1/clara/plugins/clas12/bin/hipo-utils -test out.hipo || rm -f out.hipo && ls out.hipo
 
 for filenum in {40..49}; do /work/clas12/rg-b/clas12_clara4.3.5_coatjava5b.7.8/clara/plugins/clas12/bin/decoder -t -1 -s -1 -o /cache/clas12/rg-b/production/decoded/v1/00$rnum/clas_00
 $rnum.evio.000$filenum.hipo /cache/clas12/rg-b/data/clas_00$rnum/clas_00$rnum.evio.000$filenum & ; done;
