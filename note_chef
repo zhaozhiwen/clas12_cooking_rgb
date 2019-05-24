@@ -60,6 +60,10 @@ setenv PATH ${COATJAVA}/bin:$PATH
 setenv CLARA_USER_DATA ${WORK}
 cd $WORK
 
+source /group/clas12/packages/setup.csh 
+module load coatjava/6b.2.0
+setenv CLARA_USER_DATA /work/clas12/rg-b/clas12_clara4.4_coatjava6b.2.0
+
 $CLARA_HOME/bin/clara-shell /work/clas12/rg-b/clas12_cooking_rgb/script.clara_farm
 
 $CLARA_HOME/bin/clara-shell /work/clas12/rg-b/clas12_cooking_rgb/script.clara_local
@@ -179,3 +183,7 @@ python bankSplit_20190424.py hipo_20190424
 mkdir hipo4_20190508
 cp /work/clas12/rg-b/clas12_clara4.3.9_coatjava6b.1.1/clara/plugins/clas12/etc/bankdefs/hipo4/* hipo4_20190508/
 python bankSplit_20190508.py hipo4_20190508
+
+mkdir hipo4_20190523
+cp /group/clas12/packages/clara/4.4_6b.2.0/plugins/clas12/etc/bankdefs/hipo4/* hipo4_20190523/
+python bankSplit_20190523.py hipo4_20190523
