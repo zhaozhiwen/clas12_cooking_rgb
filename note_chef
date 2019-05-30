@@ -163,6 +163,14 @@ swif cancel -delete -workflow workflowName
 
 == skim ===================================
 
+> common tasks always have this line there:
+>
+> MALLOC_ARENA_MAX=1; export MALLOC_ARENA_MAX
+>
+> You should use this, it limits how much memory JVM asks from the
+>
+> system. It helps a lot.
+
 compile code
 javac -cp "$COATJAVA/lib/clas/*:$COATJAVA/lib/utils/*:." filter_pid11.java
 

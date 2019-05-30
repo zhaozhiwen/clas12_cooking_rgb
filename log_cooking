@@ -1,3 +1,25 @@
+== pass0v5 ==============================================================
+by Zhiwen Zhao, in 2018/05
+
+software same as pass0v4
+timestamp use 05/29/2019 after another RF calibration update
+
+use hipo3
+
+decode by coatjava5b.7.8
+
+cooking by clara4.3.8 and coatjava5.9.0
+
+schema 
+bankSplit_20190424.py
+
+yaml 
+rgb_mon_pass0v4_20190529.yaml
+rgb_calib_pass0v4_20190529.yaml
+
+timestamp in yaml
+all service, 05/29/2019
+
 == pass0v4 ==============================================================
 by Zhiwen Zhao, in 2018/05
 
