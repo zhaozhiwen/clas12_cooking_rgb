@@ -24,10 +24,11 @@ services:
     name: CVT
   - class: org.jlab.service.ctof.CTOFEngine
     name: CTOF
+#  - class: org.jlab.service.cnd.CNDEngine
   - class: org.jlab.service.cnd.CNDCalibrationEngine
     name: CND
   - class: org.jlab.service.band.BANDEngine
-    name: BAND
+    name: BAND    
   - class: org.jlab.service.htcc.HTCCReconstructionService
     name: HTCC
   - class: org.jlab.service.ltcc.LTCCEngine
@@ -46,68 +47,74 @@ configuration:
   io-services:
     writer:
       compression: 2
-      schema_dir: "/work/clas12/rg-b/clas12_cooking_rgb/hipo4_20190523/singles/monitoring"
+#      schema_dir: "absolute-path-to-schema-folder"
+      schema_dir: "/work/clas12/rg-b/clas12_cooking_rgb/hipo_20190424/singles/dst"
   services:
     MAGFIELDS:
-      magfieldSolenoidMap: Symm_solenoid_r601_phi1_z1201_13June2018.dat
-      magfieldTorusMap: Full_torus_r251_phi181_z251_08May2018.dat
-      variation: rga_fall2018
-      timestamp: 05/18/2019
+      torusMap: Symm_torus_r2501_phi16_z251_24Apr2018.dat
+      solenoidMap: Symm_solenoid_r601_phi1_z1201_13June2018.dat
+      timestamp: 05/29/2019
+# solenoid shift to -2.9 cm instead of -1.9 cm. The -1.9 was RG-A spring while the solenoid position in Fall and now is close to -2.9 cm. I will actually try to get the latest survey to give you a more precise number. It¡¯s anyway a small effect.   Raffaella  2/12/2019
+#      solenoidShift: "-1.9"
+      solenoidShift: "-2.9"
+      torusXShift: "0.0"
+      torusYShift: "0.0"
+      torusZShift: "0.0"      
     FTCAL:
       variation: default    
-      timestamp: 05/18/2019          
+      timestamp: 05/29/2019          
     FTHODO:
       variation: default    
-      timestamp: 05/18/2019                    
+      timestamp: 05/29/2019                    
     FTEB:
       variation: default    
-      timestamp: 05/18/2019                  
+      timestamp: 05/29/2019                  
     DCHB:
-      variation: rga_fall2018
-      timestamp: 05/18/2019
+      variation: default
+      timestamp: 05/29/2019
       useStartTime: "true"
-      wireDistort: "true"      
-      dcGeometryVariation: rga_fall2018
+      wireDistort: "true"
+      geomDBVariation: thayward_test_0085
     FTOFHB:
-      variation: rga_fall2018    
-      timestamp: 05/18/2019                  
+      variation: default    
+      timestamp: 05/29/2019                  
     EC:
-      variation: rga_fall2018    
-      timestamp: 05/18/2019                        
+      variation: default    
+      timestamp: 05/29/2019                        
     CVT:
-      variation: rga_fall2018
-      timestamp: 05/18/2019
+      variation: default
+      timestamp: 05/29/2019
     CTOF:
-      variation: rga_fall2018
-      timestamp: 05/18/2019      
+      variation: default
+      timestamp: 05/29/2019      
     CND:
-      variation: rga_fall2018
-      timestamp: 05/18/2019      
+      variation: default
+      timestamp: 05/29/2019      
     BAND:
       variation: default    
-      timestamp: 05/18/2019      
+      timestamp: 05/29/2019      
     HTCC:
       variation: default    
-      timestamp: 05/18/2019
+      timestamp: 05/29/2019
     LTCC:
       variation: default    
-      timestamp: 05/18/2019        
+      timestamp: 05/29/2019        
     RICH:
       variation: default    
-      timestamp: 05/18/2019
+      timestamp: 05/29/2019
     EBHB:
       variation: default    
-      timestamp: 05/18/2019        
+      timestamp: 05/29/2019        
     DCTB:
-      variation: rga_fall2018
-      timestamp: 05/18/2019      
-      dcGeometryVariation: rga_fall2018
+      variation: default
+      timestamp: 05/29/2019      
+      geomDBVariation: thayward_test_0085      
     FTOFTB:
-      variation: rga_fall2018
-      timestamp: 05/18/2019      
+      variation: default
+      timestamp: 05/29/2019      
     EBTB:
       variation: default    
-      timestamp: 05/18/2019       
+      timestamp: 05/29/2019           
       
 mime-types:
   - binary/data-hipo

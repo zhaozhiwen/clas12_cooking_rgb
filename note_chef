@@ -8,7 +8,7 @@ setenv clara_version 4.3.8
 setenv coatjava_version 5.9.0
 
 setenv clara_version 4.3.9
-setenv coatjava_version 6b.1.1
+setenv coatjava_version 6b.2.0
 
 setenv WORK /work/clas12/rg-b/clas12_clara${clara_version}_coatjava${coatjava_version}
 setenv CLARA_HOME ${WORK}/clara
@@ -60,9 +60,11 @@ setenv PATH ${COATJAVA}/bin:$PATH
 setenv CLARA_USER_DATA ${WORK}
 cd $WORK
 
+mkdir /work/clas12/rg-b/clas12_clara4.3.10_coatjava6b.2.0
 source /group/clas12/packages/setup.csh 
 module load coatjava/6b.2.0
-setenv CLARA_USER_DATA /work/clas12/rg-b/clas12_clara4.4_coatjava6b.2.0
+setenv CLARA_USER_DATA /work/clas12/rg-b/clas12_clara4.3.10_coatjava6b.2.0
+cd $CLARA_USER_DATA
 
 $CLARA_HOME/bin/clara-shell /work/clas12/rg-b/clas12_cooking_rgb/script.clara_farm
 
@@ -82,6 +84,7 @@ comm -23 allfile donefile | cat > leftfile
 
 #rename "calib_" of file name in filelist
 sed -i 's/calib_//g' filelist
+sed -i 's/mon_//g' filelist
 
 #rename many file name
 for xx in `ls */* | grep "hipo"` ; 
