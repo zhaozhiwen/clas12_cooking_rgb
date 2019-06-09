@@ -1,3 +1,55 @@
+== pass0v7  ==============================================================
+by Zhiwen Zhao, in 2018/06
+
+calibration same as pass0v6
+LTCC reconstruction check
+
+use hipo4
+
+decode by coatjava6b.1.1
+cooking by clara4.3.10 and coatjava6c.2.1
+
+schema 
+bankSplit_20190523.py
+  # copy the file from coatjava6b.2.0 defined at https://github.com/JeffersonLab/clas12-offline-software/blob/6b.2.0/etc/bankdefs/util/bankSplit.py
+  #new dst schema will add "BAND::adc","BAND::tdc","BAND::hits","CND::hits"
+  #new mon schema will add "HEL::adc"
+
+yaml 
+rgb_calib_pass0v7_20190607.yaml
+
+timestamp in yaml
+all services, 06/07/2019
+
+variation in yaml
+some are default, some are rga_fall2018
+
+== pass0v6  ==============================================================
+by Zhiwen Zhao, in 2018/06
+
+software same as pass0v3
+timestamp use 06/07/2019 after Dan updated TOF https://logbooks.jlab.org/entry/3685523
+
+use hipo4
+
+decode by coatjava6b.1.1
+cooking by clara4.3.10 and coatjava6b.2.0
+
+schema 
+bankSplit_20190523.py
+  # copy the file from coatjava6b.2.0 defined at https://github.com/JeffersonLab/clas12-offline-software/blob/6b.2.0/etc/bankdefs/util/bankSplit.py
+  #new dst schema will add "BAND::adc","BAND::tdc","BAND::hits","CND::hits"
+  #new mon schema will add "HEL::adc"
+
+yaml 
+rgb_calib_pass0v6_20190607.yaml
+
+timestamp in yaml
+all services, 06/07/2019
+
+variation in yaml
+some are default, some are rga_fall2018
+
 == pass0v5 ==============================================================
 by Zhiwen Zhao, in 2018/05
 
@@ -7,7 +59,6 @@ timestamp use 05/29/2019 after another RF calibration update
 use hipo3
 
 decode by coatjava5b.7.8
-
 cooking by clara4.3.8 and coatjava5.9.0
 
 schema 
@@ -30,7 +81,6 @@ timestamp use 05/18/2019 after RF calibration update
 use hipo3
 
 decode by coatjava5b.7.8
-
 cooking by clara4.3.8 and coatjava5.9.0
 
 schema 
@@ -43,14 +93,13 @@ rgb_calib_pass0v4_20190518.yaml
 timestamp in yaml
 all service, 05/18/2019
 
-== pass0v3 testing ==============================================================
+== pass0v3  ==============================================================
 by Zhiwen Zhao, in 2018/06
 
 1st hipo4 cooking
 
 use hipo4
-
-decode by coatjava6b.2.0
+decode by coatjava6b.1.1
 
 cooking by clara4.3.10 and coatjava6b.2.0
 
@@ -79,7 +128,6 @@ by Zhiwen Zhao, in 2018/05
 use hipo3
 
 decode by coatjava5b.7.8
-
 cooking by clara4.3.8 and coatjava5.9.0
 
 schema 
@@ -104,7 +152,6 @@ by Zhiwen Zhao, during data taking from 2019/02 to 2019/03
 use hipo3
 
 decode by coatjava5b.7.7, coatjava5b.7.8
-
 cooking by clara4.3.5 and coatjava5b.7.7, clara4.3.5 and coatjava5b.7.8, clara4.3.8 and coatjava5b.7.8
 
 runlist

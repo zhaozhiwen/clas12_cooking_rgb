@@ -7,8 +7,8 @@ cd /work/clas12/rg-b
 setenv clara_version 4.3.8
 setenv coatjava_version 5.9.0
 
-setenv clara_version 4.3.9
-setenv coatjava_version 6b.2.0
+setenv clara_version 4.3.10
+setenv coatjava_version 6c.2.1
 
 setenv WORK /work/clas12/rg-b/clas12_clara${clara_version}_coatjava${coatjava_version}
 setenv CLARA_HOME ${WORK}/clara
@@ -18,7 +18,9 @@ cd ${WORK}
 
 wget https://claraweb.jlab.org/clara/_downloads/install-claracre-clas.sh   
 chmod 755 install-claracre-clas.sh
-./install-claracre-clas.sh -f ${clara_version} -v ${coatjava_version} -g 2.0
+./install-claracre-clas.sh -f ${clara_version} -v ${coatjava_version} -g 2.1
+
+setenv CLARA_USER_DATA ${WORK}
 
 setenv CLARA_OUTPUT ${WORK}/output
 setenv CLARA_LOG ${WORK}/log
@@ -34,7 +36,6 @@ setenv COATJAVA ${CLARA_HOME}/plugins/clas12
 
 setenv PATH ${COATJAVA}/bin:$PATH
 
-setenv CLARA_USER_DATA ${WORK}
 
 ==run clara and coatjava, and other tools ===========================
 
@@ -51,8 +52,8 @@ setenv CLARA_LOG ${WORK}/log
 setenv PATH ${GROOVY_HOME}/bin:$PATH
 cd $WORK
 
-setenv coatjava_version 6b.1.1
-setenv clara_version 4.3.9
+setenv coatjava_version 5.9.0
+setenv clara_version 4.3.8
 setenv WORK /work/clas12/rg-b/clas12_clara${clara_version}_coatjava${coatjava_version}
 setenv CLARA_HOME ${WORK}/clara
 setenv COATJAVA ${CLARA_HOME}/plugins/clas12
@@ -85,6 +86,7 @@ comm -23 allfile donefile | cat > leftfile
 #rename "calib_" of file name in filelist
 sed -i 's/calib_//g' filelist
 sed -i 's/mon_//g' filelist
+sed -i 's/dst_//g' filelist
 
 #rename many file name
 for xx in `ls */* | grep "hipo"` ; 
