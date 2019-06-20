@@ -1,3 +1,32 @@
+== pass0v8  ==============================================================
+by Zhiwen Zhao, in 2018/06
+
+software same as pass0v6
+timestamp use 06/20/2019 after Dan updated ftof with
+run 6164: https://logbooks.jlab.org/entry/3689692
+run 6233: https://logbooks.jlab.org/entry/3689998
+run 6489: https://logbooks.jlab.org/entry/3688165
+
+use hipo4
+
+decode by coatjava6b.1.1
+cooking by clara4.3.10 and coatjava6b.2.0
+
+schema 
+bankSplit_20190523.py
+  # copy the file from coatjava6b.2.0 defined at https://github.com/JeffersonLab/clas12-offline-software/blob/6b.2.0/etc/bankdefs/util/bankSplit.py
+  #new dst schema will add "BAND::adc","BAND::tdc","BAND::hits","CND::hits"
+  #new mon schema will add "HEL::adc"
+
+yaml 
+rgb_calib_pass0v8_201906015yaml
+
+timestamp in yaml
+all services, 06/20/2019
+
+variation in yaml
+some are default, some are rga_fall2018
+
 == pass0v7  ==============================================================
 by Zhiwen Zhao, in 2018/06
 
