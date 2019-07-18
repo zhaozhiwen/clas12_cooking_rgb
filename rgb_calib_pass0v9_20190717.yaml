@@ -52,62 +52,62 @@ configuration:
       magfieldSolenoidMap: Symm_solenoid_r601_phi1_z1201_13June2018.dat
       magfieldTorusMap: Full_torus_r251_phi181_z251_08May2018.dat
       variation: rga_fall2018
-      timestamp: 06/15/2019
+      timestamp: 07/17/2019
     FTCAL:
       variation: default    
-      timestamp: 06/15/2019          
+      timestamp: 07/17/2019          
     FTHODO:
       variation: default    
-      timestamp: 06/15/2019                    
+      timestamp: 07/17/2019                    
     FTEB:
       variation: default    
-      timestamp: 06/15/2019                  
+      timestamp: 07/17/2019                  
     DCHB:
       variation: rga_fall2018
-      timestamp: 06/15/2019
+      timestamp: 07/17/2019
       useStartTime: "true"
       wireDistort: "true"      
       dcGeometryVariation: rga_fall2018
     FTOFHB:
       variation: rga_fall2018    
-      timestamp: 06/15/2019                  
+      timestamp: 07/17/2019                  
     EC:
       variation: rga_fall2018    
-      timestamp: 06/15/2019                        
+      timestamp: 07/17/2019                        
     CVT:
       variation: rga_fall2018
-      timestamp: 06/15/2019
+      timestamp: 07/17/2019
     CTOF:
       variation: rga_fall2018
-      timestamp: 06/15/2019      
+      timestamp: 07/17/2019      
     CND:
       variation: rga_fall2018
-      timestamp: 06/15/2019      
+      timestamp: 07/17/2019      
     BAND:
       variation: default    
-      timestamp: 06/15/2019      
+      timestamp: 07/17/2019      
     HTCC:
       variation: default    
-      timestamp: 06/15/2019
+      timestamp: 07/17/2019
     LTCC:
       variation: default    
-      timestamp: 06/15/2019        
+      timestamp: 07/17/2019        
     RICH:
       variation: default    
-      timestamp: 06/15/2019
+      timestamp: 07/17/2019
     EBHB:
       variation: default    
-      timestamp: 06/15/2019        
+      timestamp: 07/17/2019        
     DCTB:
       variation: rga_fall2018
-      timestamp: 06/15/2019      
+      timestamp: 07/17/2019      
       dcGeometryVariation: rga_fall2018
     FTOFTB:
       variation: rga_fall2018
-      timestamp: 06/15/2019      
+      timestamp: 07/17/2019      
     EBTB:
       variation: default    
-      timestamp: 06/15/2019       
+      timestamp: 07/17/2019       
       
 mime-types:
   - binary/data-hipo
