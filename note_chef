@@ -67,10 +67,10 @@ module load coatjava/6b.2.0
 setenv CLARA_USER_DATA /work/clas12/rg-b/clas12_clara4.3.10_coatjava6b.2.0
 cd $CLARA_USER_DATA
 
-mkdir /work/clas12/rg-b/clas12_clara4.3.11_coatjava6b.3.0
+mkdir /work/clas12/rg-b/clas12_clara4.3.10_coatjava6b.3.0
 source /group/clas12/packages/setup.csh 
 module load coatjava/6b.3.0
-setenv CLARA_USER_DATA /work/clas12/rg-b/clas12_clara4.3.11_coatjava6b.3.0
+setenv CLARA_USER_DATA /work/clas12/rg-b/clas12_clara4.3.10_coatjava6b.3.0
 cd $CLARA_USER_DATA
 
 $CLARA_HOME/bin/clara-shell /work/clas12/rg-b/clas12_cooking_rgb/script.clara_farm
