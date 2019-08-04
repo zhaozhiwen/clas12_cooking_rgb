@@ -67,10 +67,10 @@ module load coatjava/6b.2.0
 setenv CLARA_USER_DATA /work/clas12/rg-b/clas12_clara4.3.10_coatjava6b.2.0
 cd $CLARA_USER_DATA
 
-mkdir /work/clas12/rg-b/clas12_clara4.3.10_coatjava6b.3.0
+mkdir /work/clas12/rg-b/clas12_clara4.3.10_coatjava6.3.1
 source /group/clas12/packages/setup.csh 
-module load coatjava/6b.3.0
-setenv CLARA_USER_DATA /work/clas12/rg-b/clas12_clara4.3.10_coatjava6b.3.0
+module load coatjava/6.3.1
+setenv CLARA_USER_DATA /work/clas12/rg-b/clas12_clara4.3.10_coatjava6.3.1
 cd $CLARA_USER_DATA
 
 $CLARA_HOME/bin/clara-shell /work/clas12/rg-b/clas12_cooking_rgb/script.clara_farm
@@ -199,10 +199,12 @@ mkdir hipo_20190424
 cp /work/clas12/rg-b/clas12_clara4.3.8_coatjava5.9.0/clara/plugins/clas12/etc/bankdefs/hipo/* hipo_20190424/
 python bankSplit_20190424.py hipo_20190424
 
-mkdir hipo4_20190508
-cp /work/clas12/rg-b/clas12_clara4.3.9_coatjava6b.1.1/clara/plugins/clas12/etc/bankdefs/hipo4/* hipo4_20190508/
-python bankSplit_20190508.py hipo4_20190508
-
 mkdir hipo4_20190523
 cp /group/clas12/packages/clara/4.4_6b.2.0/plugins/clas12/etc/bankdefs/hipo4/* hipo4_20190523/
 python bankSplit_20190523.py hipo4_20190523
+
+mkdir hipo4_20190722
+cp /group/clas12/packages/clara/4.3.10_6b.3.0/plugins/clas12/etc/bankdefs/util/bankSplit.py bankSplit_20190722.py
+edit bankSplit_20190722.py
+cp /group/clas12/packages/clara/4.3.10_6b.3.0/plugins/clas12/etc/bankdefs/hipo4/* hipo4_20190722/
+python bankSplit_20190722.py hipo4_20190722

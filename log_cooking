@@ -1,5 +1,55 @@
+== pass0v11  ==============================================================
+by Zhiwen Zhao, in 2019/08
+
+redo FTOF calib with latest software
+software change from 6b.3.0 to 6.3.1
+timestamp 08/01/2019 after RF calibration
+
+use hipo4
+
+decode by coatjava6b.1.1
+cooking by clara4.3.10 and coatjava 6.3.1
+
+schema 
+bankSplit_20190722.py
+  # copy the file from coatjava6b.3.0 defined at https://github.com/JeffersonLab/clas12-offline-software/blob/6b.3.0/etc/bankdefs/util/bankSplit.py
+  #new dst schema will add "BAND::adc","BAND::tdc","BAND::hits","CND::hits"
+
+yaml 
+rgb_calib_pass0v11_20190801.yaml
+
+timestamp in yaml
+all services, 08/01/2019
+
+variation in yaml
+some are default, some are rga_fall2018
+== pass0v10  ==============================================================
+by Zhiwen Zhao, in 2019/07
+
+software change from 6b.2.0 to 6b.3.0
+timestamp same as v9
+
+use hipo4
+
+decode by coatjava6b.1.1
+cooking by clara4.3.10 and coatjava6b.3.0
+
+schema 
+bankSplit_20190722.py
+  # copy the file from coatjava6b.3.0 defined at https://github.com/JeffersonLab/clas12-offline-software/blob/6b.3.0/etc/bankdefs/util/bankSplit.py
+  #new dst schema will add "BAND::adc","BAND::tdc","BAND::hits","CND::hits"
+
+yaml 
+rgb_mon_pass0v10_20190717.yaml
+rgb_calib_pass0v10_20190717.yaml
+
+timestamp in yaml
+all services, 07/17/2019
+
+variation in yaml
+some are default, some are rga_fall2018
 == pass0v9  ==============================================================
-by Zhiwen Zhao, in 2018/07
+by Zhiwen Zhao, in 2019/07
 
 software same as pass0v8
 timestamp use 07/17/2019 after CTOF,RF,FTCal and CND constants updated
@@ -26,7 +76,7 @@ all services, 07/17/2019
 variation in yaml
 some are default, some are rga_fall2018
 == pass0v8  ==============================================================
-by Zhiwen Zhao, in 2018/06
+by Zhiwen Zhao, in 2019/06
 
 software same as pass0v6
 timestamp use 06/20/2019 after Dan updated ftof with
@@ -55,7 +105,7 @@ variation in yaml
 some are default, some are rga_fall2018
 
 == pass0v7  ==============================================================
-by Zhiwen Zhao, in 2018/06
+by Zhiwen Zhao, in 2019/06
 
 calibration same as pass0v6
 LTCC reconstruction check
@@ -81,7 +131,7 @@ variation in yaml
 some are default, some are rga_fall2018
 
 == pass0v6  ==============================================================
-by Zhiwen Zhao, in 2018/06
+by Zhiwen Zhao, in 2019/06
 
 software same as pass0v3
 timestamp use 06/07/2019 after Dan updated TOF https://logbooks.jlab.org/entry/3685523
@@ -107,7 +157,7 @@ variation in yaml
 some are default, some are rga_fall2018
 
 == pass0v5 ==============================================================
-by Zhiwen Zhao, in 2018/05
+by Zhiwen Zhao, in 2019/05
 
 software same as pass0v4
 timestamp use 05/29/2019 after another RF calibration update
@@ -129,7 +179,7 @@ timestamp in yaml
 all service, 05/29/2019
 
 == pass0v4 ==============================================================
-by Zhiwen Zhao, in 2018/05
+by Zhiwen Zhao, in 2019/05
 
 software same as pass0v2
 timestamp use 05/18/2019 after RF calibration update
@@ -150,7 +200,7 @@ timestamp in yaml
 all service, 05/18/2019
 
 == pass0v3  ==============================================================
-by Zhiwen Zhao, in 2018/06
+by Zhiwen Zhao, in 2019/06
 
 1st hipo4 cooking
 
@@ -177,7 +227,7 @@ variation in yaml
 some are default, some are rga_fall2018
 
 == pass0v2 ==============================================================
-by Zhiwen Zhao, in 2018/05
+by Zhiwen Zhao, in 2019/05
 
 1st cooking after run finished
 
