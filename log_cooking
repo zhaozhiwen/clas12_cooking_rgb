@@ -1,7 +1,31 @@
+== pass0v12  ==============================================================
+by Zhiwen Zhao, in 2019/08
+
+same software like v11
+timestamp 08/06/2019-12:00:00 after redo FTOF calib https://logbooks.jlab.org/entry/3715492
+
+use hipo4
+
+decode by coatjava6b.1.1
+cooking by clara4.3.10 and coatjava 6.3.1
+
+schema 
+bankSplit_20190722.py
+  # copy the file from coatjava6b.3.0 defined at https://github.com/JeffersonLab/clas12-offline-software/blob/6b.3.0/etc/bankdefs/util/bankSplit.py
+  #new dst schema will add "BAND::adc","BAND::tdc","BAND::hits","CND::hits"
+
+yaml 
+rgb_calib_pass0v12_20190806.yaml
+
+timestamp in yaml
+all services, 08/06/2019-12:00:00
+
+variation in yaml
+some are default, some are rga_fall2018
+
 == pass0v11  ==============================================================
 by Zhiwen Zhao, in 2019/08
 
-redo FTOF calib with latest software
 software change from 6b.3.0 to 6.3.1
 timestamp 08/01/2019 after RF calibration
 
@@ -134,7 +158,7 @@ some are default, some are rga_fall2018
 by Zhiwen Zhao, in 2019/06
 
 software same as pass0v3
-timestamp use 06/07/2019 after Dan updated TOF https://logbooks.jlab.org/entry/3685523
+timestamp use 06/07/2019 after Dan updated FTOF https://logbooks.jlab.org/entry/3685523
 
 use hipo4
 
@@ -169,6 +193,10 @@ cooking by clara4.3.8 and coatjava5.9.0
 
 schema 
 bankSplit_20190424.py
+  #based on coatjava5.9.0 defined at https://github.com/JeffersonLab/clas12-offline-software/blob/5.9.0/etc/bankdefs/util/bankSplit.py
+  #new dst schema will add "BAND::adc","BAND::tdc","BAND::hits","CND::hits"
+  #new calib schema will add "ECAL::adc","ECAL::moments","ECAL::tdc","ECAL::hits"
+  #new mon schema will add "ECAL::adc","ECAL::moments","ECAL::tdc","HEL::adc","BMT::adc","BST::adc","BMTRec::Clusters","BSTRec::Clusters" and remove "BMTRec::Hits, BSTRec::Hits, BMTRec::LayerEffs, and BSTRec::LayerEffs" 
 
 yaml 
 rgb_mon_pass0v5_20190529.yaml
@@ -191,6 +219,10 @@ cooking by clara4.3.8 and coatjava5.9.0
 
 schema 
 bankSplit_20190424.py
+  #based on coatjava5.9.0 defined at https://github.com/JeffersonLab/clas12-offline-software/blob/5.9.0/etc/bankdefs/util/bankSplit.py
+  #new dst schema will add "BAND::adc","BAND::tdc","BAND::hits","CND::hits"
+  #new calib schema will add "ECAL::adc","ECAL::moments","ECAL::tdc","ECAL::hits"
+  #new mon schema will add "ECAL::adc","ECAL::moments","ECAL::tdc","HEL::adc","BMT::adc","BST::adc","BMTRec::Clusters","BSTRec::Clusters" and remove "BMTRec::Hits, BSTRec::Hits, BMTRec::LayerEffs, and BSTRec::LayerEffs" 
 
 yaml 
 rgb_mon_pass0v4_20190518.yaml
