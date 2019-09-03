@@ -208,3 +208,9 @@ cp /group/clas12/packages/clara/4.3.10_6b.3.0/plugins/clas12/etc/bankdefs/util/b
 edit bankSplit_20190722.py
 cp /group/clas12/packages/clara/4.3.10_6b.3.0/plugins/clas12/etc/bankdefs/hipo4/* hipo4_20190722/
 python bankSplit_20190722.py hipo4_20190722
+
+mkdir hipo4_6.3.1_20190815
+cp /group/clas12/packages/clara/4.3.10_6.3.1/plugins/clas12/etc/bankdefs/util/bankSplit.py bankSplit_6.3.1_20190815.py
+edit bankSplit_6.3.1_20190815.py
+cp /group/clas12/packages/clara/4.3.10_6.3.1/plugins/clas12/etc/bankdefs/hipo4/* hipo4_6.3.1_20190815/
+python bankSplit_6.3.1_20190815.py hipo4_6.3.1_20190815

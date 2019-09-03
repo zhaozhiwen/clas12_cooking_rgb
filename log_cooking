@@ -1,8 +1,98 @@
+pass0v15 latest hipo4 cooking
+
+pass0v5 latest hipo3 cooking
+
+== pass0v15  ==============================================================
+by Zhiwen Zhao, in 2019/08
+
+same software like v14
+RICH calib
+https://logbooks.jlab.org/entry/3725177
+https://clasweb.jlab.org/cgi-bin/ccdb/show_request?request=/calibration/rich/time_offset:6189:default:2019-08-28_08-24-57
+LTCC
+https://clasweb.jlab.org/cgi-bin/ccdb/show_request?request=/calibration/ltcc/spe:6595:default:2019-08-28_11-35-53
+CND calib
+https://logbooks.jlab.org/entry/3725094
+
+use hipo4
+
+decode by coatjava6b.1.1
+cooking by clara4.3.10 and coatjava 6.3.1
+
+schema 
+bankSplit_6.3.1_20190815.py
+  # copy the file from coatjava6.3.1 defined at https://github.com/JeffersonLab/clas12-offline-software/blob/6.3.1/etc/bankdefs/util/bankSplit.py
+  #new dst schema will add "BAND::adc","BAND::tdc","BAND::hits","CND::hits"
+
+yaml 
+rgb_calib_pass0v15_20190828.yaml
+rgb_mon_pass0v15_20190828.yaml
+
+timestamp in yaml
+all services, 08/28/2019-12:00:00
+
+variation in yaml
+some are default, some are rga_fall2018
+== pass0v14  ==============================================================
+by Zhiwen Zhao, in 2019/08
+
+same software like v13
+beam position update
+https://clasweb.jlab.org/cgi-bin/ccdb/show_request?request=/geometry/beam/position:6141:rga_fall2018:2019-08-23_18-11-06
+
+use hipo4
+
+decode by coatjava6b.1.1
+cooking by clara4.3.10 and coatjava 6.3.1
+
+schema 
+bankSplit_6.3.1_20190815.py
+  # copy the file from coatjava6.3.1 defined at https://github.com/JeffersonLab/clas12-offline-software/blob/6.3.1/etc/bankdefs/util/bankSplit.py
+  #new dst schema will add "BAND::adc","BAND::tdc","BAND::hits","CND::hits"
+
+yaml 
+rgb_calib_pass0v14_20190823.yaml
+
+timestamp in yaml
+all services, 08/23/2019-18:15:00
+
+variation in yaml
+some are default, some are rga_fall2018
+== pass0v13  ==============================================================
+by Zhiwen Zhao, in 2019/08
+
+same software like v12
+bank schema fixed
+
+use hipo4
+
+decode by coatjava6b.1.1
+cooking by clara4.3.10 and coatjava 6.3.1
+
+schema 
+bankSplit_6.3.1_20190815.py
+  # copy the file from coatjava6.3.1 defined at https://github.com/JeffersonLab/clas12-offline-software/blob/6.3.1/etc/bankdefs/util/bankSplit.py
+  #new dst schema will add "BAND::adc","BAND::tdc","BAND::hits","CND::hits"
+
+yaml 
+rgb_calib_pass0v13_20190815.yaml
+
+timestamp in yaml
+all services, 08/15/2019-00:00:00
+
+variation in yaml
+some are default, some are rga_fall2018
 == pass0v12  ==============================================================
 by Zhiwen Zhao, in 2019/08
 
 same software like v11
-timestamp 08/06/2019-12:00:00 after redo FTOF calib https://logbooks.jlab.org/entry/3715492
+after redo FTOF calib https://logbooks.jlab.org/entry/3715492
+
+bank schema wrong because coatjava6b.3.0 and coatjava6.3.1 has changes, resulting 4 corrupted banks
+>>> RECFT::Particle
+>>> RECHB::Particle
+>>> REC::Particle
+>>> RICH::ringCher
 
 use hipo4
 
@@ -27,7 +117,13 @@ some are default, some are rga_fall2018
 by Zhiwen Zhao, in 2019/08
 
 software change from 6b.3.0 to 6.3.1
-timestamp 08/01/2019 after RF calibration
+after RF calibration
+
+bank schema wrong because coatjava6b.3.0 and coatjava6.3.1 has changes, resulting 4 corrupted banks
+>>> RECFT::Particle
+>>> RECHB::Particle
+>>> REC::Particle
+>>> RICH::ringCher
 
 use hipo4
 
