@@ -1,15 +1,46 @@
-pass0v15 latest hipo4 cooking
+pass0v16 latest hipo4 cooking
 
 pass0v5 latest hipo3 cooking
 
+== pass0v16  ==============================================================
+by Zhiwen Zhao, in 2019/09
+
+same software like v15
+FTCAL energy calibrations
+https://logbooks.jlab.org/entry/3728662
+RICH time_offset calib
+https://logbooks.jlab.org/entry/3729534
+CND calib
+https://logbooks.jlab.org/entry/3731032
+https://logbooks.jlab.org/entry/3730780
+
+use hipo4
+
+decode by coatjava6b.1.1
+cooking by clara4.3.10 and coatjava 6.3.1
+
+schema 
+bankSplit_6.3.1_20190815.py
+  # copy the file from coatjava6.3.1 defined at https://github.com/JeffersonLab/clas12-offline-software/blob/6.3.1/etc/bankdefs/util/bankSplit.py
+  #new dst schema will add "BAND::adc","BAND::tdc","BAND::hits","CND::hits"
+
+yaml 
+rgb_dst_pass0v16_20190911.yaml
+rgb_mon_pass0v16_20190911.yaml
+
+timestamp in yaml
+all services, 09/11/2019-10:00:00
+
+variation in yaml
+some are default, some are rga_fall2018
 == pass0v15  ==============================================================
 by Zhiwen Zhao, in 2019/08
 
 same software like v14
-RICH calib
+RICH calib time_offset
 https://logbooks.jlab.org/entry/3725177
 https://clasweb.jlab.org/cgi-bin/ccdb/show_request?request=/calibration/rich/time_offset:6189:default:2019-08-28_08-24-57
-LTCC
+LTCC calib
 https://clasweb.jlab.org/cgi-bin/ccdb/show_request?request=/calibration/ltcc/spe:6595:default:2019-08-28_11-35-53
 CND calib
 https://logbooks.jlab.org/entry/3725094

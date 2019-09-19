@@ -164,7 +164,7 @@ check
 ./scripts/swif-status.py --details --workflow workflowName
 
 retry
-./scripts/swif-status.py --retry -workflow workflowName
+./scripts/swif-status.py --retry --workflow workflowName
 
 cancel jobs
 swif cancel -workflow workflowName
