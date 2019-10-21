@@ -172,6 +172,14 @@ swif cancel -workflow workflowName
 sweep clean
 swif cancel -delete -workflow workflowName
 
+cron 
+cp cron/swif.cron ./
+edit swif.cron
+crontab swif.cron to install it and it will retry all jobs every 30m
+crontab -e to edit
+crontab -l to list
+crontab -r to remove
+
 == skim ===================================
 
 > common tasks always have this line there:
