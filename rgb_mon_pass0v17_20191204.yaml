@@ -46,7 +46,7 @@ configuration:
   io-services:
     writer:
       compression: 2
-      schema_dir: "/work/clas12/rg-b/clas12_cooking_rgb/hipo4_6b.4.0.1_20191204/singles/dst"
+      schema_dir: /work/clas12/rg-b/clas12_cooking_rgb/hipo4_6b.4.0_20191204/singles/monitoring
   services:
     MAGFIELDS:
       magfieldSolenoidMap: Symm_solenoid_r601_phi1_z1201_13June2018.dat

@@ -49,7 +49,7 @@ for filename in os.listdir("./"):
 print("Single json files saved in " + workdirectory + singledirectory)
 
 # create dst, calibration and monitoring directories
-# copy the file from coatjava6.3.1 defined at https://github.com/JeffersonLab/clas12-offline-software/blob/6.3.1/etc/bankdefs/util/bankSplit.py
+# copy the file from /group/clas12/packages/clara/4.3.11_6b.4.0/plugins/clas12/etc/bankdefs/util/bankSplit.py
 #new dst schema will add "BAND::adc","BAND::tdc","BAND::hits","CND::hits"
 #dst = ["RUN::config","RAW::epics","RAW::scaler","REC::Event","REC::Particle","REC::Calorimeter","REC::Cherenkov","REC::CovMat","REC::ForwardTagger","REC::Scintillator","REC::Track","REC::Traj","RECFT::Event","RECFT::Particle","RICH::tdc","RICH::ringCher","RUN::scaler","HEL::flip","HEL::online","MC::Event","MC::Header","MC::Lund","MC::Particle","MC::True"]
 dst = ["BAND::adc","BAND::tdc","BAND::hits","CND::hits","RUN::config","RAW::epics","RAW::scaler","REC::Event","REC::Particle","REC::Calorimeter","REC::Cherenkov","REC::CovMat","REC::ForwardTagger","REC::Scintillator","REC::Track","REC::Traj","RECFT::Event","RECFT::Particle","RICH::tdc","RICH::ringCher","RUN::scaler","HEL::flip","HEL::online","MC::Event","MC::Header","MC::Lund","MC::Particle","MC::True"]

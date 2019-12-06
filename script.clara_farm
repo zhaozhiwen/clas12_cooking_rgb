@@ -75,13 +75,30 @@
 #set files /work/clas12/rg-b/clas12_cooking_rgb/runlist_2019spring_DNP2019_6b.1.1/*
 #set outputDir    /cache/clas12/rg-b/production/recon/pass0/v16/mon/
 
+#set servicesFile /work/clas12/rg-b/clas12_cooking_rgb/rgb_calib_pass0v16_20190911.yaml
+#set outputFilePrefix    calib_
+#set description rgbv16calib6420r22
+#set fileList     filelist_6420nn
+#set inputDir /cache/clas12/rg-b/production/decoded/6b.1.1/006420
+#set files /cache/clas12/rg-b/production/decoded/6b.1.1/006420/*
+#set outputDir    /cache/clas12/rg-b/production/recon/pass0/v16/calib/unfiltered/006420
+
 set servicesFile /work/clas12/rg-b/clas12_cooking_rgb/rgb_dst_pass0v16_20190911.yaml
 set outputFilePrefix    dst_
-set description rgbv16dst6595r21
-set fileList     filelist_6595
-set inputDir /cache/clas12/rg-b/production/decoded/6b.1.1/006595
-#set files /cache/clas12/rg-b/production/decoded/6b.1.1/006595/*
-set outputDir    /cache/clas12/rg-b/production/recon/pass0/v16/dst/unfiltered/006595
+set description rgbv16dst6227r21
+set fileList     filelist_6227
+set inputDir /cache/clas12/rg-b/production/decoded/6b.1.1/006227
+#set files /cache/clas12/rg-b/production/decoded/6b.1.1/006227/*
+set outputDir    /cache/clas12/rg-b/production/recon/pass0/v16/dst/unfiltered/006227
+
+#set servicesFile /work/clas12/rg-b/clas12_cooking_rgb/rgb_dst_pass0v16_20190911.yaml
+#set outputFilePrefix    dst_
+#set description rgbv16lc5nA
+#set fileList     filelist_lc5nA
+#set inputDir /work/clas12/rg-b/clas12_cooking_rgb/runlist_2019spring_lc5nA_6b.1.1
+#set files /work/clas12/rg-b/clas12_cooking_rgb/runlist_2019spring_lc5nA_6b.1.1/*
+#set outputDir    /cache/clas12/rg-b/production/recon/pass0/v16/dst/unfiltered/lc5nA
+
 
 #------------
 #set inputDir     ${CLARA_INPUT}
@@ -117,8 +134,8 @@ set farm.cpu 16
 set farm.memory 15
 set javaMemory 12
 set farm.disk 5
-set farm.scaling 10
-set farm.time 1440
+set farm.scaling 2
+set farm.time 600
 
 #exclusive, include cpu,mem,disk and NUMA affinity
 #set farm.exclusive farm18

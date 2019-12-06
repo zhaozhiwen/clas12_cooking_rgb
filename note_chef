@@ -1,5 +1,49 @@
-==use slurm farm ===========================
-setenv PATH /site/scicomp/auger-slurm/bin:$PATH
+====do everything with clas12-workflow =============================================
+refer to 
+https://github.com/baltzell/clas12-workflow
+$CLAS12WFLOW/README.md
+
+module load workflow
+clas12-workflow.py -h
+
+check rcdb
+python $CLAS12WFLOW/lib/clas12/RcdbManager.py 11014
+
+import
+swif import -file jobs/rgb_decode_R6223x1_x1200.json
+
+run
+swif run -workflow rgb_decode_R6223x1_x1200
+
+check
+swif-status.py 
+swif-status.py | grep workflow_name
+swif-status.py --workflow workflowName
+swif-status.py --details --workflow workflowName
+
+retry
+swif-status.py --retry --workflow workflowName
+
+cancel jobs
+swif cancel -workflow workflowName
+
+sweep clean
+swif cancel -delete -workflow workflowName
+
+cron 
+cp $CLAS12WFLOW/cron/swif.cron ./
+edit swif.cron
+crontab swif.cron to install it and it will retry all jobs every 30m
+crontab -e to edit
+crontab -l to list
+crontab -r to remove
+
+== access clas online data =============================================================
+(do this only when data mover is not working or too slow)
+ssh hallgw
+login with PIN+passcode from the mobile app
+ssh clondaq6
+cd /data/stage_in
 
 ==install clara and coatjava  ===========================
 cd /work/clas12/rg-b
@@ -36,7 +80,6 @@ setenv COATJAVA ${CLARA_HOME}/plugins/clas12
 
 setenv PATH ${COATJAVA}/bin:$PATH
 
-
 ==run clara and coatjava, and other tools ===========================
 
 cd /work/clas12/rg-b
@@ -71,6 +114,12 @@ mkdir /work/clas12/rg-b/clas12_clara4.3.10_coatjava6.3.1
 source /group/clas12/packages/setup.csh 
 module load coatjava/6.3.1
 setenv CLARA_USER_DATA /work/clas12/rg-b/clas12_clara4.3.10_coatjava6.3.1
+cd $CLARA_USER_DATA
+
+mkdir /work/clas12/rg-b/clas12_clara4.3.11_coatjava6b.4.0
+source /group/clas12/packages/setup.csh 
+module load coatjava/6b.4.0
+setenv CLARA_USER_DATA /work/clas12/rg-b/clas12_clara4.3.11_coatjava6b.4.0
 cd $CLARA_USER_DATA
 
 $CLARA_HOME/bin/clara-shell /work/clas12/rg-b/clas12_cooking_rgb/script.clara_farm
@@ -116,13 +165,7 @@ Yes. By default it will use all available cores. However, you can set the core c
 for submitting a single job, don't set farm.scaling and just use default 0
 otherwise, clara will create more jobs and could miss files
 
-== access clas online data =============================================================
-ssh hallgw
-login with PIN+passcode from the mobile app
-ssh clondaq6
-cd /data/stage_in
-
-====decode with workflow  =============================================
+====decode with clas12-workflow (old) =============================================
 
 #decode simulation
 $CLARA_HOME/plugins/clas12/bin/evio2hipo -r 4310 -t -1 -s 1 -o $CLARA_INPUT/jpsi_gen_qf_1.hipo jpsi_gen_qf_1.evio
@@ -152,33 +195,6 @@ source env.sh
 by default it find all find under input 
 --fileRegex ".*clas[_A-Za-z]*_(\d+)\.evio\.0004(\d+)"
 
-import
-swif import -file jobs/rgb_decode_R6223x1_x1200.json
-
-run
-swif run -workflow rgb_decode_R6223x1_x1200
-
-check
-./scripts/swif-status.py 
-./scripts/swif-status.py --workflow workflowName
-./scripts/swif-status.py --details --workflow workflowName
-
-retry
-./scripts/swif-status.py --retry --workflow workflowName
-
-cancel jobs
-swif cancel -workflow workflowName
-
-sweep clean
-swif cancel -delete -workflow workflowName
-
-cron 
-cp cron/swif.cron ./
-edit swif.cron
-crontab swif.cron to install it and it will retry all jobs every 30m
-crontab -e to edit
-crontab -l to list
-crontab -r to remove
 
 == skim ===================================
 
@@ -222,3 +238,9 @@ cp /group/clas12/packages/clara/4.3.10_6.3.1/plugins/clas12/etc/bankdefs/util/ba
 edit bankSplit_6.3.1_20190815.py
 cp /group/clas12/packages/clara/4.3.10_6.3.1/plugins/clas12/etc/bankdefs/hipo4/* hipo4_6.3.1_20190815/
 python bankSplit_6.3.1_20190815.py hipo4_6.3.1_20190815
+
+mkdir hipo4_6b.4.0_20191204
+cp /group/clas12/packages/clara/4.3.11_6b.4.0/plugins/clas12/etc/bankdefs/util/bankSplit.py bankSplit_6b.4.0_20191204.py
+edit bankSplit_6b.4.0_20191204.py
+cp /group/clas12/packages/clara/4.3.11_6b.4.0/plugins/clas12/etc/bankdefs/hipo4/* hipo4_6b.4.0_20191204
+python bankSplit_6b.4.0_20191204.py hipo4_6b.4.0_20191204
