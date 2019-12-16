@@ -127,7 +127,10 @@ public class filter_pid11{
 
                                 for(int ip=0;ip<partBank.rows() && !isSelected;ip++){
 
-                                        if(partBank.getInt("pid",ip)==11 && partBank.getShort("status", ip)>2000 && partBank.getShort("status", ip)<4000 ){
+                                        if(partBank.getInt("pid",ip)==11 && Math.abs(partBank.getShort("status", ip))>=2000 && Math.abs(partBank.getShort("status", ip))<=4000 ){                                
+//                                         if(partBank.getInt("pid",ip)==11 && partBank.getShort("status", ip)>2000 && partBank.getShort("status", ip)<4000 ){
+//                                         if(partBank.getInt("pid",ip)==11 ){
+//                                 System.out.println("pid "+partBank.getInt("pid",ip)+" "+partBank.getShort("status", ip));
 
                                                 isSelected=true;
 
@@ -149,7 +152,11 @@ public class filter_pid11{
 
                                 for(int ip=0;ip<partBank.rows() && !isSelected;ip++){
 
-                                        if(partBank.getInt("pid",ip)==11 && partBank.getShort("status", ip)>2000 && partBank.getShort("status", ip)<4000 ){
+                                        if(partBank.getInt("pid",ip)==11 && Math.abs(partBank.getShort("status", ip))>=2000 && Math.abs(partBank.getShort("status", ip))<=4000 ){                                                                
+//                                         if(partBank.getInt("pid",ip)==11 && partBank.getShort("status", ip)>2000 && partBank.getShort("status", ip)<4000 ){
+//                                         if(partBank.getInt("pid",ip)==11 ){
+//                                 System.out.println("pid "+partBank.getInt("pid",ip)+" "+partBank.getShort("status", ip));
+
 
                                                 isSelected=true;
 

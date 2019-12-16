@@ -1,0 +1,81 @@
+#!/bin/sh
+
+clara=4.3.11
+# coatjava=6b.4.0
+coatjava_decode=6b.4.0
+coatjava_cook=6b.4.1
+# tag=v17
+# tag=v18
+
+# for rnum in {011080..011092}
+# for rnum in {011143,011144,011145,011155,011156}
+# for rnum in {011157,011158,011159,011160,011162}
+# for rnum in {011168,011169,011170}
+# for rnum in {011163,011165,011171}
+# for rnum in {011174..011180}
+# for rnum in {011182,011183,011188,011189}
+# for rnum in {011190,011191,011193,011194,011197,011198,011199}
+for rnum in {011206,011207,011210,011211,011212,011213,011214,011215,011218,011220,011221,011222,011223,011224}
+# for rnum in 011093
+# for rnum in 006164
+
+
+# for rnum in $1
+
+do 
+
+# clas12-workflow.py [-h] [--runGroup NAME] [--tag NAME] [--model NAME] [--inputs PATH] [--runs RUN/PATH] [--outDir PATH] [--decDir PATH] [--workDir PATH] [--logDir PATH] [--coatjava PATH] [--clara PATH] [--threads #] [--reconYaml PATH] [--trainYaml PATH] [--claraLogDir PATH] [--phaseSize #] [--mergeSize #] [--trainSize #] [--torus #.#] [--solenoid #.#] [--fileRegex REGEX]                [--config PATH] [--defaults] [--show] [--submit] [--version]
+
+# rm -f /cache/clas12/rg-b/production/decoded/6b.4.0/config.json /work/clas12/rg-b/production/recon/pass0/v17/recon/config.json 
+#rm -f rgb-decrec-v17_R11014.json
+
+tag=v17
+clas12-workflow.py --runGroup rgb --tag ${tag} --model decrec --inputs "/cache/clas12/rg-b/data/clas_*$rnum" --runs $rnum --outDir /work/clas12/rg-b/production/recon/pass0/${tag} --decDir /cache/clas12/rg-b/production/decoded/${coatjava_decode} --clara /group/clas12/packages/clara/${clara}_${coatjava_cook} --coatjava /group/clas12/packages/clara/${clara}_${coatjava_decode}/plugins/clas12 --reconYaml /work/clas12/rg-b/clas12_cooking_rgb/rgb_mon_pass0v17_20191204.yaml --submit
+
+# tag=v18
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model decrecana --inputs "/mss/clas12/rg-b/data/clas_*$rnum" --runs $rnum --outDir /work/clas12/rg-b/production/recon/pass0/${tag} --decDir /cache/clas12/rg-b/production/decoded/${coatjava_decode} --clara /group/clas12/packages/clara/${clara}_${coatjava_cook} --coatjava /group/clas12/packages/clara/${clara}_${coatjava_decode}/plugins/clas12 --reconYaml /work/clas12/rg-b/clas12_cooking_rgb/rgb_calib_pass0v18_20191215.yaml --trainYaml /work/clas12/rg-b/clas12_cooking_rgb/train_calib.yaml --submit
+
+# tag=v18
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model recana --inputs /cache/clas12/rg-b/production/decoded/${coatjava_decode}/$rnum --runs $rnum --outDir /work/clas12/rg-b/production/recon/pass0/${tag}  --clara /group/clas12/packages/clara/${clara}_${coatjava_cook} --reconYaml /work/clas12/rg-b/clas12_cooking_rgb/rgb_calib_pass0v18_20191215.yaml --trainYaml /work/clas12/rg-b/clas12_cooking_rgb/train_calib.yaml --submit
+# ===========================
+
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model rec --inputs /home/clas12-1/files --runs $rnum --outDir /work/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara}_${coatjava} --reconYaml /work/clas12/rg-b/clas12_cooking_rgb/rgb_mon_pass0v17_20191204.yaml --submit
+
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model rec --inputs "/cache/clas12/rg-b/production/decoded/${coatjava}/$rnum/*.0004*" --runs $rnum --outDir /work/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara}_${coatjava} --reconYaml /work/clas12/rg-b/clas12_cooking_rgb/rgb_mon_pass0v17_20191204.yaml --submit
+
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model decrec --inputs /mss/clas12/rg-b/data/clas_*$rnum --runs $rnum --outDir /work/clas12/rg-b/production/recon/pass0/${tag} --decDir /cache/clas12/rg-b/production/decoded/${coatjava} --clara /group/clas12/packages/clara/${clara}_${coatjava} --reconYaml /work/clas12/rg-b/clas12_cooking_rgb/rgb_mon_pass0v17_20191204.yaml --solenoid -1.0 --torus 1.0 --submit
+
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model decrec --inputs "/cache/clas12/rg-b/data/clas_*$rnum/*.0004*" --runs $rnum --outDir /work/clas12/rg-b/production/recon/pass0/${tag} --decDir /cache/clas12/rg-b/production/decoded/${coatjava} --clara /group/clas12/packages/clara/${clara}_${coatjava} --reconYaml /work/clas12/rg-b/clas12_cooking_rgb/rgb_mon_pass0v17_20191204.yaml --submit
+
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model ana --inputs /work/clas12/rg-b/production/recon/pass0/${tag}/calib/unfiltered/$rnum --runs $rnum --outDir /work/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara}_${coatjava} --trainYaml /work/clas12/rg-b/clas12_cooking_rgb/train_calib.yaml --submit
+
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model ana --inputs /work/clas12/rg-b/production/recon/pass0/${tag}/recon/$rnum --runs $rnum --outDir /work/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara}_${coatjava} --trainYaml /work/clas12/rg-b/clas12_cooking_rgb/train_trigger.yaml --submit
+
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model decrecana --inputs "/mss/clas12/rg-b/data/clas_*$rnum" --runs $rnum --outDir /work/clas12/rg-b/production/recon/pass0/${tag} --decDir /cache/clas12/rg-b/production/decoded/${coatjava} --clara /group/clas12/packages/clara/${clara}_${coatjava} --reconYaml /work/clas12/rg-b/clas12_cooking_rgb/rgb_calib_pass0v17_20191204.yaml --trainYaml /work/clas12/rg-b/clas12_cooking_rgb/train_calib.yaml --solenoid -1.0 --torus 1.0 --submit
+
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model decrecana --inputs "/mss/clas12/rg-b/data/clas_*$rnum" --runs $rnum --outDir /work/clas12/rg-b/production/recon/pass0/${tag} --decDir /cache/clas12/rg-b/production/decoded/${coatjava} --clara /group/clas12/packages/clara/${clara}_${coatjava} --reconYaml /work/clas12/rg-b/clas12_cooking_rgb/rgb_mon_pass0v17_20191204.yaml --trainYaml /work/clas12/rg-b/clas12_cooking_rgb/train_calib.yaml --solenoid -1.0 --torus 1.0 --submit
+
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model decrecana --inputs "/cache/clas12/rg-b/data/clas_*$rnum" --runs $rnum --outDir /work/clas12/rg-b/production/recon/pass0/${tag} --decDir /cache/clas12/rg-b/production/decoded/${coatjava} --clara /group/clas12/packages/clara/${clara}_${coatjava} --reconYaml /work/clas12/rg-b/clas12_cooking_rgb/rgb_mon_pass0v17_20191204.yaml --trainYaml /work/clas12/rg-b/clas12_cooking_rgb/train_calib.yaml --submit
+
+
+# CRITICAL [CLAS12Jobs     ] Configuration conflicts with /cache/clas12/rg-b/production/decoded/6b.4.0/config.json
+
+# If you don't specify --coatjava, it will use the one in --clara.
+
+# --workDir /work/clas12/rg-b/clas12_clara${clara}_coatjava${coatjava} 
+
+# clas12-workflow.py --runGroup rga --model dec --runs 4013,4014 --inputs /mss/clas12/rg-a/data --outDir /volatile/clas12/rg-a/test
+
+# get 0004 file on cache correct, but output name as 0000
+# possible fix from Nathan, i.e. move the 4 right by one character to be inside the parentheses
+# Or, more generally, probably "\.(0*4\d)$" should give files 40-49 regardless of how many left-buffered zeroes there are.
+
+# swif import -file jobs/rgb-decode-${coatjava}_R${rnum}x1.json
+# swif import -slurm -file jobs/rgb-decode-${coatjava}_R${rnum}x1.json
+
+# swif run -workflow rgb-decode-${coatjava}_R${rnum}x1
+
+# ./scripts/swif-status.py --retry --workflow rgb-decode-${coatjava}_R${rnum}x1_x1200
+
+# do  echo $xx;
+done

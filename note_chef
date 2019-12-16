@@ -3,8 +3,17 @@ refer to
 https://github.com/baltzell/clas12-workflow
 $CLAS12WFLOW/README.md
 
-module load workflow
+module load workflow/0.5
 clas12-workflow.py -h
+
+when we need to pause jobs
+****************************
+swif pause -workflow asdf
+crontab -r
+jkill 0
+...­ wait until disaster is gone ...
+swif run -workflow asdf or crontab swif.cron
+****************************
 
 check rcdb
 python $CLAS12WFLOW/lib/clas12/RcdbManager.py 11014
@@ -37,6 +46,43 @@ crontab swif.cron to install it and it will retry all jobs every 30m
 crontab -e to edit
 crontab -l to list
 crontab -r to remove
+
+== filter and merge ==================================================
+
+remove old file first! otherwise it will be appended!!!!!
+
+trigger skim
+hipo-utils -filter -b "RUN::config,REC::Particle,REC::Calorimeter,REC::Cherenkov,RAW::vtp" -e "RAW::vtp" -merge -o out.hipo input.hipos
+
+DC:
+hipo-utils -filter -b "RUN::config,TimeBasedTrkg::TBHits,TimeBasedTrkg::TBSegments" -e "TimeBasedTrkg::TBHits" -merge -o output.hipo skim6*hipo
+
+
+FTOF:
+hipo-utils -filter -b "RUN::rf,RUN::config,REC::Event,REC::Particle,REC::Track,REC::Scintillator,FTOF::adc,FTOF::tdc,FTOF::hits,TimeBasedTrkg::TBTracks" -e "TimeBasedTrkg::TBTracks" -merge -o output.hipo skim6*hipo
+
+HTCC:
+hipo-utils -filter -b "RUN::rf,RUN::config,REC::Event,REC::Particle,REC::Track,REC::Scintillator,REC::Cherenkov,HTCC::.*" -e "HTCC::rec" -merge -o output.hipo skim6*hipo
+
+CTOF:
+hipo-utils -filter -b "RUN::rf,RUN::config,REC::Event,REC::Particle,REC::Track,REC::Scintillator,CTOF::hits,CTOF::adc,CTOF::tdc,CVTRec::Tracks" -e "CVTRec::Tracks" -merge -o output.hipo input*.hipo
+
+CND:
+hipo-utils -filter -b "RUN::config,CND::adc,CND::tdc,CND::hits,REC::Event,CVTRec::Tracks" -e "CND::hits" -merge -o output.hipo input*.hipo
+
+FT:
+hipo-utils -filter -b "RUN::config,REC::Event,REC::Particle,FT::particles,FTCAL::adc,FTCAL::hits,FTCAL::clusters,FTHODO::adc,FTHODO::hits,FTHODO::clusters" -e "FTCAL::clusters" -merge -o output.hipo input*.hipo
+
+BAND:
+hipo-utils -filter -b "RUN::config,REC::Event,REC::Particle,REC::Calorimeter,REC::Scintillator,REC::Track,REC::Traj,BAND::hits,BAND::tdc,BAND::adc" -e "BAND::hits" -merge -o output.hipo input*.hipo 
+
+RF:
+hipo-utils -filter -b "RF::tdc,RF::adc,RUN::rf,REC::Particle,REC::Scintillator,RUN::config" -e "RUN::config" -merge -o output.hipo input*.hipo
+
+DST:
+hipo-utils -filter -b "REC::Event,REC::Particle,REC::Calorimeter,REC::Scintillator,REC::Cherenkov,REC::Track,REC::Traj,REC::ForwardTagger,REC::CovMat,RICH::tdc,BAND::hits,CND::hits" -e "REC::Event" -merge -o output.hipo input*.hipo
+
+
 
 == access clas online data =============================================================
 (do this only when data mover is not working or too slow)
@@ -175,6 +221,10 @@ They have to match what is defined in gcard by "SCALE_FIELD" option when evio fi
 #decode raw data
 $CLARA_HOME/plugins/clas12/bin/decoder -t -1 -s -1 -o /work/clas12/rg-b/production/decoded/v1/006141/clas_006141.evio.00001.hipo /work/clas12/rg-b/data/clas_006141/clas_006141.evio.00001
 
+/cache/clas12/rg-b/data/clas_pin_011077/clas_pin_011077.evio.00001
+
+$CLARA_HOME/plugins/clas12/bin/decoder -t 1 -s -1 -o clas_006141.evio.00001.hipo /cache/clas12/rg-b/data/clas_pin_011077/clas_pin_011077.evio.00001
+
 ls -l && rm -f in.evio && /bin/dd bs=1M if=/cache/clas12/rg-b/data/clas_006233/clas_006233.evio.00037 of=in.evio && unalias -a ; /work/clas12/rg-b/clas12_clara4.3.9_coatjava6b.1.1/clara/plugins/clas12/bin/decoder -c 2 -s -1.0000 -t -1.0000 -o out.hipo in.evio && ls out.hipo && /work/clas12/rg-b/clas12_clara4.3.9_coatjava6b.1.1/clara/plugins/clas12/bin/hipo-utils -test out.hipo || rm -f out.hipo && ls out.hipo
 
 for filenum in {40..49}; do /work/clas12/rg-b/clas12_clara4.3.5_coatjava5b.7.8/clara/plugins/clas12/bin/decoder -t -1 -s -1 -o /cache/clas12/rg-b/production/decoded/v1/00$rnum/clas_00
@@ -197,6 +247,10 @@ by default it find all find under input
 
 
 == skim ===================================
+clara1601.jlab.org and clara1602.jlab.org can be used for this
+
+source /group/clas12/packages/setup.csh 
+module load coatjava/6b.4.0
 
 > common tasks always have this line there:
 >
