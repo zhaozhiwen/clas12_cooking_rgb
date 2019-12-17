@@ -11,8 +11,9 @@ pass0v1 cooking during Spring 2019 run
 == pass0v18  ==============================================================
 by Zhiwen Zhao, 2019/12
 
+using clas12-workflow/0.5
 decode by coatjava6b.4.0
-cooking by clara4.3.11 and coatjava 6b.4.1
+cooking by clara4.3.11 and coatjava6b.4.1
 
 schema 
 bankSplit_6b.4.0_20191204.py
@@ -32,8 +33,10 @@ some are default, some are rga_fall2018
 == pass0v17  ==============================================================
 by Zhiwen Zhao, during data taking from 2019/12 to 2020/01
 
+use clas12-workflow/0.4 and clas12-workflow/0.5
 decode by coatjava6b.4.0
-cooking by clara4.3.11 and coatjava 6b.4.0 and coatjava 6b.4.1
+cook by clara4.3.11 and coatjava6b.4.0 for runs before 011200
+cook by clara4.3.11 and coatjava6b.4.1 for runs after  011200
 
 schema 
 bankSplit_6b.4.0_20191204.py
