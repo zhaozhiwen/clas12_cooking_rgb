@@ -1,4 +1,4 @@
-pass0v18 latest hipo4 cooking for Fall 2019 run
+pass0v19 latest hipo4 cooking for Fall 2019 run
 
 pass0v16 latest hipo4 cooking for Spring 2019 run
 
@@ -7,6 +7,30 @@ pass0v5  latest hipo3 cooking for Spring 2019 run
 pass0v17 cooking during Fall 2019 run
 
 pass0v1 cooking during Spring 2019 run
+
+== pass0v19  ==============================================================
+by Zhiwen Zhao, 2019/12
+
+variation "rga_fall2018" has updated in CCDB on 12/17 by Raffaella with new alignment and new end-plates bow parameters.
+Just relevant for rga, also the beam offset has been updated for the run range around 5038
+
+using clas12-workflow/0.5
+decode by coatjava6b.4.0
+cooking by clara4.3.11 and coatjava6b.4.1
+
+schema 
+bankSplit_6b.4.0_20191204.py
+  # copy the file from /group/clas12/packages/clara/4.3.11_6b.4.0/plugins/clas12/etc/bankdefs/util/bankSplit.py
+  #new dst schema will add "BAND::adc","BAND::tdc","BAND::hits","CND::hits"
+
+yaml 
+rgb_calib_pass0v19_20191218.yaml
+
+timestamp in yaml
+all services, timestamp: 12/18/2019-11:00:00
+
+variation in yaml
+some are default, some are rga_fall2018
 
 == pass0v18  ==============================================================
 by Zhiwen Zhao, 2019/12
@@ -21,7 +45,6 @@ bankSplit_6b.4.0_20191204.py
   #new dst schema will add "BAND::adc","BAND::tdc","BAND::hits","CND::hits"
 
 yaml 
-rgb_mon_pass0v18_20191215.yaml
 rgb_calib_pass0v18_20191215.yaml
 
 timestamp in yaml

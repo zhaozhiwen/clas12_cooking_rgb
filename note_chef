@@ -14,12 +14,11 @@ jkill 0
 ...­ wait until disaster is gone ...
 swif run -workflow asdf or crontab swif.cron
 ****************************
-
 check rcdb
 python $CLAS12WFLOW/lib/clas12/RcdbManager.py 11014
 
 import
-swif import -file jobs/rgb_decode_R6223x1_x1200.json
+swif import -file rgb_decode_R6223x1_x1200.json
 
 run
 swif run -workflow rgb_decode_R6223x1_x1200
@@ -50,6 +49,7 @@ crontab -r to remove
 == filter and merge ==================================================
 
 remove old file first! otherwise it will be appended!!!!!
+hipo-utils won't give warning if any bank name is wrong, it simply ignore the bank!!!
 
 trigger skim
 hipo-utils -filter -b "RUN::config,REC::Particle,REC::Calorimeter,REC::Cherenkov,RAW::vtp" -e "RAW::vtp" -merge -o out.hipo input.hipos
@@ -298,3 +298,19 @@ cp /group/clas12/packages/clara/4.3.11_6b.4.0/plugins/clas12/etc/bankdefs/util/b
 edit bankSplit_6b.4.0_20191204.py
 cp /group/clas12/packages/clara/4.3.11_6b.4.0/plugins/clas12/etc/bankdefs/hipo4/* hipo4_6b.4.0_20191204
 python bankSplit_6b.4.0_20191204.py hipo4_6b.4.0_20191204
+
+=== yaml trick =============================================
+
+To simplify things, you can use rga_fall2018 everywhere. This variation has default as a parent and differs for default only for DC,FTOF,ECAL geometries, target position and beam offsets. If you specify rga_fall2018 for other services as FT for example, it would be equivalent to use default.
+>
+> Does a combination of variation and timestamp completely determine a cooking condition in CCDB?
+> Only one of them can'st?
+If you specify only the timestamp, the code will use default as variation, which is not good for real data reconstruction because of geometry. If you specify a variation, you still want to specify a timestamp to freeze the constants that will be read from that variation. However there is one more caveat because I think the timestamp is applied only to the calibration constants and not to the geometry constants. If you point me to a log file, I can verify that.
+
+> If I starting cooking now using an old timestamp, will I use old content of Rga_fall2018?
+With the exception of geometry constants. See above.
+Best regards,
+	Raffaella
+
+
+yaml file is pick
