@@ -77,17 +77,17 @@ configuration:
 #       forward: 11:X+:X-:Xn
 #       tagger: X+:X-:Xn
 #       central: 45:X+:X-:Xn
-#################################################### INCLUSIVE
-#     INCLUSIVE1:
-#       id: 4
-#       forward: 11:X+:X-:Xn
-#       tagger: X+:X-:Xn
-#       central: X+:X-:Xn
-#     INCLUSIVE2:
-#       id: 4
-#       forward: -11:X+:X-:Xn
-#       tagger: X+:X-:Xn
-#       central: X+:X-:Xn
+#################################################### INCLUSIVE and BAND
+    INCLUSIVE1:
+      id: 4
+      forward: 11:X+:X-:Xn
+      tagger: X+:X-:Xn
+      central: X+:X-:Xn
+    INCLUSIVE2:
+      id: 4
+      forward: -11:X+:X-:Xn
+      tagger: X+:X-:Xn
+      central: X+:X-:Xn
 #################################################### DIS
 #    DIS:
 #      id: 5

@@ -54,31 +54,6 @@ hipo-utils won't give warning if any bank name is wrong, it simply ignore the ba
 trigger skim
 hipo-utils -filter -b "RUN::config,REC::Particle,REC::Calorimeter,REC::Cherenkov,RAW::vtp" -e "RAW::vtp" -merge -o out.hipo input.hipos
 
-DC:
-hipo-utils -filter -b "RUN::config,TimeBasedTrkg::TBHits,TimeBasedTrkg::TBSegments" -e "TimeBasedTrkg::TBHits" -merge -o output.hipo skim6*hipo
-
-
-FTOF:
-hipo-utils -filter -b "RUN::rf,RUN::config,REC::Event,REC::Particle,REC::Track,REC::Scintillator,FTOF::adc,FTOF::tdc,FTOF::hits,TimeBasedTrkg::TBTracks" -e "TimeBasedTrkg::TBTracks" -merge -o output.hipo skim6*hipo
-
-HTCC:
-hipo-utils -filter -b "RUN::rf,RUN::config,REC::Event,REC::Particle,REC::Track,REC::Scintillator,REC::Cherenkov,HTCC::.*" -e "HTCC::rec" -merge -o output.hipo skim6*hipo
-
-CTOF:
-hipo-utils -filter -b "RUN::rf,RUN::config,REC::Event,REC::Particle,REC::Track,REC::Scintillator,CTOF::hits,CTOF::adc,CTOF::tdc,CVTRec::Tracks" -e "CVTRec::Tracks" -merge -o output.hipo input*.hipo
-
-CND:
-hipo-utils -filter -b "RUN::config,CND::adc,CND::tdc,CND::hits,REC::Event,CVTRec::Tracks" -e "CND::hits" -merge -o output.hipo input*.hipo
-
-FT:
-hipo-utils -filter -b "RUN::config,REC::Event,REC::Particle,FT::particles,FTCAL::adc,FTCAL::hits,FTCAL::clusters,FTHODO::adc,FTHODO::hits,FTHODO::clusters" -e "FTCAL::clusters" -merge -o output.hipo input*.hipo
-
-BAND:
-hipo-utils -filter -b "RUN::config,REC::Event,REC::Particle,REC::Calorimeter,REC::Scintillator,REC::Track,REC::Traj,BAND::hits,BAND::tdc,BAND::adc" -e "BAND::hits" -merge -o output.hipo input*.hipo 
-
-RF:
-hipo-utils -filter -b "RF::tdc,RF::adc,RUN::rf,REC::Particle,REC::Scintillator,RUN::config" -e "RUN::config" -merge -o output.hipo input*.hipo
-
 DST:
 hipo-utils -filter -b "REC::Event,REC::Particle,REC::Calorimeter,REC::Scintillator,REC::Cherenkov,REC::Track,REC::Traj,REC::ForwardTagger,REC::CovMat,RICH::tdc,BAND::hits,CND::hits" -e "REC::Event" -merge -o output.hipo input*.hipo
 

@@ -28,6 +28,8 @@ rgb_calib_pass0v19_20191218.yaml
 
 timestamp in yaml
 all services, timestamp: 12/18/2019-11:00:00
+only calibration constants use timestamp
+geometry constant use latest which is 12/18/2019
 
 variation in yaml
 some are default, some are rga_fall2018
