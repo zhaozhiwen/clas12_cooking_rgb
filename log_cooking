@@ -1,15 +1,70 @@
-pass0v19 latest hipo4 cooking for Fall 2019 run
+pass0v19.x latest calibration cooking
 
-pass0v16 latest hipo4 cooking for Spring 2019 run
+pass0v16 latest hipo4 cooking for Spring 2019 run, used for DNP2019
 
 pass0v5  latest hipo3 cooking for Spring 2019 run
 
+pass0v20 cooking during Spring 2020 run
 pass0v17 cooking during Fall 2019 run
-
 pass0v1 cooking during Spring 2019 run
 
-== pass0v19  ==============================================================
+== pass0v20  ==============================================================
+by Zhiwen Zhao, during data taking in 2020/01
+
+use clas12-workflow/dev
+decode by coatjava6b.4.0
+cook by clara4.3.12 and coatjava6b.4.1
+
+schema 
+bankSplit_6b.4.0_20191204.py
+  # copy the file from /group/clas12/packages/clara/4.3.11_6b.4.0/plugins/clas12/etc/bankdefs/util/bankSplit.py
+  #new dst schema will add "BAND::adc","BAND::tdc","BAND::hits","CND::hits"
+
+yaml 
+rgb_mon_pass0v20_20200108.yaml
+
+timestamp in yaml
+all services, default, which means latest at run time
+
+variation in yaml
+some are default, some are rga_fall2018
+ 
+== pass0v19.2  ==============================================================
+by Zhiwen Zhao, 2020/01
+
+calibration cooking 
+
+On 12/27 (see https://clasweb.jlab.org/cgi-bin/ccdb/versions?table=/calibration/ftof/time_walk_exp)
+Raffaella deleted and recreated the FTOF time_walk_exp CCDB table to add more columns as requested by Dan to give more flexibility to the time-walk correction function.
+Dan completed the FTOF calibrations for the recently cooked runs 6164, 11019, and 11093
+with reconstruction tag 6b.4.1 and uploaded the constants to 
+ccdb. I made a corresponding entry in clas12calib (see https://logbooks.jlab.org/entry/3757437).
+run 6164 is used to cover range 6150-6603 as 1/6/2020
+
+using clas12-workflow/dev
+decode by coatjava6b.4.0
+cooking by clara4.3.12 and coatjava6b.4.1
+
+schema 
+bankSplit_6b.4.0_20191204.py
+  # copy the file from /group/clas12/packages/clara/4.3.11_6b.4.0/plugins/clas12/etc/bankdefs/util/bankSplit.py
+  #new dst schema will add "BAND::adc","BAND::tdc","BAND::hits","CND::hits"
+
+yaml 
+rgb_calib_pass0v19.2_20200106.yaml
+
+timestamp in yaml
+all services, timestamp: 01/06/2020-11:00:00
+only calibration constants use timestamp
+geometry constant use latest
+
+variation in yaml
+some are default, some are rga_fall2018
+
+== pass0v19.1  ==============================================================
 by Zhiwen Zhao, 2019/12
+
+calibration cooking
 
 variation "rga_fall2018" has updated in CCDB on 12/17 by Raffaella with new alignment and new end-plates bow parameters.
 Just relevant for rga, also the beam offset has been updated for the run range around 5038
@@ -24,7 +79,7 @@ bankSplit_6b.4.0_20191204.py
   #new dst schema will add "BAND::adc","BAND::tdc","BAND::hits","CND::hits"
 
 yaml 
-rgb_calib_pass0v19_20191218.yaml
+rgb_calib_pass0v19.1_20191218.yaml
 
 timestamp in yaml
 all services, timestamp: 12/18/2019-11:00:00
@@ -34,8 +89,10 @@ geometry constant use latest which is 12/18/2019
 variation in yaml
 some are default, some are rga_fall2018
 
-== pass0v18  ==============================================================
+== pass0v18.1  ==============================================================
 by Zhiwen Zhao, 2019/12
+
+calibration cooking 
 
 using clas12-workflow/0.5
 decode by coatjava6b.4.0
@@ -47,7 +104,7 @@ bankSplit_6b.4.0_20191204.py
   #new dst schema will add "BAND::adc","BAND::tdc","BAND::hits","CND::hits"
 
 yaml 
-rgb_calib_pass0v18_20191215.yaml
+rgb_calib_pass0v18.1_20191215.yaml
 
 timestamp in yaml
 all services, timestamp: 12/15/2019-11:00:00
@@ -56,7 +113,7 @@ variation in yaml
 some are default, some are rga_fall2018
 
 == pass0v17  ==============================================================
-by Zhiwen Zhao, during data taking from 2019/12 to 2020/01
+by Zhiwen Zhao, during data taking in 2019/12
 
 use clas12-workflow/0.4 and clas12-workflow/0.5
 decode by coatjava6b.4.0
@@ -79,6 +136,8 @@ variation in yaml
 some are default, some are rga_fall2018
 == pass0v16  ==============================================================
 by Zhiwen Zhao, in 2019/09
+
+used for DNP 2019 presentation
 
 same software like v15
 FTCAL energy calibrations

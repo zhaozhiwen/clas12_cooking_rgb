@@ -1,10 +1,13 @@
 ====do everything with clas12-workflow =============================================
 refer to 
 https://github.com/baltzell/clas12-workflow
-$CLAS12WFLOW/README.md
 
 module load workflow/0.5
+module load workflow/dev
+
+more $CLAS12WFLOW/README.md
 clas12-workflow.py -h
+
 
 when we need to pause jobs
 ****************************
@@ -142,6 +145,9 @@ source /group/clas12/packages/setup.csh
 module load coatjava/6b.4.0
 setenv CLARA_USER_DATA /work/clas12/rg-b/clas12_clara4.3.11_coatjava6b.4.0
 cd $CLARA_USER_DATA
+
+source /group/clas12/packages/setup.csh 
+module load coatjava/6b.4.1
 
 $CLARA_HOME/bin/clara-shell /work/clas12/rg-b/clas12_cooking_rgb/script.clara_farm
 
