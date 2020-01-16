@@ -6,37 +6,30 @@ io-services:
     class: org.jlab.jnp.grapes.io.HipoFrameWriter
     name: HipoFrameWriter
 services:
-#################################################### JPSI/TCS
-  - class: org.jlab.jnp.grapes.services.JpsiTcsWagon
-    name: JPSITCS
-#################################################### nDVCS
+#################################################### RF
   - class: org.jlab.jnp.grapes.services.GenericWagon
-    name: nDVCS1
+    name: RF
+#################################################### DC
   - class: org.jlab.jnp.grapes.services.GenericWagon
-    name: nDVCS2
+    name: DCm
   - class: org.jlab.jnp.grapes.services.GenericWagon
-    name: nDVCS3
-#################################################### eDeut
+    name: DCp
+#################################################### FTOF
   - class: org.jlab.jnp.grapes.services.GenericWagon
-    name: eDeut1
+    name: FTOFm
   - class: org.jlab.jnp.grapes.services.GenericWagon
-    name: eDeut2
-#################################################### INCLUSIVE
+    name: FTOFp
+#################################################### HTCC
   - class: org.jlab.jnp.grapes.services.GenericWagon
-    name: INCLUSIVE1
+    name: HTCCm
   - class: org.jlab.jnp.grapes.services.GenericWagon
-    name: INCLUSIVE2
-#################################################### DIS
-#  - class: org.jlab.jnp.grapes.services.DISWagon
-#    name: DIS
-#################################################### FTOF_HTCC
+    name: HTCCp
+#################################################### CTOF
   - class: org.jlab.jnp.grapes.services.GenericWagon
-    name: FTOF_HTCCm
+    name: CTOF
+#################################################### CND
   - class: org.jlab.jnp.grapes.services.GenericWagon
-    name: FTOF_HTCCp
-#################################################### CTOF_CND
-  - class: org.jlab.jnp.grapes.services.GenericWagon
-    name: CTOF_CND
+    name: CND
 #################################################### FT
   - class: org.jlab.jnp.grapes.services.GenericWagon
     name: FTp
@@ -44,78 +37,70 @@ services:
     name: FTm
   - class: org.jlab.jnp.grapes.services.GenericWagon
     name: FTn
+#################################################### BAND
+  - class: org.jlab.jnp.grapes.services.GenericWagon
+    name: BAND
 ####################################################
 configuration:
+  io-services:
+    writer:
+      compression: 2
+      filter: 1-RUN::config,RUN::rf,RF::.*,REC::Event,REC::Particle,REC::Scintillator-5-RUN::config,TimeBasedTrkg::TBHits,TimeBasedTrkg::TBSegments-6-RUN::rf,RUN::config,REC::Event,REC::Particle,REC::Track,REC::Scintillator,FTOF::*,TimeBasedTrkg::TBTracks-7-RUN::rf,RUN::config,REC::Event,REC::Particle,REC::Track,REC::Scintillator,REC::Cherenkov,REC::Traj,HTCC::.*-8-RUN::rf,RUN::config,REC::Event,REC::Particle,REC::Track,REC::Scintillator,CTOF::*,CVTRec::Tracks-9-RUN::config,REC::Event,CVTRec::Tracks,CND::*-10-RUN::config,REC::Event,REC::Particle,FT::particles,FTCAL::*,FTHODO::*-11-RUN::config,REC::Event,REC::Particle,REC::Calorimeter,REC::Scintillator,REC::Track,REC::Traj,BAND::*,RUN::scaler
   services:
-#################################################### JPSI/TCS
-#     JPSITCS:
-#       id: 1
-#################################################### nDVCS
-#     nDVCS1:
-#       id: 2
-#       forward: 11:Xn
-#       tagger: Xn
-#       central: Xn
-#     nDVCS2:
-#       id: 2
-#       forward: 11:2212:Xn
-#       tagger: Xn
-#       central: Xn
-#     nDVCS3:
-#       id: 2
-#       forward: 11:Xn
-#       tagger: Xn
-#       central: 2212:Xn
-#################################################### eDeut
-#     eDeut1:
-#       id: 3
-#       forward: 11:45:X+:X-:Xn
-#       tagger: X+:X-:Xn
-#       central: X+:X-:Xn
-#     eDeut2:
-#       id: 3
-#       forward: 11:X+:X-:Xn
-#       tagger: X+:X-:Xn
-#       central: 45:X+:X-:Xn
-#################################################### INCLUSIVE and BAND
-    INCLUSIVE1:
-      id: 4
-      forward: 11:X+:X-:Xn
-      tagger: X+:X-:Xn
-      central: X+:X-:Xn
-    INCLUSIVE2:
-      id: 4
-      forward: -11:X+:X-:Xn
-      tagger: X+:X-:Xn
-      central: X+:X-:Xn
-#################################################### DIS
-#    DIS:
-#      id: 5
-#################################################### FTOF_HTCC
-    FTOF_HTCCm:
+#################################################### RF
+    RF:
+      id: 1
+      forward: 11:X+:X-:Xn  
+#################################################### DC
+    DCm:
+      id: 5
+      forward: 1-:11:X+:X-:Xn
+    DCp:
+      id: 5
+      forward: 1+:11:X+:X-:Xn  
+#################################################### FTOF
+    FTOFm:
       id: 6
       forward: 1-:11:X+:X-:Xn
-    FTOF_HTCCp:
+    FTOFp:
       id: 6
       forward: 1+:11:X+:X-:Xn
-#################################################### CTOF_CND
-    CTOF_CND:
+#################################################### HTCC
+    HTCCm:
       id: 7
+      forward: 1-:11:X+:X-:Xn
+    HTCCp:
+      id: 7
+      forward: 1+:11:X+:X-:Xn
+#################################################### CTOF
+    CTOF:
+      id: 8
+      forward: 11:X+:X-:Xn
+      central: 1-:X+:X-:Xn
+#################################################### CND
+    CND:
+      id: 9
       forward: 11:X+:X-:Xn
       central: 1-:X+:X-:Xn
 #################################################### FT
     FTp:
-      id: 8
+      id: 10
       forward: 11:X+:X-:Xn
       tagger: 1+:X+:X-:Xn
     FTm:
-      id: 8
+      id: 10
       forward: 11:X+:X-:Xn
       tagger: 1-:X+:X-:Xn
     FTn:
-      id: 8
+      id: 10
       forward: 11:X+:X-:Xn
       tagger: 1n:X+:X-:Xn
+#################################################### BAND
+    BAND:
+      id: 11
+      forward: 11:X+:X-:Xn
+      tagger: X+:X-:Xn
+      central: X+:X-:Xn
 
 mime-types:
   - binary/data-hipo-frame

@@ -2,9 +2,8 @@
 
 # if ($1==NULL) return;
 
-# source /group/clas12/packages/setup.csh 
 source /group/clas12/packages/setup.sh 
-module load coatjava/6b.4.0
+module load coatjava/6b.4.1
 
 # export JAVA_HOME=/apps/scicomp/java/x64/jdk1.8;
 # export PATH=$JAVA_HOME/bin:$PATH;
@@ -19,13 +18,10 @@ MALLOC_ARENA_MAX=1;
 export MALLOC_ARENA_MAX
 
 # export dir=/work/clas12/rg-b/production/recon/pass0/v17/recon
-export dir=/work/clas12/rg-b/production/recon/pass0/v17/train
-# export dir=/work/clas12/rg-b/production/recon/pass0/v17/mon
+# export dir=/work/clas12/rg-b/production/recon/pass0/v17/train
+export dir=/work/clas12/rg-b/production/recon/pass0/v17/mon/recon
 # echo $dir
 
-mkdir $dir/$1_skim-e
-# mkdir $dir/$1_skim-e_newnew
-# mkdir $dir/$1_skim-trackpairs
 
 #for xx in `ls $1 | grep 00001`  
 #do echo $xx;
@@ -41,15 +37,19 @@ mkdir $dir/$1_skim-e
 # for xx in `ls $dir/$1 | grep "0001[5-6].hipo"`
 # do java -DCLAS12DIR="$COATJAVA" -cp "$COATJAVA/lib/clas/*:$COATJAVA/lib/utils/*:." filter_pid11 $dir/$1/$xx $dir/$1_skim-e_newnew/skim-e_$xx
 
-
-# for xx in `ls $dir/$1 | grep "mon" |grep "evio.00"` 
+mkdir $dir/$1_skim-e
+# for xx in `ls $dir/$1 |grep "evio.0000"` 
 # for xx in `ls $dir/$1 | grep "mon" |grep "evio.01"` 
 for xx in `ls $dir/$1`
 do java -DCLAS12DIR="$COATJAVA" -cp "$COATJAVA/lib/clas/*:$COATJAVA/lib/utils/*:." filter_pid11 $dir/$1/$xx $dir/$1_skim-e/skim-e_$xx
 
-
+# mkdir $dir/$1_skim-trackpairs
 # for xx in `ls $dir/$1` 
 # do java -DCLAS12DIR="$COATJAVA" -cp "$COATJAVA/lib/clas/*:$COATJAVA/lib/utils/*:." filter_trackPairs $dir/$1/$xx $dir/$1_skim-trackpairs/skim-trackpairs_$xx
+
+# for xx in `ls ./ |grep 0` 
+# do hipo-utils -filter -b "RF::tdc,RF::adc,RUN::rf,REC::Particle,REC::Scintillator,RUN::config" -e "RUN::config" -merge -o calib_rf_$xx.hipo $xx/skim4*
+
 
 # `ls -lth 011050_skim-e/* | grep 101K | awk '{print $9}'`
 

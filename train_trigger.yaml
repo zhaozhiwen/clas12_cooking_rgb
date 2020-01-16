@@ -6,45 +6,45 @@ io-services:
     class: org.jlab.jnp.grapes.io.HipoFrameWriter
     name: HipoFrameWriter
 services:
-#################################################### JPSI/TCS
-  - class: org.jlab.jnp.grapes.services.JpsiTcsWagon
-    name: JPSITCS
-#################################################### nDVCS
-  - class: org.jlab.jnp.grapes.services.GenericWagon
-    name: nDVCS1
-  - class: org.jlab.jnp.grapes.services.GenericWagon
-    name: nDVCS2
-  - class: org.jlab.jnp.grapes.services.GenericWagon
-    name: nDVCS3
-#################################################### eDeut
-  - class: org.jlab.jnp.grapes.services.GenericWagon
-    name: eDeut1
-  - class: org.jlab.jnp.grapes.services.GenericWagon
-    name: eDeut2
+# #################################################### JPSI/TCS
+#   - class: org.jlab.jnp.grapes.services.JpsiTcsWagon
+#     name: JPSITCS
+# #################################################### nDVCS
+#   - class: org.jlab.jnp.grapes.services.GenericWagon
+#     name: nDVCS1
+#   - class: org.jlab.jnp.grapes.services.GenericWagon
+#     name: nDVCS2
+#   - class: org.jlab.jnp.grapes.services.GenericWagon
+#     name: nDVCS3
+# #################################################### eDeut
+#   - class: org.jlab.jnp.grapes.services.GenericWagon
+#     name: eDeut1
+#   - class: org.jlab.jnp.grapes.services.GenericWagon
+#     name: eDeut2
 #################################################### INCLUSIVE
   - class: org.jlab.jnp.grapes.services.GenericWagon
     name: INCLUSIVE1
   - class: org.jlab.jnp.grapes.services.GenericWagon
     name: INCLUSIVE2
 #################################################### DIS
-#  - class: org.jlab.jnp.grapes.services.DISWagon
-#    name: DIS
-#################################################### FTOF_HTCC
-  - class: org.jlab.jnp.grapes.services.GenericWagon
-    name: FTOF_HTCCm
-  - class: org.jlab.jnp.grapes.services.GenericWagon
-    name: FTOF_HTCCp
-#################################################### CTOF_CND
-  - class: org.jlab.jnp.grapes.services.GenericWagon
-    name: CTOF_CND
-#################################################### FT
-  - class: org.jlab.jnp.grapes.services.GenericWagon
-    name: FTp
-  - class: org.jlab.jnp.grapes.services.GenericWagon
-    name: FTm
-  - class: org.jlab.jnp.grapes.services.GenericWagon
-    name: FTn
-####################################################
+# #  - class: org.jlab.jnp.grapes.services.DISWagon
+# #    name: DIS
+# #################################################### FTOF_HTCC
+#   - class: org.jlab.jnp.grapes.services.GenericWagon
+#     name: FTOF_HTCCm
+#   - class: org.jlab.jnp.grapes.services.GenericWagon
+#     name: FTOF_HTCCp
+# #################################################### CTOF_CND
+#   - class: org.jlab.jnp.grapes.services.GenericWagon
+#     name: CTOF_CND
+# #################################################### FT
+#   - class: org.jlab.jnp.grapes.services.GenericWagon
+#     name: FTp
+#   - class: org.jlab.jnp.grapes.services.GenericWagon
+#     name: FTm
+#   - class: org.jlab.jnp.grapes.services.GenericWagon
+#     name: FTn
+# ####################################################
 configuration:
   services:
 #################################################### JPSI/TCS
@@ -83,11 +83,11 @@ configuration:
       forward: 11:X+:X-:Xn
       tagger: X+:X-:Xn
       central: X+:X-:Xn
-#     INCLUSIVE2:
-#       id: 4
-#       forward: -11:X+:X-:Xn
-#       tagger: X+:X-:Xn
-#       central: X+:X-:Xn
+    INCLUSIVE2:
+      id: 4
+      forward: -11:X+:X-:Xn
+      tagger: X+:X-:Xn
+      central: X+:X-:Xn
 #################################################### DIS
 #    DIS:
 #      id: 5
