@@ -95,6 +95,10 @@ configuration:
       id: 10
       forward: 11:X+:X-:Xn
       tagger: 1n:X+:X-:Xn
+    FTn:
+      id: 10
+      forward: 11:X+:X-:Xn
+      tagger: 2n:X+:X-:Xn      
 #################################################### BAND
     BAND:
       id: 11

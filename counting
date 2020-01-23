@@ -18,3 +18,8 @@ calib and mon space	34TB = (541*10*2.1+5000*1.1)*2
 
 refer to
 https://clasweb.jlab.org/wiki/images/7/7c/RGB_fall_summary.pdf
+
+
+Raw data files are always 2 GB, except the last one in a run.
+Reconstructed file size (and to a much, much lesser extent, decoded files) depend on what is in that 2 GB of EVIO.  e.g. random vs physics triggers, 5 nA vs 100 nA vs all beam trips, etc
+

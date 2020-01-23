@@ -2,8 +2,8 @@
 
 # for xx in `/site/scicomp/auger-slurm/bin/slurmJobs -u clas12-1 | grep 'Feb-10 03:' | awk '{print$1'}`; do /site/scicomp/auger-slurm/bin/jkill $xx; done
 
-for xx in `/site/scicomp/auger-slurm/bin/slurmJobs -u $USER | grep 'v20' | awk '{print$1'}`; 
-do /site/scicomp/auger-slurm/bin/jkill $xx; 
+for xx in `/site/scicomp/auger-slurm/bin/slurmJobs -u $USER | grep 'farm190' | awk '{print$1'}`; 
+do jkill $xx; 
 
 # for xx in `/site/bin/jobstat -u $USER | grep '6594p1' | awk '{print$1'}`; 
 # do /site/bin/jkill $xx; 

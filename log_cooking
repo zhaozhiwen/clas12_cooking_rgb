@@ -28,7 +28,41 @@ all services, default, which means latest at run time
 
 variation in yaml
 some are default, some are rga_fall2018
- 
+=====
+
+calib ft 
+run 011093 on 2020/01/20 https://logbooks.jlab.org/entry/3763386
+run 006164 on 2020/01/21 https://logbooks.jlab.org/entry/3763056
+
+
+== pass0v19.3  ==============================================================
+by Zhiwen Zhao, 2020/01
+
+calibration cooking 
+
+calib ftof 
+run 11328 on 2020/01/20 https://logbooks.jlab.org/entry/3767639
+
+using clas12-workflow/dev
+decode by coatjava6b.4.0
+cooking by clara4.3.12 and coatjava6b.4.1
+
+schema 
+bankSplit_6b.4.0_20191204.py
+  # copy the file from /group/clas12/packages/clara/4.3.11_6b.4.0/plugins/clas12/etc/bankdefs/util/bankSplit.py
+  #new dst schema will add "BAND::adc","BAND::tdc","BAND::hits","CND::hits"
+
+yaml 
+rgb_calib_pass0v19.3_20200120.yaml
+
+timestamp in yaml
+all services, timestamp: 01/20/2020-18:00:00
+only calibration constants use timestamp
+geometry constant use latest
+
+variation in yaml
+some are default, some are rga_fall2018
+
 == pass0v19.2  ==============================================================
 by Zhiwen Zhao, 2020/01
 
