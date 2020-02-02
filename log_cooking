@@ -35,7 +35,7 @@ run 011093 on 2020/01/20 https://logbooks.jlab.org/entry/3763386
 run 006164 on 2020/01/21 https://logbooks.jlab.org/entry/3763056
 
 
-== pass0v19.3  ==============================================================
+== pass0v19.2.1  ==============================================================
 by Zhiwen Zhao, 2020/01
 
 calibration cooking 
@@ -53,7 +53,7 @@ bankSplit_6b.4.0_20191204.py
   #new dst schema will add "BAND::adc","BAND::tdc","BAND::hits","CND::hits"
 
 yaml 
-rgb_calib_pass0v19.3_20200120.yaml
+rgb_calib_pass0v19.2.1_20200120.yaml
 
 timestamp in yaml
 all services, timestamp: 01/20/2020-18:00:00

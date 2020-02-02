@@ -67,7 +67,7 @@ hipo-utils -filter -b "REC::Event,REC::Particle,REC::Calorimeter,REC::Scintillat
 (do this only when data mover is not working or too slow)
 ssh hallgw
 login with PIN+passcode from the mobile app
-ssh clondaq6
+ssh clas@clondaq6
 cd /data/stage_in
 
 ==install clara and coatjava  ===========================
