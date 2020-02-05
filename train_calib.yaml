@@ -45,7 +45,7 @@ configuration:
   io-services:
     writer:
       compression: 2
-      filter: 1-RUN::config,RUN::rf,RF::.*,REC::Event,REC::Particle,REC::Scintillator-5-RUN::config,TimeBasedTrkg::TBHits,TimeBasedTrkg::TBSegments-6-RUN::rf,RUN::config,REC::Event,REC::Particle,REC::Track,REC::Scintillator,FTOF::*,TimeBasedTrkg::TBTracks-7-RUN::rf,RUN::config,REC::Event,REC::Particle,REC::Track,REC::Scintillator,REC::Cherenkov,REC::Traj,HTCC::.*-8-RUN::rf,RUN::config,REC::Event,REC::Particle,REC::Track,REC::Scintillator,CTOF::*,CVTRec::Tracks-9-RUN::config,REC::Event,CVTRec::Tracks,CND::*-10-RUN::config,REC::Event,REC::Particle,FT::particles,FTCAL::*,FTHODO::*-11-RUN::config,REC::Event,REC::Particle,REC::Calorimeter,REC::Scintillator,REC::Track,BAND::*,RUN::scaler
+      filter: 1-RUN::config,RUN::rf,RF::.*,REC::Event,REC::Particle,REC::Scintillator-5-RUN::config,TimeBasedTrkg::TBHits,TimeBasedTrkg::TBSegments-6-RUN::rf,RUN::config,REC::Event,REC::Particle,REC::Track,REC::Scintillator,FTOF::*,TimeBasedTrkg::TBTracks-7-RUN::rf,RUN::config,REC::Event,REC::Particle,REC::Track,REC::Scintillator,REC::Cherenkov,HTCC::.*-8-RUN::rf,RUN::config,REC::Event,REC::Particle,REC::Track,REC::Scintillator,CTOF::*,CVTRec::Tracks-9-RUN::config,REC::Event,CVTRec::Tracks,CND::*-10-RUN::config,REC::Event,REC::Particle,FT::particles,FTCAL::*,FTHODO::*-11-RUN::config,REC::Event,REC::Particle,REC::Calorimeter,REC::Scintillator,REC::Track,BAND::*,RUN::scaler
   services:
 #################################################### RF
     RF:
