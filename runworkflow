@@ -1,6 +1,7 @@
 #!/bin/sh
 
-clara_decode=4.3.11
+clara_decode=4.3.12
+# clara_decode=4.3.11
 clara_cook=4.3.12
 
 coatjava_decode=6b.5.1
@@ -80,7 +81,7 @@ for rnum in 011328
 # for rnum in 006164
 # for rnum in {006164,011093,011328}
 
-# for rnum in {011094,011098}
+# for rnum in {011107,011110}
 
 # for rnum in $1
 
@@ -123,6 +124,12 @@ do
 # tag=v19.1
 # clas12-workflow.py --runGroup rgb --tag ${tag} --model recana --inputs /cache/clas12/rg-b/production/decoded/${coatjava_decode}/$rnum --runs $rnum --outDir /work/clas12/rg-b/production/recon/pass0/${tag}  --clara /group/clas12/packages/clara/${clara}_${coatjava_cook} --reconYaml /work/clas12/rg-b/clas12_cooking_rgb/rgb_calib_pass0v19.1_20191218.yaml --trainYaml /work/clas12/rg-b/clas12_cooking_rgb/train_calib.yaml --submit
 
+# tag=v19.1.1
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model decrecana --inputs "/mss/clas12/rg-b/data/clas_*$rnum" --runs $rnum --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --decDir /cache/clas12/rg-b/production/decoded/${coatjava_decode} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /work/clas12/rg-b/clas12_cooking_rgb/rgb_calib_pass0v19.1.1_20200207.yaml --trainYaml calib --submit
+
+tag=v19.1.1new
+clas12-workflow.py --runGroup rgb --tag ${tag} --model decrecana --inputs "/mss/clas12/rg-b/data/clas_*$rnum" --runs $rnum --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --decDir /cache/clas12/rg-b/production/decoded/${coatjava_decode} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /work/clas12/rg-b/clas12_cooking_rgb/rgb_calib_pass0v19.1.1_20200212.yaml --trainYaml calib --postproc --submit
+
 # tag=v19.2
 # clas12-workflow.py --runGroup rgb --tag ${tag} --model recana --inputs /cache/clas12/rg-b/production/decoded/${coatjava_decode}/$rnum --runs $rnum --outDir /work/clas12/rg-b/production/recon/pass0/${tag}  --clara /group/clas12/packages/clara/${clara}_${coatjava_cook} --reconYaml /work/clas12/rg-b/clas12_cooking_rgb/rgb_calib_pass0v19.2_20200106.yaml --trainYaml /work/clas12/rg-b/clas12_cooking_rgb/train_calib.yaml --submit
 
@@ -148,11 +155,20 @@ do
 # tag=v19.2.2
 # clas12-workflow.py --runGroup rgb --tag ${tag} --model recana --inputs "/cache/clas12/rg-b/production/decoded/${coatjava_decode}/*/*.0004*" --runs /work/clas12/rg-b/clas12_cooking_rgb/runlist_2020winter_mon --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /work/clas12/rg-b/clas12_cooking_rgb/rgb_calib_pass0v19.2.2_20200201.yaml --trainYaml /work/clas12/rg-b/clas12_cooking_rgb/train_calib.yaml --submit
 
-tag=v19.3
-clas12-workflow.py --runGroup rgb --tag ${tag} --model decrec --inputs "/mss/clas12/rg-b/data/clas_*/*.0004*" --runs /work/clas12/rg-b/clas12_cooking_rgb/runlist_2019spring_mon --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --decDir /cache/clas12/rg-b/production/decoded/${coatjava_decode} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /work/clas12/rg-b/clas12_cooking_rgb/rgb_mon_pass0v19.3_20200205.yaml --submit
+# tag=v19.3
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model decrec --inputs "/mss/clas12/rg-b/data/clas_*/*.0004*" --runs /work/clas12/rg-b/clas12_cooking_rgb/runlist_2019spring_mon --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --decDir /cache/clas12/rg-b/production/decoded/${coatjava_decode} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /work/clas12/rg-b/clas12_cooking_rgb/rgb_mon_pass0v19.3_20200211.yaml --postproc --submit
+
+# tag=v19.3
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model rec --inputs "/cache/clas12/rg-b/production/decoded/${coatjava_decode}/*/*.0004*" --runs /work/clas12/rg-b/clas12_cooking_rgb/runlist_2019spring_mon --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /work/clas12/rg-b/clas12_cooking_rgb/rgb_mon_pass0v19.3_20200205.yaml --submit
 
 # tag=test6b.5.1
 # clas12-workflow.py --runGroup rgb --tag ${tag} --model decrecana --inputs "/mss/clas12/rg-b/data/clas_*$rnum/*.0004*" --runs $rnum --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /work/clas12/rg-b/clas12_cooking_rgb/rgb_calib_pass0v21_20200204.yaml --trainYaml /work/clas12/rg-b/clas12_cooking_rgb/train_calib.yaml --submit
+
+# tag=testtrain6b.5.1
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model decrecana --inputs "/mss/clas12/rg-b/data/clas_*$rnum/*.0004*" --runs $rnum --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /work/clas12/rg-b/clas12_cooking_rgb/rgb_calib_pass0v21_20200204.yaml --trainYaml calib --submit
+
+# tag=testtrainagain6b.5.1
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model decrecana --inputs "/mss/clas12/rg-b/data/clas_*$rnum/*.0004*" --runs $rnum --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /work/clas12/rg-b/clas12_cooking_rgb/rgb_calib_pass0v21_20200211.yaml --trainYaml calib --postproc --submit
 
 # tag=v20
 # clas12-workflow.py --runGroup rgb --tag ${tag} --model decrec --inputs "/cache/clas12/rg-b/data/clas_*$rnum/*.0004*" --runs $rnum --outDir /work/clas12/rg-b/production/recon/pass0/${tag} --decDir /cache/clas12/rg-b/production/decoded/${coatjava_decode} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --coatjava /group/clas12/packages/clara/${clara_decode}_${coatjava_decode}/plugins/clas12 --reconYaml /work/clas12/rg-b/clas12_cooking_rgb/rgb_mon_pass0v20_20200108.yaml --submit

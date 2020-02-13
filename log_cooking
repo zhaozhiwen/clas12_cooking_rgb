@@ -15,13 +15,13 @@ use clas12-workflow
 decode by coatjava6b.4.0
 cook by clara4.3.12 and coatjava6b.4.1
 
-schema 
+yaml 
+rgb_mon_pass0v20_20200108.yaml
+
+schema  in yaml
 bankSplit_6b.4.0_20191204.py
   # copy the file from /group/clas12/packages/clara/4.3.11_6b.4.0/plugins/clas12/etc/bankdefs/util/bankSplit.py
   #new dst schema will add "BAND::adc","BAND::tdc","BAND::hits","CND::hits"
-
-yaml 
-rgb_mon_pass0v20_20200108.yaml
 
 timestamp in yaml
 all services, default, which means latest at run time
@@ -39,16 +39,14 @@ using clas12-workflow
 decode by coatjava6b.5.1
 cooking by clara4.3.12 and coatjava6b.5.1
 
-schema 
-bankSplit_6b.4.0_20191204.py
-  # copy the file from /group/clas12/packages/clara/4.3.11_6b.4.0/plugins/clas12/etc/bankdefs/util/bankSplit.py
-  #new dst schema will add "BAND::adc","BAND::tdc","BAND::hits","CND::hits"
-
 yaml 
-rgb_mon_pass0v19.2.2_20200205.yaml
+rgb_mon_pass0v19.3_20200211.yaml
+
+schema in yaml
+default in coatjava6b.5.1
 
 timestamp in yaml
-all services, timestamp: 02/05/2020-11:00:00
+all services, timestamp: 02/11/2020-11:00:00
 only calibration constants use timestamp
 geometry constant use latest
 

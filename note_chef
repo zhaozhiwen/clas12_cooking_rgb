@@ -3,7 +3,7 @@
 refer to 
 https://github.com/baltzell/clas12-workflow
 
-module load workflow/0.5
+module load workflow/0.8
 module load workflow/dev
 
 more $CLAS12WFLOW/README.md
@@ -49,26 +49,6 @@ crontab swif.cron to install it and it will retry all jobs every 30m
 crontab -e to edit
 crontab -l to list
 crontab -r to remove
-
-== filter and merge ==================================================
-
-remove old file first! otherwise it will be appended!!!!!
-hipo-utils won't give warning if any bank name is wrong, it simply ignore the bank!!!
-
-trigger skim
-hipo-utils -filter -b "RUN::config,REC::Particle,REC::Calorimeter,REC::Cherenkov,RAW::vtp" -e "RAW::vtp" -merge -o out.hipo input.hipos
-
-DST:
-hipo-utils -filter -b "REC::Event,REC::Particle,REC::Calorimeter,REC::Scintillator,REC::Cherenkov,REC::Track,REC::Traj,REC::ForwardTagger,REC::CovMat,RICH::tdc,BAND::hits,CND::hits" -e "REC::Event" -merge -o output.hipo input*.hipo
-
-rename calib_rf skim1 skim1/*
-rename calib_dc skim5 skim5/*
-rename calib_ftof skim6 skim6/*
-rename calib_htcc skim7 skim7/*
-rename calib_ctof skim8 skim8/*
-rename calib_cnd skim9 skim9/*
-rename calib_ft skim10 skim10/*
-rename calib_band skim11 skim11/*
 
 == access clas online data =============================================================
 (do this only when data mover is not working or too slow)
@@ -159,6 +139,8 @@ module load coatjava/6b.4.1
 
 diff /group/clas12/packages/clara/4.3.12_6b.5.1/plugins/clas12/config/data.yaml /group/clas12/packages/clara/4.3.12_6b.5.0/plugins/clas12/config/data.yaml
 diff /group/clas12/packages/clara/4.3.12_6b.5.0/plugins/clas12/etc/bankdefs/util/bankSplit.py /group/clas12/packages/clara/4.3.11_6b.4.0/plugins/clas12/etc/bankdefs/util/bankSplit.py
+diff /group/clas12/packages/clara/4.3.12_6b.5.1/plugins/clas12/etc/bankdefs/util/bankSplit.py /group/clas12/packages/clara/4.3.11_6b.4.0/plugins/clas12/etc/bankdefs/util/bankSplit.py
+diff -r /group/clas12/packages/clara/4.3.12_6b.4.1/plugins/clas12/etc/bankdefs/hipo4 /group/clas12/packages/clara/4.3.11_6b.4.0/plugins/clas12/etc/bankdefs/hipo4
 
 $CLARA_HOME/bin/clara-shell /work/clas12/rg-b/clas12_cooking_rgb/script.clara_farm
 
