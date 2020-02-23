@@ -1,0 +1,18 @@
+#!/bin/sh
+
+#link 40-49 files of a run list in a dir to be used for mon cooking
+#$1 for run list name
+
+#./runlist_xxxxx 6b.1.1
+
+sum=0;
+
+for xx in `cat $1`
+do 
+
+count=`ls /mss/clas12/rg-b/data/clas_*$xx/ |wc  | awk '{print$1'}`;
+((sum=sum+count));
+echo $count;
+echo $sum;
+
+done

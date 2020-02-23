@@ -2,14 +2,14 @@ rgb	      		spring2019	fall2019	spring2020	total
 total event		21e9		9e9		13e9		43e9
 number of run		225		116		200		541
 event per file		80e3		73e3		71e3
-number of file		2.6e5		1.2e5		1.8e5		5.6e5
-file size(decode)	0.8GB		0.8GB		0.8GB		450TB
+number of file		303938		121514		184828		610280
+file size(decode)	0.8GB		0.8GB		0.8GB		488TB
 file size(mon)		2.1GB		2.1GB		2.1GB		
 file size(calib)	1.1GB		1.1GB		1.1GB		
-file size(dst)		0.2GB		0.2GB		0.2GB		112TB
+file size(dst)		0.2GB		0.2GB		0.2GB		122TB
 
 			machine time
-decoding		5.6e5*0.5 = 0.3M core-hour 
+decoding		6.1e5*0.5 = 0.3M core-hour 
 cooking dst		100e-3*43e9/3600 = 1.2M core-hour 
 cooking calib and mon	100e-3*80e3*(541*10+5000)*2/3600 =0.05M core-hour 
 
