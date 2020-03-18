@@ -26,26 +26,18 @@ services:
     name: INCLUSIVE1
   - class: org.jlab.jnp.grapes.services.GenericWagon
     name: INCLUSIVE2
-#################################################### DIS
-#  - class: org.jlab.jnp.grapes.services.DISWagon
-#    name: DIS
-#################################################### FTOF_HTCC
+#################################################### INCtagger
   - class: org.jlab.jnp.grapes.services.GenericWagon
-    name: FTOF_HTCCm
+    name: INCtagger1
   - class: org.jlab.jnp.grapes.services.GenericWagon
-    name: FTOF_HTCCp
-#################################################### CTOF_CND
-  - class: org.jlab.jnp.grapes.services.GenericWagon
-    name: CTOF_CND
-#################################################### FT
-  - class: org.jlab.jnp.grapes.services.GenericWagon
-    name: FTp
-  - class: org.jlab.jnp.grapes.services.GenericWagon
-    name: FTm
-  - class: org.jlab.jnp.grapes.services.GenericWagon
-    name: FTn
-####################################################
+    name: INCtagger2
 configuration:
+  custom-names:
+    1: jpsi 
+    2: ndvcs
+    3: edeut
+    4: inc
+    5: inctagger
   services:
 #################################################### JPSI/TCS
     JPSITCS:
@@ -88,34 +80,17 @@ configuration:
       forward: -11:X+:X-:Xn
       tagger: X+:X-:Xn
       central: X+:X-:Xn
-#################################################### DIS
-#    DIS:
-#      id: 5
-#################################################### FTOF_HTCC
-#     FTOF_HTCCm:
-#       id: 6
-#       forward: 1-:11:X+:X-:Xn
-#     FTOF_HTCCp:
-#       id: 6
-#       forward: 1+:11:X+:X-:Xn
-#################################################### CTOF_CND
-#     CTOF_CND:
-#       id: 7
-#       forward: 11:X+:X-:Xn
-#       central: 1-:X+:X-:Xn
-#################################################### FT
-#     FTp:
-#       id: 8
-#       forward: 11:X+:X-:Xn
-#       tagger: 1+:X+:X-:Xn
-#     FTm:
-#       id: 8
-#       forward: 11:X+:X-:Xn
-#       tagger: 1-:X+:X-:Xn
-#     FTn:
-#       id: 8
-#       forward: 11:X+:X-:Xn
-#       tagger: 1n:X+:X-:Xn
-
+#################################################### INCtagger
+    INCtagger1:
+      id: 5
+      forward: X+:X-:Xn
+      tagger: 11:X+:X-:Xn
+      central: X+:X-:Xn
+    INCtagger2:
+      id: 5
+      forward: X+:X-:Xn
+      tagger: -11:X+:X-:Xn
+      central: X+:X-:Xn
+      
 mime-types:
   - binary/data-hipo-frame
