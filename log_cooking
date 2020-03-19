@@ -9,23 +9,23 @@ pass0v20 cooking during Spring 2020 run
 pass0v17 cooking during Fall 2019 run
 pass0v1  cooking during Spring 2019 run
 
-== pass0v21.4.1  ==============================================================
+== pass0v21.5.1  ==============================================================
 by Zhiwen Zhao, 2020/03
 
 calibration cooking 
 
 using clas12-workflow/dev for train_calib.yaml and post process when Charge and lifetime are transferred to REC::Event
 decode by coatjava6b.5.1
-cooking by clara4.3.12 and coatjava6b.5.2
+cooking by clara4.3.12 and coatjava6c.5.4
 
 yaml 
-rgb_calib_pass0v21.2_20200221.yaml
+rgb_calib_pass0v21.5.1_20200317.yaml
 
 schema in yaml
-default in coatjava6b.5.2
+default in coatjava6c.5.4
 
 timestamp in yaml
-all services, timestamp: 03/02/2020-12:00:00
+all services, timestamp: 03/17/2020-18:00:00
 only calibration constants use timestamp
 geometry constant use latest
 
@@ -49,6 +49,29 @@ default in coatjava6b.5.2
 
 timestamp in yaml
 all services, timestamp: 03/02/2020-12:00:00
+only calibration constants use timestamp
+geometry constant use latest
+
+variation in yaml
+some are default, some are rga_fall2018
+
+== pass0v21.3.2  ==============================================================
+by Zhiwen Zhao, 2020/03
+
+calibration cooking 
+
+using clas12-workflow/dev for train_calib.yaml and post process when Charge and lifetime are transferred to REC::Event
+decode by coatjava6b.5.1
+cooking by clara4.3.12 and coatjava6c.5.4
+
+yaml 
+rgb_mon_pass0v21.3.2_20200318ml
+
+schema in yaml
+default in coatjava6c.5.4
+
+timestamp in yaml
+all services, timestamp: 03/18/2020-12:00:00
 only calibration constants use timestamp
 geometry constant use latest
 
