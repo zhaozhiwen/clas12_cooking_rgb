@@ -14,7 +14,7 @@ file calib (1.2GB)	6TB		6TB		6TB		18TB (*5=90TB)
 file calib skim 	1TB		1TB		1TB		3TB (*5=15TB)
 file dst skim ???
 
-time decoding 		3.1e5h (0.8e5h)	1.2e5h		1.8e5h		6.1e5h
+time decoding (1h1c)	3.1e5h (0.8e5h)	1.2e5h		1.8e5h		6.1e5h
 time cook dst (2h16c)	6.2e5h (1.6e5h)	2.4e5h		3.6e5h		12.2e5h
 time cook mon (2h16c)	5e3h		2.5e3h		4e3h		11.5e3h (*5=60e3h)
 time cook calib(2h16c)	1e4h		1e4h		1e4h		3e4h (*5=14e4h)
@@ -26,8 +26,8 @@ number in parenthesis is for 2019 spring DNP run list, which has 34 runs and 735
 assumption
 1.mon, 10 files per run and 5 iterations
 2.calib, 1000 files of 5 runs for each run range and 5 iterations
-3.decoding take about 1 hour on 1 core
-4.cooking takes about 2 hour on 16 core
+3.decoding 1 file takes about 1 hour with 1 core for a single farm job
+4.cooking 1 files takes about 2 hour with 16 core for a single farm job
 
 Not counted
 1. tape to disk time
