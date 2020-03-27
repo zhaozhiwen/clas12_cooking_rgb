@@ -1,25 +1,33 @@
-rgb	      		spring2019	fall2019	spring2020	total
+=====================================================================================
+rgb run range  		spring2019	fall2019	spring2020	total
+
 total event		21e9		9e9		13e9		43e9
-number of run		225		116		200		541
 event per file		80e3		73e3		71e3
-number of file		303938		121514		184828		610280
-file size(decode)	0.8GB		0.8GB		0.8GB		488TB
-file size(mon)		2.1GB		2.1GB		2.1GB		
-file size(calib)	1.1GB		1.1GB		1.1GB		
-file size(dst)		0.2GB		0.2GB		0.2GB		122TB
+number of run		246		123		181		550
 
-			machine time
-decoding		6.1e5*0.5 = 0.3M core-hour 
-cooking dst		100e-3*43e9/3600 = 1.2M core-hour 
-cooking calib and mon	100e-3*80e3*(541*10+5000)*2/3600 =0.05M core-hour 
+number of file		303938		121314		184828		610080
+file raw (2GB)		594TB		237TB		361TB		1192TB
+file decode (0.8GB)	238TB		95TB		145TB		478TB
+file dst (0.3GB)	89GB		36GB		54GB		179TB
+file mon (2.5GB)	6TB		3TB		5TB		14TB (*5=70TB)
+file calib (1.2GB)	6TB		6TB		6TB		18TB (*5=90TB)
+file calib skim 	1TB		1TB		1TB		3TB (*5=15TB)
+file dst skim ???
 
-calib and mon space	34TB = (541*10*2.1+5000*1.1)*2
+time decoding 		3.1e5h		1.2e5h		1.8e5h		6.1e5h
+time cook dst (2h16c)	6.2e5h		2.4e5h		3.6e5h		12.2e5h
+time cook mon (2h16c)	5e3h		2.5e3h		4e3h		11.5e3h (*5=60e3h)
+time cook calib(2h16c)	1e4h		1e4h		1e4h		3e4h (*5=14e4h)
+time train ???
+=====================================================================================
 
+assumption
+1.mon, 10 files per run and 5 iterations
+2.calib, 1000 files of 5 runs for each run range and 5 iterations
+3.decoding take about 1 hour on 1 core
+4.cooking takes about 2 hour on 16 core
 
-refer to
-https://clasweb.jlab.org/wiki/images/7/7c/RGB_fall_summary.pdf
+refer to run summary
+https://www.jlab.org/indico/event/381/session/17/contribution/8/material/slides/0.pdf
 
-
-Raw data files are always 2 GB, except the last one in a run.
-Reconstructed file size (and to a much, much lesser extent, decoded files) depend on what is in that 2 GB of EVIO.  e.g. random vs physics triggers, 5 nA vs 100 nA vs all beam trips, etc
 
