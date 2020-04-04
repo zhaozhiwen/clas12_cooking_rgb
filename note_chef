@@ -3,6 +3,7 @@
 refer to 
 https://github.com/baltzell/clas12-workflow
 
+source /group/clas12/packages/setup.csh
 module load workflow/0.8
 module load workflow/dev
 
@@ -93,6 +94,8 @@ setenv COATJAVA ${CLARA_HOME}/plugins/clas12
 setenv PATH ${COATJAVA}/bin:$PATH
 
 ==run clara and coatjava, and other tools ===========================
+
+/u/home/clas12-2/users/markov/configFiles/pass1/train_physKaonNoFTNoIH.yaml
 
 cd /work/clas12/rg-b
 
