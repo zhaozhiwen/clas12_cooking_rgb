@@ -9,7 +9,7 @@ number of file		303938 (73525)[18184]	121314		184828		610080
 file raw (2GB)		594TB			237TB		361TB		1192TB
 file decode (0.8GB)	238TB (60TB)[14TB]	95TB		145TB		478TB
 file dst (0.3GB)	89TB (23TB) [5TB]	36TB		54TB		179TB
-file mon_full (2.5GB)		    [44TB]
+file mon_full (2.5GB)		    
 file dst skim ???
 
 file decode (0.8GB)								20TB 
