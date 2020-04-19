@@ -12,200 +12,27 @@ pass0v1  cooking during Spring 2019 run
 using clas12-workflow/dev for train_calib.yaml and post process when Charge and lifetime are transferred to REC::Event
 only calibration constants use timestamp, geometry constant use latest
 
+====================================================================================================================s 
+version		type	decode	cook		yaml					schema			timestamp		variation	comment
 
-version		type	decode	cook		yaml					schema	timestamp		variation	comment
-pass0v21.6.1	calib	6b.5.1	4.3.12/6c.5.4	rgb_mon_pass0v21.6.1_20200406.yaml	default	04/06/2020-9:00:00	rga_fall2018
-pass0v21.5.4	calib	6b.5.1	4.3.12/6c.5.5	rgb_calib_pass0v21.5.4_20200415.yaml	default	04/15/2020-11:00:00	rga_fall2018
-pass0v21.5.3	calib	6b.5.1	4.3.12/6c.5.4	rgb_calib_pass0v21.5.3_20200414.yaml	default	04/14/2020-11:00:00	rga_fall2018
-pass0v21.5.2	calib	6b.5.1	4.3.12/6c.5.4	rgb_calib_pass0v21.5.2_20200320.yaml	default	03/20/2020-11:00:00	rga_fall2018
-pass0v21.5.1	calib	6b.5.1	4.3.12/6c.5.4	rgb_calib_pass0v21.5.1_20200317.yaml	default	03/17/2020-18:00:00	rga_fall2018
-pass0v21.4.3	calib	6b.5.1	4.3.12/6c.5.5	rgb_calib_pass0v21.4.3_20200415.yaml	default	04/15/2020-12:00:00	rga_fall2018
-pass0v21.4.2	calib	6b.5.1	4.3.12/6c.5.4	rgb_calib_pass0v21.4.2_20200331.yaml	default	03/31/2020-12:00:00	rga_fall2018
-pass0v21.4.1	calib	6b.5.1	4.3.12/6b.5.2	rgb_calib_pass0v21.4.1_20200302.yaml	default	03/02/2020-12:00:00	rga_fall2018
+pass0v22.1	dst	6b.5.1	4.3.12/6c.5.5	rgb_dst_pass0v22.1_20200417.yaml	hipo4_6c.5.5_20200417	04/17/2020-12:00:00	rga_fall2018
 
-== pass0v21.5.2  ==============================================================
-by Zhiwen Zhao, 2020/03
+pass0v21.6.3	calib	6b.5.1	4.3.12/6c.5.4	rgb_mon_pass0v21.6.3_20200418.yaml	default			04/18/2020-11:00:00	rga_fall2018
+pass0v21.6.2	calib	6b.5.1	4.3.12/6c.5.5	rgb_mon_pass0v21.6.2_20200416.yaml	default			04/16/2020-17:00:00	rga_fall2018
+pass0v21.6.1	calib	6b.5.1	4.3.12/6c.5.4	rgb_mon_pass0v21.6.1_20200406.yaml	default			04/06/2020-9:00:00	rga_fall2018
+pass0v21.5.5	calib	6b.5.1	4.3.12/6c.5.5	rgb_calib_pass0v21.5.6_20200417.yaml	default			04/17/2020-11:00:00	rga_fall2018
+pass0v21.5.4	calib	6b.5.1	4.3.12/6c.5.5	rgb_calib_pass0v21.5.4_20200415.yaml	default			04/15/2020-11:00:00	rga_fall2018
+pass0v21.5.3	calib	6b.5.1	4.3.12/6c.5.4	rgb_calib_pass0v21.5.3_20200414.yaml	default			04/14/2020-11:00:00	rga_fall2018
+pass0v21.5.2	calib	6b.5.1	4.3.12/6c.5.4	rgb_calib_pass0v21.5.2_20200320.yaml	default			03/20/2020-11:00:00	rga_fall2018
+pass0v21.5.1	calib	6b.5.1	4.3.12/6c.5.4	rgb_calib_pass0v21.5.1_20200317.yaml	default			03/17/2020-18:00:00	rga_fall2018
+pass0v21.4.2	calib	6b.5.1	4.3.12/6c.5.4	rgb_calib_pass0v21.4.2_20200331.yaml	default			03/31/2020-12:00:00	rga_fall2018
+pass0v21.4.1	calib	6b.5.1	4.3.12/6b.5.2	rgb_calib_pass0v21.4.1_20200302.yaml	default			03/02/2020-12:00:00	rga_fall2018
+pass0v21.3.2	calib	6b.5.1	4.3.12/6c.5.4	rgb_mon_pass0v21.3.2_20200318.yaml	default			03/18/2020-12:00:00	rga_fall2018
+pass0v21.3.1	calib	6b.5.1	4.3.12/6c.5.4	rgb_mon_pass0v21.3.1_20200313.yaml	default			03/13/2020-12:00:00	rga_fall2018
+pass0v21.2.1	calib	6b.5.1	4.3.12/6c.5.4	rgb_calib_pass0v21.2.1_20200307.yaml	default			03/07/2020-12:00:00	rga_fall2018
+pass0v21.2	calib	6b.5.1	4.3.12/6b.5.1	rgb_calib_pass0v21.2_20200221.yaml	default			02/21/2020-17:00:00	rga_fall2018
 
-calibration cooking 
-
-using clas12-workflow/dev for train_calib.yaml and post process when Charge and lifetime are transferred to REC::Event
-decode by coatjava6b.5.1
-cooking by clara4.3.12 and coatjava6c.5.4
-
-yaml 
-rgb_calib_pass0v21.5.2_20200320.yaml
-
-schema in yaml
-default in coatjava6c.5.4
-
-timestamp in yaml
-all services, timestamp: 03/20/2020-11:00:00
-only calibration constants use timestamp
-geometry constant use latest
-
-variation in yaml
-some are default, some are rga_fall2018
-
-== pass0v21.5.1  ==============================================================
-by Zhiwen Zhao, 2020/03
-
-calibration cooking 
-
-using clas12-workflow/dev for train_calib.yaml and post process when Charge and lifetime are transferred to REC::Event
-decode by coatjava6b.5.1
-cooking by clara4.3.12 and coatjava6c.5.4
-
-yaml 
-rgb_calib_pass0v21.5.1_20200317.yaml
-
-schema in yaml
-default in coatjava6c.5.4
-
-timestamp in yaml
-all services, timestamp: 03/17/2020-18:00:00
-only calibration constants use timestamp
-geometry constant use latest
-
-variation in yaml
-some are default, some are rga_fall2018
-
-== pass0v21.4.2  ==============================================================
-by Zhiwen Zhao, 2020/04
-
-calibration cooking 
-
-using clas12-workflow/dev for train_calib.yaml and post process when Charge and lifetime are transferred to REC::Event
-decode by coatjava6b.5.1
-cooking by clara4.3.12 and coatjava6c.5.4
-
-yaml 
-rgb_calib_pass0v21.4.2_20200331.yaml
-
-schema in yaml
-default in coatjava6c.5.4
-
-timestamp in yaml
-all services, timestamp: 03/31/2020-12:00:00
-only calibration constants use timestamp
-geometry constant use latest
-
-variation in yaml
-some are default, some are rga_fall2018
-
-== pass0v21.4.1  ==============================================================
-by Zhiwen Zhao, 2020/02
-
-calibration cooking 
-
-using clas12-workflow/dev for train_calib.yaml and post process when Charge and lifetime are transferred to REC::Event
-decode by coatjava6b.5.1
-cooking by clara4.3.12 and coatjava6b.5.2
-
-yaml 
-rgb_calib_pass0v21.4.1_20200302.yaml
-
-schema in yaml
-default in coatjava6b.5.2
-
-timestamp in yaml
-all services, timestamp: 03/02/2020-12:00:00
-only calibration constants use timestamp
-geometry constant use latest
-
-variation in yaml
-some are default, some are rga_fall2018
-
-== pass0v21.3.2  ==============================================================
-by Zhiwen Zhao, 2020/03
-
-calibration cooking 
-
-using clas12-workflow/dev for train_calib.yaml and post process when Charge and lifetime are transferred to REC::Event
-decode by coatjava6b.5.1
-cooking by clara4.3.12 and coatjava6c.5.4
-
-yaml 
-rgb_mon_pass0v21.3.2_20200318ml
-
-schema in yaml
-default in coatjava6c.5.4
-
-timestamp in yaml
-all services, timestamp: 03/18/2020-12:00:00
-only calibration constants use timestamp
-geometry constant use latest
-
-variation in yaml
-some are default, some are rga_fall2018
-
-== pass0v21.3.1  ==============================================================
-by Zhiwen Zhao, 2020/03
-
-calibration cooking 
-
-using clas12-workflow/dev for train_calib.yaml and post process when Charge and lifetime are transferred to REC::Event
-decode by coatjava6b.5.1
-cooking by clara4.3.12 and coatjava6c.5.4
-
-yaml 
-rgb_mon_pass0v21.3.1_20200313.yaml
-
-schema in yaml
-default in coatjava6c.5.4
-
-timestamp in yaml
-all services, timestamp: 03/13/2020-12:00:00
-only calibration constants use timestamp
-geometry constant use latest
-
-variation in yaml
-some are default, some are rga_fall2018
-
-== pass0v21.2.1  ==============================================================
-by Zhiwen Zhao, 2020/03
-
-calibration cooking 
-
-using clas12-workflow/dev for train_calib.yaml and post process when Charge and lifetime are transferred to REC::Event
-decode by coatjava6b.5.1
-cooking by clara4.3.12 and coatjava6c.5.4
-
-yaml 
-rgb_calib_pass0v21.2.1_20200307.yaml
-
-schema in yaml
-default in coatjava6c.5.4
-
-timestamp in yaml
-all services, timestamp: 03/07/2020-12:00:00
-only calibration constants use timestamp
-geometry constant use latest
-
-variation in yaml
-some are default, some are rga_fall2018
-
-== pass0v21.2  ==============================================================
-by Zhiwen Zhao, 2020/02
-
-calibration cooking 
-
-using clas12-workflow/dev for train_calib.yaml and post process when Charge and lifetime are transferred to REC::Event
-decode by coatjava6b.5.1
-cooking by clara4.3.12 and coatjava6b.5.1
-
-yaml 
-rgb_calib_pass0v21.2_20200221.yaml
-
-schema in yaml
-default in coatjava6b.5.1
-
-timestamp in yaml
-all services, timestamp: 02/21/2020-17:00:00
-only calibration constants use timestamp
-geometry constant use latest
-
-variation in yaml
-some are default, some are rga_fall2018
+====================================================================================================================
 
 == pass0v20  ==============================================================
 by Zhiwen Zhao, during data taking in 2020/01

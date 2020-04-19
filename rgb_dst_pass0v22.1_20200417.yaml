@@ -48,71 +48,71 @@ configuration:
   io-services:
     writer:
       compression: 2
-      schema_dir: /group/clas12/packages/clara/4.3.12_6c.5.5/plugins/clas12/etc/bankdefs/hipo4/singles/calibration
+      schema_dir: /work/clas12/rg-b/clas12_cooking_rgb/hipo4_6c.5.5_20200417/singles/dst
   services:
     MAGFIELDS:
       magfieldSolenoidMap: Symm_solenoid_r601_phi1_z1201_13June2018.dat
       magfieldTorusMap: Full_torus_r251_phi181_z251_08May2018.dat
       variation: rga_fall2018
-      timestamp: 04/15/2020-12:00:00
+      timestamp: 04/17/2020-12:00:00
     CND:
       variation: rga_fall2018
-      timestamp: 04/15/2020-12:00:00      
+      timestamp: 04/17/2020-12:00:00      
     CTOF:
       variation: rga_fall2018
-      timestamp: 04/15/2020-12:00:00      
+      timestamp: 04/17/2020-12:00:00      
     CVT:
       variation: rga_fall2018
-      timestamp: 04/15/2020-12:00:00      
+      timestamp: 04/17/2020-12:00:00      
     DCHB:
       variation: rga_fall2018
       dcGeometryVariation: rga_fall2018
       dcT2DFunc: "Polynomial"
       dcWireDistortion: "true"      
-      timestamp: 04/15/2020-12:00:00      
+      timestamp: 04/17/2020-12:00:00      
     DCTB:
       variation: rga_fall2018
       dcGeometryVariation: rga_fall2018
-      timestamp: 04/15/2020-12:00:00      
+      timestamp: 04/17/2020-12:00:00      
     EC:
       variation: rga_fall2018
-      timestamp: 04/15/2020-12:00:00      
+      timestamp: 04/17/2020-12:00:00      
     FTOFHB:
       variation: rga_fall2018
-      timestamp: 04/15/2020-12:00:00      
+      timestamp: 04/17/2020-12:00:00      
     FTOFTB:
       variation: rga_fall2018
-      timestamp: 04/15/2020-12:00:00      
+      timestamp: 04/17/2020-12:00:00      
     EBHB:
       variation: rga_fall2018
-      timestamp: 04/15/2020-12:00:00      
+      timestamp: 04/17/2020-12:00:00      
     EBTB:
       variation: rga_fall2018
-      timestamp: 04/15/2020-12:00:00     
+      timestamp: 04/17/2020-12:00:00     
     FTCAL:
       variation: default    
-      timestamp: 04/15/2020-12:00:00          
+      timestamp: 04/17/2020-12:00:00          
     FTHODO:
       variation: default    
-      timestamp: 04/15/2020-12:00:00                    
+      timestamp: 04/17/2020-12:00:00                    
     FTEB:
       variation: default    
-      timestamp: 04/15/2020-12:00:00             
+      timestamp: 04/17/2020-12:00:00             
     BAND:
       variation: default    
-      timestamp: 04/15/2020-12:00:00      
+      timestamp: 04/17/2020-12:00:00      
     HTCC:
       variation: default    
-      timestamp: 04/15/2020-12:00:00
+      timestamp: 04/17/2020-12:00:00
     LTCC:
       variation: default    
-      timestamp: 04/15/2020-12:00:00        
+      timestamp: 04/17/2020-12:00:00        
     RICH:
       variation: default    
-      timestamp: 04/15/2020-12:00:00
+      timestamp: 04/17/2020-12:00:00
     RTPC:
       variation: default    
-      timestamp: 04/15/2020-12:00:00
+      timestamp: 04/17/2020-12:00:00
       
 mime-types:
   - binary/data-hipo
