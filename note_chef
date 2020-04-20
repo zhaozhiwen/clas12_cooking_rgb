@@ -276,11 +276,11 @@ edit bankSplit_6b.4.0_20191204.py
 cp /group/clas12/packages/clara/4.3.11_6b.4.0/plugins/clas12/etc/bankdefs/hipo4/* hipo4_6b.4.0_20191204
 python bankSplit_6b.4.0_20191204.py hipo4_6b.4.0_20191204
 
-mkdir hipo4_6c.5.4_20200314
-cp /group/clas12/packages/clara/4.3.12_6c.5.4/plugins/clas12/etc/bankdefs/util/bankSplit.py bankSplit_6c.5.4_20200314.py
-edit bankSplit_6c.5.4_20200314.py
-cp /group/clas12/packages/clara/4.3.12_6c.5.4/plugins/clas12/etc/bankdefs/hipo4/* hipo4_6c.5.4_20200314
-python bankSplit_6c.5.4_20200314.py hipo4_6c.5.4_20200314
+mkdir hipo4_6c.5.4_20200417
+cp /group/clas12/packages/clara/4.3.12_6c.5.4/plugins/clas12/etc/bankdefs/util/bankSplit.py bankSplit_6c.5.4_20200417.py
+edit bankSplit_6c.5.4_20200317.py
+cp /group/clas12/packages/clara/4.3.12_6c.5.4/plugins/clas12/etc/bankdefs/hipo4/* hipo4_6c.5.4_20200417
+python bankSplit_6c.5.4_20200417.py hipo4_6c.5.4_20200417
 
 mkdir hipo4_6c.5.5_20200417
 cp /group/clas12/packages/clara/4.3.12_6c.5.5/plugins/clas12/etc/bankdefs/util/bankSplit.py bankSplit_6c.5.5_20200417.py
