@@ -13,6 +13,6 @@ do
 count=`ls /mss/clas12/rg-b/data/clas_*$xx/ |wc  | awk '{print$1'}`;
 ((sum=sum+count));
 echo $count;
-echo $sum;
 
 done
+echo "sum $sum";
