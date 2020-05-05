@@ -4,8 +4,8 @@ refer to
 https://github.com/baltzell/clas12-workflow
 
 source /group/clas12/packages/setup.csh
-module load workflow/0.8
 module load workflow/dev
+module load workflow/0.8
 
 more $CLAS12WFLOW/README.md
 clas12-workflow.py -h
@@ -50,6 +50,21 @@ crontab swif.cron to install it and it will retry all jobs every 30m
 crontab -e to edit
 crontab -l to list
 crontab -r to remove
+
+== file check ==================
+
+#!/bin/bash
+touch log
+for x in /cache/clas12/rg-x/asdf/*/*.hipo
+do
+  hipo-check-integrity.py $x >> log
+done
+
+And then script on log to collect the issues.  Or 
+
+hipo-check-integrity.py /cache/clas12/asdf/*
+
+which will fail on first file with problem, which you then remove, log, and rerun.
 
 == access clas online data =============================================================
 (do this only when data mover is not working or too slow)
