@@ -17,7 +17,7 @@ file mon_10file (2.5GB)	30TB			9TB		15TB		70TB
 file calib (1.2GB)	30TB			30TB		30TB		90TB 
 file calib skim 	5TB			5TB		5TB		15TB
 
-time decoding 		2.2e5h (0.6e5h)[0.1e5h]	8.4e5h		1.3e5h		4.3e5h
+time decoding 		2.2e5h (0.5e5h)[0.1e5h]	8.4e5h		1.3e5h		4.3e5h
 time cook dst 		6.1e5h (1.5e5h)[0.3e5h]	2.4e5h		3.6e5h		12.2e5h
 time cook mon 		2.5e4h			1.25e4h		2e4h		6e4h 
 time cook calib		5e4h			5e4h		5e4h		15e4h

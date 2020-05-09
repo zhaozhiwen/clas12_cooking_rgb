@@ -2,7 +2,7 @@
 
 # for xx in `/site/scicomp/auger-slurm/bin/slurmJobs -u clas12-1 | grep 'Feb-10 03:' | awk '{print$1'}`; do /site/scicomp/auger-slurm/bin/jkill $xx; done
 
-for xx in `/site/scicomp/auger-slurm/bin/slurmJobs -u $USER | grep '21.4.2' | awk '{print$1'}`; 
+for xx in `/site/scicomp/auger-slurm/bin/slurmJobs -u $USER | grep '3-6346' | awk '{print$1'}`; 
 do jkill $xx; 
 
 # for xx in `/site/bin/jobstat -u $USER | grep '6594p1' | awk '{print$1'}`; 
