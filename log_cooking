@@ -17,7 +17,7 @@ v1  cooking during Spring 2019 run
 =====================================================================================================================
 version	decode	cook		yaml				schema			timestamp		variation
 
-v23.2	6.5.6	4.3.12/6c.5.7	rgb_dst_v23.2_20200515.yaml	default			05/15/2020-11:00:00	rga_fall2018
+v23.2	6.5.6	4.3.12/6c.5.7	rgb_dst_v23.2_20200515.yaml	hipo4_6c.5.7_20200515	05/15/2020-11:00:00	rga_fall2018
 v23.1	6.5.6	4.3.12/6c.5.7	rgb_calib_v23.1_20200515.yaml	default			05/15/2020-11:00:00	rga_fall2018
 
 v22.4	6c.5.4	4.3.12/6c.5.4	rgb_calib_v22.4_20200506.yaml	default			05/06/2020-11:00:00	rga_fall2018
