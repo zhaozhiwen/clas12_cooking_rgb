@@ -15,43 +15,45 @@ v17 cooking during Fall 2019 run
 v1  cooking during Spring 2019 run
 
 =====================================================================================================================
-version	decode	cook		yaml				schema			timestamp		variation
+version	 decode	cook		yaml				 schema			timestamp		variation
 
-v23.2	6.5.6	4.3.12/6c.5.7	rgb_dst_v23.2_20200515.yaml	hipo4_6c.5.7_20200515	05/15/2020-11:00:00	rga_fall2018
-v23.1	6.5.6	4.3.12/6c.5.7	rgb_calib_v23.1_20200515.yaml	default			05/15/2020-11:00:00	rga_fall2018
+v23.2	 6.5.6	4.3.12/6c.5.7	rgb_dst_v23.2_20200515.yaml	 hipo4_6c.5.7_20200515	05/15/2020-11:00:00	rga_fall2018
+v23.1	 6.5.6	4.3.12/6c.5.7	rgb_calib_v23.1_20200515.yaml	 default		05/15/2020-11:00:00	rga_fall2018
 
-v22.4	6c.5.4	4.3.12/6c.5.4	rgb_calib_v22.4_20200506.yaml	default			05/06/2020-11:00:00	rga_fall2018
-v22.3	6c.5.4	4.3.12/6c.5.4	rgb_calib_v22.3_20200429.yaml	default			04/29/2020-21:00:00	rga_fall2018
-v22.2	6c.5.4	4.3.12/6c.5.4	rgb_dst_v22.2_20200417.yaml	hipo4_6c.5.4_20200417	04/17/2020-12:00:00	rga_fall2018
-v22.1	6b.5.1	4.3.12/6c.5.5	rgb_dst_v22.1_20200417.yaml	hipo4_6c.5.5_20200417	04/17/2020-12:00:00	rga_fall2018
+v22.4	 6c.5.4	4.3.12/6c.5.4	rgb_calib_v22.4_20200506.yaml	 default		05/06/2020-11:00:00	rga_fall2018
+v22.3	 6c.5.4	4.3.12/6c.5.4	rgb_calib_v22.3_20200429.yaml	 default		04/29/2020-21:00:00	rga_fall2018
+v22.2	 6c.5.4	4.3.12/6c.5.4	rgb_dst_v22.2_20200417.yaml	 hipo4_6c.5.4_20200417	04/17/2020-12:00:00	rga_fall2018
+v22.1	 6b.5.1	4.3.12/6c.5.5	rgb_dst_v22.1_20200417.yaml	 hipo4_6c.5.5_20200417	04/17/2020-12:00:00	rga_fall2018
 
-v21.7.5	6b.5.1	4.3.12/6c.5.4	rgb_mon_v21.7.5_20200511.yaml	default			05/11/2020-23:00:00	rga_fall2018
-v21.7.4	6b.5.1	4.3.12/6c.5.4	rgb_mon_v21.7.4_20200506.yaml	default			05/06/2020-14:00:00	rga_fall2018
-v21.7.3	6b.5.1	4.3.12/6c.5.4	rgb_mon_v21.7.3_20200504.yaml	default			05/04/2020-17:30:00	rga_fall2018
-v21.7.2	6b.5.1	4.3.12/6c.5.4	rgb_mon_v21.7.2_20200501.yaml	default			05/01/2020-18:00:00	rga_fall2018
-v21.7.1	6b.5.1	4.3.12/6c.5.4	rgb_mon_v21.7.1_20200425.yaml	default			04/25/2020-14:00:00	rga_fall2018
-v21.6.3	6b.5.1	4.3.12/6c.5.4	rgb_mon_v21.6.3_20200418.yaml	default			04/18/2020-11:00:00	rga_fall2018
-v21.6.2	6b.5.1	4.3.12/6c.5.5	rgb_mon_v21.6.2_20200416.yaml	default			04/16/2020-17:00:00	rga_fall2018
-v21.6.1	6b.5.1	4.3.12/6c.5.4	rgb_mon_v21.6.1_20200406.yaml	default			04/06/2020-9:00:00	rga_fall2018
-v21.5.136b.5.1	4.3.12/6c.5.4	rgb_calib_v21.5.13_20200512.yamldefault			05/12/2020-09:30:00	rga_fall2018
-v21.5.126b.5.1	4.3.12/6c.5.4	rgb_calib_v21.5.12_20200509.yamldefault			05/09/2020-09:30:00	rga_fall2018
-v21.5.116b.5.1	4.3.12/6c.5.4	rgb_calib_v21.5.11_20200506.yamldefault			05/06/2020-14:00:00	rga_fall2018
-v21.5.106b.5.1	4.3.12/6c.5.4	rgb_calib_v21.5.10_20200430.yamldefault			04/30/2020-17:00:00	rga_fall2018
-v21.5.9	6b.5.1	4.3.12/6c.5.4	rgb_calib_v21.5.9_20200428.yaml	default			04/28/2020-12:00:00	rga_fall2018
-v21.5.8	6b.5.1	4.3.12/6c.5.4	rgb_calib_v21.5.8_20200425.yaml	default			04/25/2020-14:00:00	rga_fall2018
-v21.5.7	6b.5.1	4.3.12/6c.5.4	rgb_calib_v21.5.7_20200424.yaml	default			04/24/2020-9:00:00	rga_fall2018
-v21.5.6	6b.5.1	4.3.12/6c.5.4	rgb_calib_v21.5.6_20200421.yaml	default			04/21/2020-12:00:00	rga_fall2018
-v21.5.5	6b.5.1	4.3.12/6c.5.5	rgb_calib_v21.5.6_20200417.yaml	default			04/17/2020-11:00:00	rga_fall2018
-v21.5.4	6b.5.1	4.3.12/6c.5.5	rgb_calib_v21.5.4_20200415.yaml	default			04/15/2020-11:00:00	rga_fall2018
-v21.5.3	6b.5.1	4.3.12/6c.5.4	rgb_calib_v21.5.3_20200414.yaml	default			04/14/2020-11:00:00	rga_fall2018
-v21.5.2	6b.5.1	4.3.12/6c.5.4	rgb_calib_v21.5.2_20200320.yaml	default			03/20/2020-11:00:00	rga_fall2018
-v21.5.1	6b.5.1	4.3.12/6c.5.4	rgb_calib_v21.5.1_20200317.yaml	default			03/17/2020-18:00:00	rga_fall2018
-v21.4.2	6b.5.1	4.3.12/6c.5.4	rgb_calib_v21.4.2_20200331.yaml	default			03/31/2020-12:00:00	rga_fall2018
-v21.4.1	6b.5.1	4.3.12/6b.5.2	rgb_calib_v21.4.1_20200302.yaml	default			03/02/2020-12:00:00	rga_fall2018
-v21.3.2	6b.5.1	4.3.12/6c.5.4	rgb_mon_v21.3.2_20200318.yaml	default			03/18/2020-12:00:00	rga_fall2018
-v21.3.1	6b.5.1	4.3.12/6c.5.4	rgb_mon_v21.3.1_20200313.yaml	default			03/13/2020-12:00:00	rga_fall2018
-v21.2.1	6b.5.1	4.3.12/6c.5.4	rgb_calib_v21.2.1_20200307.yaml	default			03/07/2020-12:00:00	rga_fall2018
-v21.2	6b.5.1	4.3.12/6b.5.1	rgb_calib_v21.2_20200221.yaml	default			02/21/2020-17:00:00	rga_fall2018
+v21.8.2	 6b.5.1	4.3.12/6c.5.7n	rgb_mon_v21.8.2_20200526.yaml	 default		05/26/2020-16:00:00	rga_fall2018
+v21.8.1	 6b.5.1	4.3.12/6c.5.7	rgb_mon_v21.8.1_20200522.yaml	 default		05/22/2020-11:00:00	rga_fall2018
+v21.7.5	 6b.5.1	4.3.12/6c.5.4	rgb_mon_v21.7.5_20200511.yaml	 default		05/11/2020-23:00:00	rga_fall2018
+v21.7.4	 6b.5.1	4.3.12/6c.5.4	rgb_mon_v21.7.4_20200506.yaml	 default		05/06/2020-14:00:00	rga_fall2018
+v21.7.3	 6b.5.1	4.3.12/6c.5.4	rgb_mon_v21.7.3_20200504.yaml	 default		05/04/2020-17:30:00	rga_fall2018
+v21.7.2	 6b.5.1	4.3.12/6c.5.4	rgb_mon_v21.7.2_20200501.yaml	 default		05/01/2020-18:00:00	rga_fall2018
+v21.7.1	 6b.5.1	4.3.12/6c.5.4	rgb_mon_v21.7.1_20200425.yaml	 default		04/25/2020-14:00:00	rga_fall2018
+v21.6.3	 6b.5.1	4.3.12/6c.5.4	rgb_mon_v21.6.3_20200418.yaml	 default		04/18/2020-11:00:00	rga_fall2018
+v21.6.2	 6b.5.1	4.3.12/6c.5.5	rgb_mon_v21.6.2_20200416.yaml	 default		04/16/2020-17:00:00	rga_fall2018
+v21.6.1	 6b.5.1	4.3.12/6c.5.4	rgb_mon_v21.6.1_20200406.yaml	 default		04/06/2020-9:00:00	rga_fall2018
+v21.5.13 6b.5.1	4.3.12/6c.5.4	rgb_calib_v21.5.13_20200512.yaml default		05/12/2020-09:30:00	rga_fall2018
+v21.5.12 6b.5.1	4.3.12/6c.5.4	rgb_calib_v21.5.12_20200509.yaml default		05/09/2020-09:30:00	rga_fall2018
+v21.5.11 6b.5.1	4.3.12/6c.5.4	rgb_calib_v21.5.11_20200506.yaml default		05/06/2020-14:00:00	rga_fall2018
+v21.5.10 6b.5.1	4.3.12/6c.5.4	rgb_calib_v21.5.10_20200430.yaml default		04/30/2020-17:00:00	rga_fall2018
+v21.5.9	 6b.5.1	4.3.12/6c.5.4	rgb_calib_v21.5.9_20200428.yaml	 default		04/28/2020-12:00:00	rga_fall2018
+v21.5.8	 6b.5.1	4.3.12/6c.5.4	rgb_calib_v21.5.8_20200425.yaml	 default		04/25/2020-14:00:00	rga_fall2018
+v21.5.7	 6b.5.1	4.3.12/6c.5.4	rgb_calib_v21.5.7_20200424.yaml	 default		04/24/2020-9:00:00	rga_fall2018
+v21.5.6	 6b.5.1	4.3.12/6c.5.4	rgb_calib_v21.5.6_20200421.yaml	 default		04/21/2020-12:00:00	rga_fall2018
+v21.5.5	 6b.5.1	4.3.12/6c.5.5	rgb_calib_v21.5.6_20200417.yaml	 default		04/17/2020-11:00:00	rga_fall2018
+v21.5.4	 6b.5.1	4.3.12/6c.5.5	rgb_calib_v21.5.4_20200415.yaml	 default		04/15/2020-11:00:00	rga_fall2018
+v21.5.3	 6b.5.1	4.3.12/6c.5.4	rgb_calib_v21.5.3_20200414.yaml	 default		04/14/2020-11:00:00	rga_fall2018
+v21.5.2	 6b.5.1	4.3.12/6c.5.4	rgb_calib_v21.5.2_20200320.yaml	 default		03/20/2020-11:00:00	rga_fall2018
+v21.5.1	 6b.5.1	4.3.12/6c.5.4	rgb_calib_v21.5.1_20200317.yaml	 default		03/17/2020-18:00:00	rga_fall2018
+v21.4.2	 6b.5.1	4.3.12/6c.5.4	rgb_calib_v21.4.2_20200331.yaml	 default		03/31/2020-12:00:00	rga_fall2018
+v21.4.1	 6b.5.1	4.3.12/6b.5.2	rgb_calib_v21.4.1_20200302.yaml	 default		03/02/2020-12:00:00	rga_fall2018
+v21.3.2	 6b.5.1	4.3.12/6c.5.4	rgb_mon_v21.3.2_20200318.yaml	 default		03/18/2020-12:00:00	rga_fall2018
+v21.3.1	 6b.5.1	4.3.12/6c.5.4	rgb_mon_v21.3.1_20200313.yaml	 default		03/13/2020-12:00:00	rga_fall2018
+v21.2.1	 6b.5.1	4.3.12/6c.5.4	rgb_calib_v21.2.1_20200307.yaml	 default		03/07/2020-12:00:00	rga_fall2018
+v21.2	 6b.5.1	4.3.12/6b.5.1	rgb_calib_v21.2_20200221.yaml	 default		02/21/2020-17:00:00	rga_fall2018
 
 ====================================================================================================================
 
@@ -71,10 +73,10 @@ bankSplit_6b.4.0_20191204.py
   #new dst schema will add "BAND::adc","BAND::tdc","BAND::hits","CND::hits"
 
 timestamp in yaml
-all services, default, which means latest at run time
+all services,  default, which means latest at run time
 
 variation in yaml
-some are default, some are rga_fall2018
+some are  default, some are rga_fall2018
 
 == v19.3  ==============================================================
 by Zhiwen Zhao, 2020/02
@@ -90,7 +92,7 @@ yaml
 rgb_mon_v19.3_20200211.yaml
 
 schema in yaml
-default in coatjava6b.5.1
+ default in coatjava6b.5.1
 
 timestamp in yaml
 all services, timestamp: 02/11/2020-11:00:00
@@ -98,7 +100,7 @@ only calibration constants use timestamp
 geometry constant use latest
 
 variation in yaml
-some are default, some are rga_fall2018
+some are  default, some are rga_fall2018
 
 == v19.2.2  ==============================================================
 by Zhiwen Zhao, 2020/02
@@ -124,7 +126,7 @@ only calibration constants use timestamp
 geometry constant use latest
 
 variation in yaml
-some are default, some are rga_fall2018
+some are  default, some are rga_fall2018
 
 == v19.2.1  ==============================================================
 by Zhiwen Zhao, 2020/01
@@ -150,7 +152,7 @@ only calibration constants use timestamp
 geometry constant use latest
 
 variation in yaml
-some are default, some are rga_fall2018
+some are  default, some are rga_fall2018
 
 == v19.2  ==============================================================
 by Zhiwen Zhao, 2020/01
@@ -181,7 +183,7 @@ only calibration constants use timestamp
 geometry constant use latest
 
 variation in yaml
-some are default, some are rga_fall2018
+some are  default, some are rga_fall2018
 
 == v19.1.1  ==============================================================
 by Zhiwen Zhao, 2019/02
@@ -197,7 +199,7 @@ yaml
 rgb_calib_v19.1.1_20200212.yaml
 
 schema in yaml
-default in coatjava6b.5.1
+ default in coatjava6b.5.1
 
 timestamp in yaml
 all services, timestamp: 02/12/2020-16:45:00
@@ -205,7 +207,7 @@ only calibration constants use timestamp
 geometry constant use latest
 
 variation in yaml
-some are default, some are rga_fall2018
+some are  default, some are rga_fall2018
 
 == v19.1  ==============================================================
 by Zhiwen Zhao, 2019/12
@@ -233,7 +235,7 @@ only calibration constants use timestamp
 geometry constant use latest which is 12/18/2019
 
 variation in yaml
-some are default, some are rga_fall2018
+some are  default, some are rga_fall2018
 
 == v18  ==============================================================
 by Zhiwen Zhao, 2019/12
@@ -256,7 +258,7 @@ timestamp in yaml
 all services, timestamp: 12/15/2019-11:00:00
 
 variation in yaml
-some are default, some are rga_fall2018
+some are  default, some are rga_fall2018
 
 == v17  ==============================================================
 by Zhiwen Zhao, during data taking in 2019/12
@@ -276,10 +278,10 @@ rgb_mon_v17_20191204.yaml
 rgb_calib_v17_20191204.yaml
 
 timestamp in yaml
-all services, default, which means latest at run time
+all services,  default, which means latest at run time
 
 variation in yaml
-some are default, some are rga_fall2018
+some are  default, some are rga_fall2018
 == v16  ==============================================================
 by Zhiwen Zhao, in 2019/09
 
@@ -313,16 +315,16 @@ timestamp in yaml
 all services, 09/11/2019-10:00:00
 
 variation in yaml
-some are default, some are rga_fall2018
+some are  default, some are rga_fall2018
 == v15  ==============================================================
 by Zhiwen Zhao, in 2019/08
 
 same software like v14
 RICH calib time_offset
 https://logbooks.jlab.org/entry/3725177
-https://clasweb.jlab.org/cgi-bin/ccdb/show_request?request=/calibration/rich/time_offset:6189:default:2019-08-28_08-24-57
+https://clasweb.jlab.org/cgi-bin/ccdb/show_request?request=/calibration/rich/time_offset:6189: default:2019-08-28_08-24-57
 LTCC calib
-https://clasweb.jlab.org/cgi-bin/ccdb/show_request?request=/calibration/ltcc/spe:6595:default:2019-08-28_11-35-53
+https://clasweb.jlab.org/cgi-bin/ccdb/show_request?request=/calibration/ltcc/spe:6595: default:2019-08-28_11-35-53
 CND calib
 https://logbooks.jlab.org/entry/3725094
 
@@ -344,7 +346,7 @@ timestamp in yaml
 all services, 08/28/2019-12:00:00
 
 variation in yaml
-some are default, some are rga_fall2018
+some are  default, some are rga_fall2018
 == v14  ==============================================================
 by Zhiwen Zhao, in 2019/08
 
@@ -369,7 +371,7 @@ timestamp in yaml
 all services, 08/23/2019-18:15:00
 
 variation in yaml
-some are default, some are rga_fall2018
+some are  default, some are rga_fall2018
 == v13  ==============================================================
 by Zhiwen Zhao, in 2019/08
 
@@ -393,7 +395,7 @@ timestamp in yaml
 all services, 08/15/2019-00:00:00
 
 variation in yaml
-some are default, some are rga_fall2018
+some are  default, some are rga_fall2018
 == v12  ==============================================================
 by Zhiwen Zhao, in 2019/08
 
@@ -423,7 +425,7 @@ timestamp in yaml
 all services, 08/06/2019-12:00:00
 
 variation in yaml
-some are default, some are rga_fall2018
+some are  default, some are rga_fall2018
 
 == v11  ==============================================================
 by Zhiwen Zhao, in 2019/08
@@ -454,7 +456,7 @@ timestamp in yaml
 all services, 08/01/2019
 
 variation in yaml
-some are default, some are rga_fall2018
+some are  default, some are rga_fall2018
 == v10  ==============================================================
 by Zhiwen Zhao, in 2019/07
 
@@ -479,7 +481,7 @@ timestamp in yaml
 all services, 07/17/2019
 
 variation in yaml
-some are default, some are rga_fall2018
+some are  default, some are rga_fall2018
 == v9  ==============================================================
 by Zhiwen Zhao, in 2019/07
 
@@ -506,7 +508,7 @@ timestamp in yaml
 all services, 07/17/2019
 
 variation in yaml
-some are default, some are rga_fall2018
+some are  default, some are rga_fall2018
 == v8  ==============================================================
 by Zhiwen Zhao, in 2019/06
 
@@ -534,7 +536,7 @@ timestamp in yaml
 all services, 06/20/2019
 
 variation in yaml
-some are default, some are rga_fall2018
+some are  default, some are rga_fall2018
 
 == v7  ==============================================================
 by Zhiwen Zhao, in 2019/06
@@ -560,7 +562,7 @@ timestamp in yaml
 all services, 06/07/2019
 
 variation in yaml
-some are default, some are rga_fall2018
+some are  default, some are rga_fall2018
 
 == v6  ==============================================================
 by Zhiwen Zhao, in 2019/06
@@ -586,7 +588,7 @@ timestamp in yaml
 all services, 06/07/2019
 
 variation in yaml
-some are default, some are rga_fall2018
+some are  default, some are rga_fall2018
 
 == v5 ==============================================================
 by Zhiwen Zhao, in 2019/05
@@ -664,7 +666,7 @@ timestamp in yaml
 all services, 05/29/2019
 
 variation in yaml
-some are default, some are rga_fall2018
+some are  default, some are rga_fall2018
 
 == v2 ==============================================================
 by Zhiwen Zhao, in 2019/05
@@ -678,7 +680,7 @@ cooking by clara4.3.8 and coatjava5.9.0
 
 schema 
 bankSplit_20190424.py
-     based on default schema in coatjava5.9.0 at https://github.com/JeffersonLab/clas12-offline-software/blob/5.9.0/etc/bankdefs/util/bankSplit.py
+     based on  default schema in coatjava5.9.0 at https://github.com/JeffersonLab/clas12-offline-software/blob/5.9.0/etc/bankdefs/util/bankSplit.py
     (0.25GB per file) new dst schema adds "BAND::adc","BAND::tdc","BAND:hits","CND::hits"
     (1GB per file) new calib schema adds "ECAL::adc","ECAL::moments","ECAL::tdc","ECAL::hits"
     (2GB per file) new mon schema adds "ECAL::adc","ECAL::moments","ECAL::tdc","HEL::adc","BMT::adc","BST::adc","BMTRec::Clusters","BSTRec::Clusters" and removes "BMTRec::Hits, BSTRec::Hits, BMTRec::LayerEffs, and BSTRec::LayerEffs" 
@@ -690,7 +692,7 @@ rgb_calib_v2_20190501.yaml
 
 timestamp in yaml
 DCHB service, 05/01/2019, which means May 1 2019 0AM ET
-all other services, default, which means latest at run time
+all other services,  default, which means latest at run time
 
 == v1 ====================================================================
 by Zhiwen Zhao, during data taking from 2019/02 to 2019/03 
@@ -712,7 +714,7 @@ runlist_2019spring, 235 production runs with full target and full current during
 runlist_v2, 226 of runlist_2019spring with at least 50 files, used for mon cooking
 
 schema 
-default in coatjava5b.7.7 and coatjava5b.7.8, $CLARA_HOME/plugins/clas12/etc/bankdefs/hipo/singles
+ default in coatjava5b.7.7 and coatjava5b.7.8, $CLARA_HOME/plugins/clas12/etc/bankdefs/hipo/singles
 With all EC banks added to calibration schema
 
 yaml   
@@ -721,7 +723,7 @@ rgb_calib_v1_20190221.yaml  rgb_full_v1_20190209.yaml  rgb_mon_v1_20190221.yaml
 rgb_calib_v1_20190313.yaml  rgb_full_v1_20190213.yaml  rgb_mon_v1_20190313.yaml
 
 timsstamp in yaml
-all services, default, which means latest at run time
+all services,  default, which means latest at run time
 
 run list of decoding and cooking condition
 https://jeffersonlab-my.sharepoint.com/:x:/g/personal/zwzhao_jlab_org/Ef0DF0RF5UpCvKrwZf5u4cAB3IYkCp8-vaXCk8NmjewvKw?e=cSQB3m

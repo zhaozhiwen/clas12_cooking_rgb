@@ -47,7 +47,7 @@ configuration:
       id: 2
       forward: 11:Xn
       tagger: Xn
-      central: Xn
+      central: 1n:Xn:X+:X-
     nDVCS2:
       id: 2
       forward: 11:2212:Xn
