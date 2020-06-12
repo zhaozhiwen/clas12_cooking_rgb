@@ -1,9 +1,13 @@
+farm speed 
+https://jeffersonlab-my.sharepoint.com/:x:/g/personal/baltzell_jlab_org/EU096WRXcyBLl_ApLfSCuvoBiwsPFfBN_0enCzU3dFV6rw?rtime=E2LEG1UG2Eg
 
 ====do everything with clas12-workflow =============================================
 refer to 
 https://github.com/baltzell/clas12-workflow
 
 source /group/clas12/packages/setup.csh
+module load clas12/dev
+
 module load workflow/dev
 module load workflow/0.8
 
@@ -308,6 +312,13 @@ cp /group/clas12/packages/clara/4.3.12_6c.5.7/plugins/clas12/etc/bankdefs/util/b
 edit bankSplit_6c.5.7_20200515.py
 cp /group/clas12/packages/clara/4.3.12_6c.5.7/plugins/clas12/etc/bankdefs/hipo4/* hipo4_6c.5.7_20200515
 python bankSplit_6c.5.7_20200515.py hipo4_6c.5.7_20200515
+
+
+cp /group/clas12/packages/clara/4.3.12_6.5.8/plugins/clas12/etc/bankdefs/util/bankSplit.py bankSplit_6.5.8_20200610.py
+edit bankSplit_6.5.8_20200610.py
+mkdir hipo4_6.5.8_20200610
+cp /group/clas12/packages/clara/4.3.12_6c.5.7/plugins/clas12/etc/bankdefs/hipo4/* hipo4_6.5.8_20200610
+python bankSplit_6.5.8_20200610.py hipo4_6.5.8_20200610
 
 === yaml trick =============================================
 

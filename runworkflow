@@ -5,12 +5,13 @@ clara_decode=4.3.12
 
 clara_cook=4.3.12
 
-# coatjava_decode=6.5.6
+coatjava_decode=6.5.6
 # coatjava_decode=6c.5.4
-coatjava_decode=6b.5.1
+# coatjava_decode=6b.5.1
 # coatjava_decode=6b.4.0
 
-coatjava_cook=6c.5.7
+coatjava_cook=6.5.8
+# coatjava_cook=6c.5.7
 # coatjava_cook=6c.5.4
 # coatjava_cook=6b.5.2
 # coatjava_cook=6b.5.1
@@ -114,6 +115,8 @@ for rnum in 006164
 # for rnum in 006346
 # for rnum in 006420
 # for rnum in 006595 
+
+# for rnum in 005823
 
 # for rnum in 006557
 # for rnum in 006549
@@ -354,8 +357,8 @@ do
 # tag=v21.8.1
 # clas12-workflow.py --runGroup rgb --tag ${tag} --model rec --inputs "/cache/clas12/rg-b/production/decoded/${coatjava_decode}/*/*.0004*" --runs /work/clas12/rg-b/clas12_cooking_rgb/runlist_2019spring_mon_more --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /work/clas12/rg-b/clas12_cooking_rgb/rgb_mon_pass0v21.8.1_20200522.yaml --postproc --submit
 
-tag=v21.8.2
-clas12-workflow.py --runGroup rgb --tag ${tag} --model rec --inputs "/cache/clas12/rg-b/production/decoded/${coatjava_decode}/*/*.0004*" --runs /work/clas12/rg-b/clas12_cooking_rgb/runlist_2019spring_mon_tmp --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /work/clas12/rg-b/clas12_cooking_rgb/rgb_mon_pass0v21.8.2_20200526.yaml --postproc --submit
+# tag=v21.8.2
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model rec --inputs "/cache/clas12/rg-b/production/decoded/${coatjava_decode}/*/*.0004*" --runs /work/clas12/rg-b/clas12_cooking_rgb/runlist_2019spring_mon_tmp --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /work/clas12/rg-b/clas12_cooking_rgb/rgb_mon_pass0v21.8.2_20200526.yaml --postproc --submit
 
 # tag=v22.1
 # clas12-workflow.py --runGroup rgb --tag ${tag} --model decrecana --inputs "/mss/clas12/rg-b/data/clas_*$rnum/*.000*" --runs $rnum --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --decDir /cache/clas12/rg-b/production/decoded/${coatjava_decode} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook}  --coatjava /group/clas12/packages/clara/${clara_decode}_${coatjava_decode}/plugins/clas12 --reconYaml /work/clas12/rg-b/clas12_cooking_rgb/rgb_dst_pass0v22.1_20200417.yaml --trainYaml /work/clas12/rg-b/clas12_cooking_rgb/train_dst.yaml --postproc --submit
@@ -395,6 +398,32 @@ clas12-workflow.py --runGroup rgb --tag ${tag} --model rec --inputs "/cache/clas
 
 # tag=v23.2m
 # clas12-workflow.py --runGroup rgb --tag ${tag} --model recana --inputs "/volatile/clas12/rg-b/production/decoded/${coatjava_decode}m/$rnum/*" --runs $rnum --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag}  --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook}  --reconYaml /work/clas12/rg-b/clas12_cooking_rgb/rgb_dst_pass0v23.2_20200515.yaml --trainYaml /work/clas12/rg-b/clas12_cooking_rgb/train_dst.yaml --postproc --phaseSize 1 --submit
+
+# tag=v23.3
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model dec --inputs "/mss/clas12/rg-b/data/clas_*$rnum/*.00[5-9]*" --runs $rnum --decDir /volatile/clas12/rg-b/production/decoded/${coatjava_decode} --clara /group/clas12/packages/clara/${clara_decode}_${coatjava_decode} --submit
+
+# tag=v23.3
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model recana --inputs "/volatile/clas12/rg-b/production/decoded/${coatjava_decode}/$rnum/*.0*" --runs $rnum --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag}  --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook}  --reconYaml /work/clas12/rg-b/clas12_cooking_rgb/rgb_calib_pass0v23.3_20200526.yaml --trainYaml calib --postproc --submit
+
+# tag=v23.3
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model decrecana --inputs "/mss/clas12/rg-k/data/clas_*$rnum/*" --runs $rnum --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --decDir /volatile/clas12/rg-b/production/decoded/${coatjava_decode} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook}  --coatjava /group/clas12/packages/clara/${clara_decode}_${coatjava_decode}/plugins/clas12 --reconYaml /work/clas12/rg-b/clas12_cooking_rgb/rgb_calib_pass0v23.3_20200526.yaml --trainYaml calib --postproc  --submit
+
+# tag=v23.3new
+# clas12-workflow.py --runGroup rgk --tag ${tag} --model ana --inputs "/volatile/clas12/rg-b/production/recon/pass0/v23.3/calib/recon/$rnum/" --runs $rnum --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook}  --reconYaml /work/clas12/rg-b/clas12_cooking_rgb/rgb_calib_pass0v23.3_20200526.yaml --trainYaml calib  --submit
+
+tag=v23.4
+clas12-workflow.py --runGroup rgb --tag ${tag} --model recana --inputs /cache/clas12/rg-b/production/decoded/${coatjava_decode}/$rnum --runs $rnum --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag}  --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook}  --reconYaml /work/clas12/rg-b/clas12_cooking_rgb/rgb_dst_pass0v23.4_20200610.yaml --trainYaml /work/clas12/rg-b/clas12_cooking_rgb/train_dst.yaml --postproc --submit
+
+# tag=pass1v0
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model decmrg --inputs /mss/clas12/rg-b/data --runs /work/clas12/rg-b/clas12_cooking_rgb/runlist_2019spring_decode2 --decDir /cache/clas12/rg-b/production/decoded/${coatjava_decode} --clara /group/clas12/packages/clara/${clara_decode}_${coatjava_decode} --mergeSize 5 --phaseSize 1
+
+# clas12-workflow.py --runGroup rgb --tag pass1v0 --model decmrg --inputs /mss/clas12/rg-b/data --runs /work/clas12/rg-b/clas12_cooking_rgb/runlist_2019spring_decode1 --decDir /cache/clas12/rg-b/production/decoded/6.5.6 --clara /group/clas12/packages/clara/4.3.12_6.5.6 --mergeSize 5 --phaseSize 1
+
+# tag=v23.4
+
+# --submit
+
+#  --workDir /volatile/clas12/rg-b/production/decoded/${coatjava_decode} 
 
 # tag=decodetest1
 # clas12-workflow.py --runGroup rgb --tag ${tag} --model decmrg --inputs "/mss/clas12/rg-b/data/clas_*$rnum/*.0000*" --runs $rnum --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --mergeSize 4  --submit

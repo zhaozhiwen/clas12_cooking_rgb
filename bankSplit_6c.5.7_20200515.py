@@ -49,7 +49,7 @@ for filename in os.listdir("./"):
 print("Single json files saved in " + workdirectory + singledirectory)
 
 # create dst, calibration and monitoring directories
-# copy the file from /group/clas12/packages/clara/4.3.12_6c.5.5/plugins/clas12/etc/bankdefs/util/bankSplit.py
+# copy the file from /group/clas12/packages/clara/4.3.12_6c.5.7/plugins/clas12/etc/bankdefs/util/bankSplit.py
 #new dst schema will add "BAND::adc","BAND::tdc","BAND::hits","CND::clusters","CTOF::clusters"
 #dst = ["BAND::laser","RUN::config","RAW::epics","RAW::scaler","REC::Event","REC::Particle","REC::Calorimeter","REC::Cherenkov","REC::CovMat","REC::ForwardTagger","REC::Scintillator","REC::Track","REC::Traj","RECFT::Event","RECFT::Particle","RICH::tdc","RICH::ringCher","RICH::hadCher","RUN::scaler","HEL::flip","HEL::online","MC::Event","MC::Header","MC::Lund","MC::Particle","MC::True"]
 dst = ["BAND::adc","BAND::tdc","BAND::hits","CND::clusters","CTOF::clusters","BAND::laser","RUN::config","RAW::epics","RAW::scaler","REC::Event","REC::Particle","REC::Calorimeter","REC::Cherenkov","REC::CovMat","REC::ForwardTagger","REC::Scintillator","REC::Track","REC::Traj","RECFT::Event","RECFT::Particle","RICH::tdc","RICH::ringCher","RICH::hadCher","RUN::scaler","HEL::flip","HEL::online","MC::Event","MC::Header","MC::Lund","MC::Particle","MC::True"]

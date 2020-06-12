@@ -26,18 +26,18 @@ services:
     name: INCLUSIVE1
   - class: org.jlab.jnp.grapes.services.GenericWagon
     name: INCLUSIVE2
-#################################################### INCtagger
+#################################################### TWO    
   - class: org.jlab.jnp.grapes.services.GenericWagon
-    name: INCtagger1
+    name: TWO1
   - class: org.jlab.jnp.grapes.services.GenericWagon
-    name: INCtagger2
+    name: TWO2    
 configuration:
   custom-names:
     1: jpsi 
     2: ndvcs
     3: edeut
     4: inc
-    5: inctagger
+    5: two    
   services:
 #################################################### JPSI/TCS
     JPSITCS:
@@ -80,17 +80,13 @@ configuration:
       forward: -11:X+:X-:Xn
       tagger: X+:X-:Xn
       central: X+:X-:Xn
-#################################################### INCtagger
-    INCtagger1:
+#################################################### Two
+    TWO1:
       id: 5
-      forward: X+:X-:Xn
-      tagger: 11:X+:X-:Xn
-      central: X+:X-:Xn
-    INCtagger2:
+      filter: 321:321:X+:X-:Xn
+    TWO2:
       id: 5
-      forward: X+:X-:Xn
-      tagger: -11:X+:X-:Xn
-      central: X+:X-:Xn
+      filter: 2212:2212:X+:X-:Xn      
       
 mime-types:
   - binary/data-hipo-frame
