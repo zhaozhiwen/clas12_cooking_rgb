@@ -30,7 +30,7 @@ services:
   - class: org.jlab.jnp.grapes.services.GenericWagon
     name: TWO1
   - class: org.jlab.jnp.grapes.services.GenericWagon
-    name: TWO2    
+    name: TWO2
 configuration:
   custom-names:
     1: jpsi 
