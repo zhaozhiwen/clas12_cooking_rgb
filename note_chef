@@ -14,6 +14,13 @@ module load workflow/0.8
 more $CLAS12WFLOW/README.md
 clas12-workflow.py -h
 
+check log
+clara-log-ana.py -i -r -m"-r-" /farm_out/clas12-1/rgb-dmra-pass1v0-6156x74
+check status
+slurm-status.py -m"6156x74-p0-r-"
+
+To delete everything older than a day:
+find /farm_out/$USER/rgb-dmra-pass1v0-6156x74 -type f -mtime +1 -exec mv {} ~/work/farm_out/rgb-dmra-pass1v0-6156x74 \;
 
 when we need to pause jobs
 ****************************
