@@ -6,6 +6,8 @@
 #./runlist_xxxxx 6b.1.1
 
 sum=0;
+sum1=0;
+sum2=0;
 
 for xx in `cat $1`
 do 
@@ -13,14 +15,20 @@ count=`ls /mss/clas12/rg-b/data/clas_*$xx/*evio* |wc  | awk '{print$1'}`;
 # ((sum=sum+count));
 # echo $xx $count	$sum;
 
-count1=`ls /cache/clas12/rg-b/production/recon/spring2019/torus-1/pass1/v0/dst/recon/$xx/ |wc  | awk '{print$1'}`;
+count1=`ls /cache/clas12/rg-b/production/decoded/6.5.6/$xx/ |wc  | awk '{print$1'}`;
 ((count1=count1*5));
-if [ $count -gt $count1 ]
-  then
-    ((sum=1));
-fi  
-echo $xx $count	$count1 $sum;
-sum=0
+count2=`ls /cache/clas12/rg-b/production/recon/spring2019/torus-1/pass1/v0/dst/recon/$xx/ |wc  | awk '{print$1'}`;
+((count2=count2*5));
+
+# if [ $count -gt $count1 ]
+#   then
+#     ((sum=1));
+# fi  
+((sum=sum+count));
+((sum1=sum1+count1));
+((sum2=sum2+count2));
+echo -e $xx "\t" $count  "\t" $count1  "\t"  $count2  "\t"  $sum "\t"  $sum1 "\t"  $sum2;
+# sum=0
 done
 
-echo "sum $sum";
+# echo "sum $sum";
