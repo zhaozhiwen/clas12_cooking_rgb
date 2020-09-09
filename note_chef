@@ -17,7 +17,10 @@ clas12-workflow.py -h
 check log
 clara-log-ana.py -i -r -m"-r-" /farm_out/clas12-1/rgb-dmra-pass1v0-6156x74
 check status
-slurm-status.py -m"6156x74-p0-r-"
+slurm-status.py -m "6156x74-p0-r-"
+
+Nathan's cooking speed record
+https://jeffersonlab-my.sharepoint.com/:x:/r/personal/baltzell_jlab_org/_layouts/15/Doc.aspx?sourcedoc={64E93D4D-7357-4B20-97F0-292DF482BAFA}&file=CLAS12%20@%20JLab%20Batch.xlsx&wdOrigin=OFFICECOM-WEB.MAIN.MRU&action=default&mobileredirect=true
 
 To delete everything older than a day:
 find /farm_out/$USER/rgb-dmra-pass1v0-6156x74 -type f -mtime +1 -exec mv {} ~/work/farm_out/rgb-dmra-pass1v0-6156x74 \;
