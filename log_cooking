@@ -1,9 +1,11 @@
-***** pass1 info *****************************************************************************************
+for CLAS12 cooking, a version is defined by software, schema file, yaml file, ccdb variation and timestamp
+
+***** pass1 *****************************************************************************************
 version	 			decode	cook		yaml				 schema				timestamp		variation
 
 spring2019/torus-1/pass1/v0	6.5.6	4.3.12/6.5.8	rgb_dst_pass1v0_20200610.yaml	 hipo4_6.5.8_20200610	06/10/2020-18:00:00	rga_fall2018
 
-***** pass0 info *****************************************************************************************
+***** pass0 *****************************************************************************************
 using clas12-workflow/dev for train_calib.yaml and post process when Charge and lifetime are transferred to REC::Event
 only calibration constants use timestamp, geometry constant use latest
 
@@ -24,6 +26,12 @@ v1  cooking during Spring 2019 run
 
 =====================================================================================================================
 version	 decode	cook		yaml					schema			timestamp		variation
+v25.1	 6.5.6	4.3.12/6.5.8	rgb_mon_pass0v25.1_20201014.yaml	default			10/14/2020-11:00:00	rga_fall2018
+
+v24.9	 6.5.6	4.3.12/6.5.8	rgb_calib_pass0v24.9_20201013.yaml	default			10/13/2020-15:00:00	rga_fall2018
+v24.8	 6.5.6	4.3.12/6.5.8	rgb_mon_pass0v24.8_20201007.yaml	default			10/07/2020-11:00:00	rga_fall2018
+v24.7	 6.5.6	4.3.12/6.5.8	rgb_calib_pass0v24.7_20200913.yaml	default			09/13/2020-11:00:00	rga_fall2018
+v24.6	 6.5.6	4.3.12/6.5.8	rgb_mon_pass0v24.6_20200913.yaml	default			09/13/2020-11:00:00	rga_fall2018
 v24.5	 6.5.6	4.3.12/6.5.8	rgb_calib_pass0v24.5_20200902.yaml	default			09/02/2020-10:00:00	rga_fall2018
 v24.4	 6.5.6	4.3.12/6.5.8	rgb_calib_pass0v24.4_20200821.yaml	default			08/21/2020-09:00:00	rga_fall2018
 v24.3	 6.5.6	4.3.12/6.5.8	rgb_dst_pass0v24.3_20200709.yaml	hipo4_6.5.8_20200610	07/09/2020-09:30:00	rga_fall2018
@@ -69,8 +77,7 @@ v21.3.2	 6b.5.1	4.3.12/6c.5.4	rgb_mon_pass0v21.3.2_20200318.yaml	default			03/18
 v21.3.1	 6b.5.1	4.3.12/6c.5.4	rgb_mon_pass0v21.3.1_20200313.yaml	default			03/13/2020-12:00:00	rga_fall2018
 v21.2.1	 6b.5.1	4.3.12/6c.5.4	rgb_calib_pass0v21.2.1_20200307.yaml	default			03/07/2020-12:00:00	rga_fall2018
 v21.2	 6b.5.1	4.3.12/6b.5.1	rgb_calib_pass0v21.2_20200221.yaml	default			02/21/2020-17:00:00	rga_fall2018
-
-====================================================================================================================
+=====================================================================================================================
 
 == v20  ==============================================================
 by Zhiwen Zhao, during data taking in 2020/01
