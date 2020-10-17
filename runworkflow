@@ -450,8 +450,14 @@ do
 # tag=v24.9
 # clas12-workflow.py --runGroup rgb --tag ${tag} --model recana --inputs /volatile/clas12/rg-b/production/decoded/${coatjava_decode} --runs /work/clas12/rg-b/clas12_cooking_rgb/runlist_tmp --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /work/clas12/rg-b/clas12_cooking_rgb/rgb_calib_pass0v24.9_20201013.yaml --trainYaml calib --postproc --submit
 
-tag=v25.1
-clas12-workflow.py --runGroup rgb --tag ${tag} --model decrec --inputs "/mss/clas12/rg-b/data/clas_*/*.0004*" --runs /work/clas12/rg-b/clas12_cooking_rgb/runlist_2020winter_mon_more --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --decDir /volatile/clas12/rg-b/production/decoded/${coatjava_decode} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook}  --coatjava /group/clas12/packages/clara/${clara_decode}_${coatjava_decode}/plugins/clas12 --reconYaml /work/clas12/rg-b/clas12_cooking_rgb/rgb_mon_pass0v25.1_20201014.yaml --postproc --submit
+# tag=v24.10
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model rec --inputs "/volatile/clas12/rg-b/production/decoded/${coatjava_decode}/*/*.0004*" --runs /work/clas12/rg-b/clas12_cooking_rgb/runlist_2019fall_mon_more --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /work/clas12/rg-b/clas12_cooking_rgb/rgb_mon_pass0v24.10_20201016.yaml --postproc --submit
+
+tag=v24.10
+clas12-workflow.py --runGroup rgb --tag ${tag} --model decrec --inputs "/mss/clas12/rg-b/data/clas_*/*.0000*" --runs /work/clas12/rg-b/clas12_cooking_rgb/runlist_tmp --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --decDir /volatile/clas12/rg-b/production/decoded/${coatjava_decode} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook}  --coatjava /group/clas12/packages/clara/${clara_decode}_${coatjava_decode}/plugins/clas12 --reconYaml /work/clas12/rg-b/clas12_cooking_rgb/rgb_mon_pass0v24.10_20201016.yaml --postproc --submit
+
+# tag=v25.1
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model decrec --inputs "/mss/clas12/rg-b/data/clas_*/*.0004*" --runs /work/clas12/rg-b/clas12_cooking_rgb/runlist_2020winter_mon_more --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --decDir /volatile/clas12/rg-b/production/decoded/${coatjava_decode} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook}  --coatjava /group/clas12/packages/clara/${clara_decode}_${coatjava_decode}/plugins/clas12 --reconYaml /work/clas12/rg-b/clas12_cooking_rgb/rgb_mon_pass0v25.1_20201014.yaml --postproc --submit
 
 
 # tag=pass1v0
