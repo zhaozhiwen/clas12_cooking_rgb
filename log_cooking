@@ -1,7 +1,7 @@
 for CLAS12 cooking, a version is defined by software, schema file, yaml file, ccdb variation and timestamp
 
 ***** pass1 *****************************************************************************************
-version	 			decode	cook		yaml				 schema				timestamp		variation
+version	 			decode	cook		yaml				 schema				timestamp				variation
 
 spring2019/torus-1/pass1/v0	6.5.6	4.3.12/6.5.8	rgb_dst_pass1v0_20200610.yaml	 hipo4_6.5.8_20200610	06/10/2020-18:00:00	rga_fall2018
 
@@ -9,11 +9,14 @@ spring2019/torus-1/pass1/v0	6.5.6	4.3.12/6.5.8	rgb_dst_pass1v0_20200610.yaml	 hi
 using clas12-workflow/dev for train_calib.yaml and post process when Charge and lifetime are transferred to REC::Event
 only calibration constants use timestamp, geometry constant use latest
 
-v23.x test cooking
-v22.x test cooking
+v25.x calibration cooking for spring2020
 
 v24.x calibration cooking for fall2019
+
+v23.x test cooking for spring2019
+v22.x test cooking for spring2019
 v21.x calibration cooking mostly for spring2019
+
 v19.x calibration cooking
 
 v16 hipo4 cooking for Spring 2019 run, used for DNP2019
@@ -25,9 +28,18 @@ v17 cooking during Fall 2019 run
 v1  cooking during Spring 2019 run
 
 =====================================================================================================================
-version	 decode	cook		yaml					schema			timestamp		variation
+version	 decode	cook		yaml					schema			timestamp			variation
+v25.4	 6.5.6	4.3.12/6.5.8	rgb_calib_pass0v25.4_20201028.yaml	default			10/28/2020-14:00:00	rga_fall2018
+v25.3	 6.5.6	4.3.12/6.5.8	rgb_calib_pass0v25.3_20201027.yaml	default			10/27/2020-12:00:00	rga_fall2018
+v25.2	 6.5.6	4.3.12/6.5.8	rgb_calib_pass0v25.2_20201025.yaml	default			10/25/2020-11:00:00	rga_fall2018
 v25.1	 6.5.6	4.3.12/6.5.8	rgb_mon_pass0v25.1_20201014.yaml	default			10/14/2020-11:00:00	rga_fall2018
 
+v24.15	 6.5.6	4.3.12/6.5.8	rgb_mon_pass0v24.15_20201030.yaml	default			10/30/2020-18:00:00	rga_fall2018
+v24.14	 6.5.6	4.3.12/6.5.8	rgb_mon_pass0v24.14_20201030.yaml	default			10/30/2020-18:00:00	rga_fall2018
+v24.13	 6.5.6	4.3.12/6.5.12	rgb_dst_pass0v24.13_20201028.yaml	hipo4_6.5.12_20201028	10/28/2020-18:00:00	rga_fall2018
+v24.12	 6.5.6	4.3.12/6.5.8	rgb_mon_pass0v24.12_20201023.yaml	default			10/23/2020-15:00:00	rga_fall2018
+v24.11	 6.5.6	4.3.12/6.5.8	rgb_mon_pass0v24.11_20201023.yaml	default			10/23/2020-15:00:00	rga_fall2018
+v24.10	 6.5.6	4.3.12/6.5.8	rgb_mon_pass0v24.10_20201016.yaml	default			10/16/2020-17:00:00	rga_fall2018
 v24.9	 6.5.6	4.3.12/6.5.8	rgb_calib_pass0v24.9_20201013.yaml	default			10/13/2020-15:00:00	rga_fall2018
 v24.8	 6.5.6	4.3.12/6.5.8	rgb_mon_pass0v24.8_20201007.yaml	default			10/07/2020-11:00:00	rga_fall2018
 v24.7	 6.5.6	4.3.12/6.5.8	rgb_calib_pass0v24.7_20200913.yaml	default			09/13/2020-11:00:00	rga_fall2018

@@ -18,13 +18,13 @@ echo -e run"\t"raw"\t"decoded"\t""\t"cooked"\t""\t""|\t"r_sum"\t"d_sum"\t"c_sum"
 
 for xx in `cat $1`
 do 
-count=`ls /mss/clas12/rg-b/data/clas_*$xx/*evio* |wc  | awk '{print$1'}`;
+count=`ls /mss/clas12/rg-b/data/clas_*$xx/*.evio.* |wc  | awk '{print$1'}`;
 # ((sum=sum+count));
 # echo $xx $count	$sum;
 
-count1=`ls /cache/clas12/rg-b/production/decoded/6.5.6/$xx/ |wc  | awk '{print$1'}`;
+count1=`ls /mss/clas12/rg-b/production/decoded/6.5.6/$xx/ |wc  | awk '{print$1'}`;
 ((count1=count1*5));
-count2=`ls /cache/clas12/rg-b/production/recon/spring2019/torus-1/pass1/v0/dst/recon/$xx/ |wc  | awk '{print$1'}`;
+count2=`ls /mss/clas12/rg-b/production/recon/spring2019/torus-1/pass1/v0/dst/recon/$xx/ |wc  | awk '{print$1'}`;
 ((count2=count2*5));
 
 count3=`ls /volatile/clas12/rg-b/production/recon/spring2019/torus-1/pass1/v0/dst/train/*/ | grep $xx |wc  | awk '{print$1'}`;
@@ -45,6 +45,11 @@ fi
 ((sum2=sum2+count2));
 
 echo -e $xx"\t"$count"\t"$count1"\t"$compare1"\t"$count2"\t"$compare2"\t""|\t"$sum"\t"$sum1"\t"$sum2"|\t"$count3;
+
+# if [ $compare2 -gt 0 ]
+#   then
+#     echo !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# fi  
 
 compare1=0;
 compare2=0;

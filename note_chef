@@ -1,5 +1,8 @@
-farm speed 
+Nathan's cooking speed record 
 https://jeffersonlab-my.sharepoint.com/:x:/g/personal/baltzell_jlab_org/EU096WRXcyBLl_ApLfSCuvoBiwsPFfBN_0enCzU3dFV6rw?rtime=E2LEG1UG2Eg
+
+bad
+clas_011131.evio.00262
 
 ====do everything with clas12-workflow =============================================
 refer to 
@@ -14,13 +17,12 @@ module load workflow/0.8
 more $CLAS12WFLOW/README.md
 clas12-workflow.py -h
 
-check log
+check log to make cooking speed plot
 clara-log-ana.py -i -r -m"-r-" /farm_out/clas12-1/rgb-dmra-pass1v0-6156x74
-check status
-slurm-status.py -m "6156x74-p0-r-"
 
-Nathan's cooking speed record
-https://jeffersonlab-my.sharepoint.com/:x:/r/personal/baltzell_jlab_org/_layouts/15/Doc.aspx?sourcedoc={64E93D4D-7357-4B20-97F0-292DF482BAFA}&file=CLAS12%20@%20JLab%20Batch.xlsx&wdOrigin=OFFICECOM-WEB.MAIN.MRU&action=default&mobileredirect=true
+check log to make cpu and wall time plot
+slurm-status.py -u clas12-1 -m "6156x74-p0-r-"
+slurm-status.py -u clas12-1 -m rgb-dm-pass1v0-11159x21 -w 7 -g
 
 To delete everything older than a day:
 find /farm_out/$USER/rgb-dmra-pass1v0-6156x74 -type f -mtime +1 -exec mv {} ~/work/farm_out/rgb-dmra-pass1v0-6156x74 \;
@@ -28,11 +30,12 @@ find /farm_out/$USER/rgb-dmra-pass1v0-6156x74 -type f -mtime +1 -exec mv {} ~/wo
 when we need to pause jobs
 ****************************
 swif pause -workflow asdf
-crontab -r
 jkill 0
 ...­ wait until disaster is gone ...
-swif run -workflow asdf or crontab swif.cron
+swif run -workflow asdf 
+no need to stop crontab retry because it doesn't affect paused workflow
 ****************************
+
 check rcdb
 python $CLAS12WFLOW/lib/clas12/RcdbManager.py 11014
 
@@ -56,6 +59,10 @@ swif cancel -workflow workflowName
 
 sweep clean
 swif cancel -delete -workflow workflowName
+
+make time out double
+pause a workflow first, then run command below, then restart workflow. for a running workflow, it will cause running jobs get recalled
+swif modify-jobs -workflow rgb-dm-pass1v0-11250x36 -time mult 2 -names -regexp '.*'
 
 cron 
 cp $CLAS12WFLOW/cron/swif.cron ./
@@ -327,8 +334,15 @@ python bankSplit_6c.5.7_20200515.py hipo4_6c.5.7_20200515
 cp /group/clas12/packages/clara/4.3.12_6.5.8/plugins/clas12/etc/bankdefs/util/bankSplit.py bankSplit_6.5.8_20200610.py
 edit bankSplit_6.5.8_20200610.py
 mkdir hipo4_6.5.8_20200610
-cp /group/clas12/packages/clara/4.3.12_6c.5.7/plugins/clas12/etc/bankdefs/hipo4/* hipo4_6.5.8_20200610
+cp /group/clas12/packages/clara/4.3.12_6.5.8/plugins/clas12/etc/bankdefs/hipo4/* hipo4_6.5.8_20200610
 python bankSplit_6.5.8_20200610.py hipo4_6.5.8_20200610
+
+cp /group/clas12/packages/clara/4.3.12_6.5.12/plugins/clas12/etc/bankdefs/util/bankSplit.py bankSplit_6.5.12_20201028.py
+edit bankSplit_6.5.12_20201028.py
+mkdir hipo4_6.5.12_20201028
+cp /group/clas12/packages/clara/4.3.12_6.5.12/plugins/clas12/etc/bankdefs/hipo4/* hipo4_6.5.12_20201028
+python bankSplit_6.5.12_20201028.py hipo4_6.5.12_20201028
+
 
 === yaml trick =============================================
 
