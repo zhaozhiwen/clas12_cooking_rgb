@@ -1,4 +1,4 @@
-Nathan's cooking speed record 
+Nathan's cooking speed record and run info
 https://jeffersonlab-my.sharepoint.com/:x:/g/personal/baltzell_jlab_org/EU096WRXcyBLl_ApLfSCuvoBiwsPFfBN_0enCzU3dFV6rw?rtime=E2LEG1UG2Eg
 
 bad
@@ -23,6 +23,9 @@ clara-log-ana.py -i -r -m"-r-" /farm_out/clas12-1/rgb-dmra-pass1v0-6156x74
 check log to make cpu and wall time plot
 slurm-status.py -u clas12-1 -m "6156x74-p0-r-"
 slurm-status.py -u clas12-1 -m rgb-dm-pass1v0-11159x21 -w 7 -g
+
+check problem
+swif-status.py --problemStats --workflow rgb-ra-v26.2-6366
 
 To delete everything older than a day:
 find /farm_out/$USER/rgb-dmra-pass1v0-6156x74 -type f -mtime +1 -exec mv {} ~/work/farm_out/rgb-dmra-pass1v0-6156x74 \;
