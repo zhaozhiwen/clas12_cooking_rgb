@@ -1,12 +1,11 @@
 for CLAS12 cooking, a version is defined by software, schema file, yaml file, ccdb variation and timestamp
 
 ***** pass1 *****************************************************************************************
-version	 			decode	cook		yaml				schema				timestamp				variation
+version	 			decode	cook		cook_yaml				schema				timestamp				variation	train_code	train_yaml
 
-spring2019/torus-1/pass1/v0	6.5.6	4.3.12/6.5.8	rgb_dst_pass1v0_20200610.yaml	hipo4_6.5.8_20200610	06/10/2020-18:00:00	rga_fall2018
+spring2019/torus-1/pass1/v0	6.5.6	4.3.12/6.5.8	rgb_dst_pass1v0_20200610.yaml	hipo4_6.5.8_20200610	06/10/2020-18:00:00	rga_fall2018	4.3.12/6.5.8	train_dst_20200610.yaml
 
-fall2019/torus+1/pass1/v1	6.5.6	4.3.12/6.5.12	rgb_dst_pass1v1_20201125.yaml	hipo4_6.5.12_20201028	11/25/2020-11:00:00	rga_fall2018
-
+fall2019/torus+1/pass1/v1	6.5.6	4.3.12/6.5.12	rgb_dst_pass1v1_20201125.yaml	hipo4_6.5.12_20201028	11/25/2020-11:00:00	rga_fall2018	4.3.12/6.5.13	train_dst_20201204.yaml ????????
 
 ***** pass0 *****************************************************************************************
 using clas12-workflow/dev for train_calib.yaml and post process when Charge and lifetime are transferred to REC::Event
