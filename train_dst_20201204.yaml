@@ -14,8 +14,6 @@ services:
     name: nDVCSQ1
   - class: org.jlab.jnp.grapes.services.GenericWagon
     name: nDVCSQ2
-  - class: org.jlab.jnp.grapes.services.GenericWagon
-    name: nDVCSQ3
 #################################################### eDeut
   - class: org.jlab.jnp.grapes.services.GenericWagon
     name: eDeutQ1
@@ -34,7 +32,7 @@ configuration:
     1: jpsi 
     2: ndvcscut
     3: edeutcut
-    4: nsidiscut
+    4: nsidis
     5: two    
   services:
 #################################################### JPSI/TCS
@@ -44,43 +42,36 @@ configuration:
     nDVCSQ1:
       id: 2
       forward: 11:Xn
-      beamEnergy: 10.410
+      beamEnergy: 10.4096
       targetPDG: 2112
       electron: Q2>0.9
     nDVCSQ2:
       id: 2
       forward: 11:2212:Xn
-      beamEnergy: 10.410
-      targetPDG: 2112
-      electron: Q2>0.9
-    nDVCSQ3:
-      id: 2
-      forward: 11:Xn
-      central: 2212:Xn:X+:X-
-      beamEnergy: 10.410
+      beamEnergy: 10.4096
       targetPDG: 2112
       electron: Q2>0.9
 #################################################### eDeut
     eDeutQ1:
       id: 3
       forward: 11:45:X+:X-:Xn
-      beamEnergy: 10.410
-      targetPDG: 2112
+      beamEnergy: 10.4096
+      targetPDG: 45
       electron: Q2>0.9
     eDeutQ2:
       id: 3
       forward: 11:X+:X-:Xn
       central: 45:X+:X-:Xn
-      beamEnergy: 10.410
-      targetPDG: 2112
+      beamEnergy: 10.4096
+      targetPDG: 45
       electron: Q2>0.9      
 #################################################### nSidis
     nSidisCut:
       id: 4
       forward: 11:X+:X-:Xn
-      beamEnergy: 10.200
-      targetPDG: 2212
-      electron: Q2>1.0 && W>2 && P>2 && VZ>-25 && VZ<20      
+      beamEnergy: 10.4096
+      targetPDG: 2112 
+      electron: Q2>1.0 && W>2 && p>2 && vz>-25 && vz<20
 #################################################### Two
     TWO1:
       id: 5
