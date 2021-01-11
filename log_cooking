@@ -34,8 +34,16 @@ version	 decode	cook		yaml					schema			timestamp			variation
 v26.2	 6.5.6	4.3.12/6.5.12	rgb_calib_pass0v26.2_20201028.yaml	default			10/28/2020-14:00:00	rga_fall2018
 v26.1	 6.5.6	4.3.12/6.5.12	rgb_calib_pass0v26.1_20201028.yaml	default			10/28/2020-14:00:00	rga_fall2018
 
-v25.6	 6.5.6	4.3.12/6.5.12	rgb_mon_pass0v25.6_202011122.yaml	default			11/22/2020-19:00:00	rga_fall2018
-v25.5	 6.5.6	4.3.12/6.5.12	rgb_calib_pass0v25.5_202011118.yaml	default			11/18/2020-14:00:00	rga_fall2018
+v25.14	 6.5.6	4.3.12/6.5.12	rgb_mon_pass0v25.14_20210106.yaml	default			01/06/2021-16:00:00	rga_fall2018
+v25.13	 6.5.6	4.3.12/6.5.12	rgb_mon_pass0v25.13_20201230.yaml	default			12/30/2020-16:00:00	rga_fall2018
+v25.12	 6.5.6	4.3.12/6.5.12	rgb_calib_pass0v25.12_20201227.yaml	default			12/27/2020-10:00:00	rga_fall2018
+v25.11	 6.5.6	4.3.12/6.5.12	rgb_mon_pass0v25.11_20201227.yaml	default			12/27/2020-10:00:00	rga_fall2018
+v25.10	 6.5.6	4.3.12/6.5.12	rgb_mon_pass0v25.10_20201222.yaml	default			12/22/2020-17:00:00	rga_fall2018
+v25.9	 6.5.6	4.3.12/6.5.12	rgb_calib_pass0v25.9_20201218.yaml	default			12/18/2020-14:00:00	rga_fall2018
+v25.8	 6.5.6	4.3.12/6.5.12	rgb_mon_pass0v25.8_20201216.yaml	default			12/16/2020-14:00:00	rga_fall2018
+v25.7	 6.5.6	4.3.12/6.5.12	rgb_calib_pass0v25.7_20201210.yaml	default			12/10/2020-14:00:00	rga_fall2018
+v25.6	 6.5.6	4.3.12/6.5.12	rgb_mon_pass0v25.6_20201122.yaml	default			11/22/2020-19:00:00	rga_fall2018
+v25.5	 6.5.6	4.3.12/6.5.12	rgb_calib_pass0v25.5_20201118.yaml	default			11/18/2020-14:00:00	rga_fall2018
 v25.4	 6.5.6	4.3.12/6.5.8	rgb_calib_pass0v25.4_20201028.yaml	default			10/28/2020-14:00:00	rga_fall2018
 v25.3	 6.5.6	4.3.12/6.5.8	rgb_calib_pass0v25.3_20201027.yaml	default			10/27/2020-12:00:00	rga_fall2018
 v25.2	 6.5.6	4.3.12/6.5.8	rgb_calib_pass0v25.2_20201025.yaml	default			10/25/2020-11:00:00	rga_fall2018
