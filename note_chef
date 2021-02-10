@@ -1,7 +1,7 @@
 Nathan's cooking speed record and run info
-https://jeffersonlab-my.sharepoint.com/:x:/g/personal/baltzell_jlab_org/EU096WRXcyBLl_ApLfSCuvoBiwsPFfBN_0enCzU3dFV6rw?rtime=E2LEG1UG2Eg
+https://jeffersonlab-my.sharepoint.com/:x:/r/personal/baltzell_jlab_org/_layouts/15/Doc.aspx?sourcedoc=%7B64E93D4D-7357-4B20-97F0-292DF482BAFA%7D&file=CLAS12%20%40%20JLab%20Batch.xlsx&action=default&mobileredirect=true
 
-bad
+bad fall2019 evio file
 clas_011131.evio.00262
 
 ====do everything with clas12-workflow =============================================
@@ -11,6 +11,7 @@ https://github.com/baltzell/clas12-workflow
 source /group/clas12/packages/setup.csh
 module load clas12/dev
 
+module load workflow
 module load workflow/dev
 module load workflow/0.8
 
@@ -226,6 +227,9 @@ Yes. By default it will use all available cores. However, you can set the core c
 
 for submitting a single job, don't set farm.scaling and just use default 0
 otherwise, clara will create more jobs and could miss files
+
+grape and train
+We have to use the grape in the same version of coatjava used for cooking to do train, otherwise at least REC bank could be corrupted
 
 ====decode with clas12-workflow (old) =============================================
 

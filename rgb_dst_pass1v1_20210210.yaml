@@ -56,7 +56,7 @@ configuration:
       magfieldSolenoidMap: Symm_solenoid_r601_phi1_z1201_13June2018.dat
       magfieldTorusMap: Full_torus_r251_phi181_z251_08May2018.dat
       variation: rga_fall2018
-      timestamp: 11/25/2020-11:00:00
+      timestamp: 02/10/2021-11:00:00
     SWAPS:
       timestamp: 10/28/2020
       previousTimestamp: 10/01/2020
@@ -64,62 +64,62 @@ configuration:
       modifyBanks: "true"      
     CND:
       variation: rga_fall2018
-      timestamp: 11/25/2020-11:00:00      
+      timestamp: 02/10/2021-11:00:00      
     CTOF:
       variation: rga_fall2018
-      timestamp: 11/25/2020-11:00:00      
+      timestamp: 02/10/2021-11:00:00      
     CVT:
       variation: rga_fall2018
-      timestamp: 11/25/2020-11:00:00      
+      timestamp: 02/10/2021-11:00:00      
     DCHB:
       variation: rga_fall2018
       dcGeometryVariation: rga_fall2018
       dcT2DFunc: "Polynomial"
       dcWireDistortion: "true"      
-      timestamp: 11/25/2020-11:00:00      
+      timestamp: 02/10/2021-11:00:00      
     DCTB:
       variation: rga_fall2018
       dcGeometryVariation: rga_fall2018
-      timestamp: 11/25/2020-11:00:00      
+      timestamp: 02/10/2021-11:00:00      
     EC:
       variation: rga_fall2018
-      timestamp: 11/25/2020-11:00:00      
+      timestamp: 02/10/2021-11:00:00      
     FTOFHB:
       variation: rga_fall2018
-      timestamp: 11/25/2020-11:00:00      
+      timestamp: 02/10/2021-11:00:00      
     FTOFTB:
       variation: rga_fall2018
-      timestamp: 11/25/2020-11:00:00      
+      timestamp: 02/10/2021-11:00:00      
     EBHB:
       variation: rga_fall2018
-      timestamp: 11/25/2020-11:00:00      
+      timestamp: 02/10/2021-11:00:00      
     EBTB:
       variation: rga_fall2018
-      timestamp: 11/25/2020-11:00:00     
+      timestamp: 02/10/2021-11:00:00     
     FTCAL:
       variation: default    
-      timestamp: 11/25/2020-11:00:00          
+      timestamp: 02/10/2021-11:00:00          
     FTHODO:
       variation: default    
-      timestamp: 11/25/2020-11:00:00                    
+      timestamp: 02/10/2021-11:00:00                    
     FTEB:
       variation: default    
-      timestamp: 11/25/2020-11:00:00             
+      timestamp: 02/10/2021-11:00:00             
     BAND:
       variation: default    
-      timestamp: 11/25/2020-11:00:00      
+      timestamp: 02/10/2021-11:00:00      
     HTCC:
       variation: default    
-      timestamp: 11/25/2020-11:00:00
+      timestamp: 02/10/2021-11:00:00
     LTCC:
       variation: default    
-      timestamp: 11/25/2020-11:00:00        
+      timestamp: 02/10/2021-11:00:00        
     RICH:
       variation: default    
-      timestamp: 11/25/2020-11:00:00
+      timestamp: 02/10/2021-11:00:00
     RTPC:
       variation: default    
-      timestamp: 11/25/2020-11:00:00
+      timestamp: 02/10/2021-11:00:00
       
 mime-types:
   - binary/data-hipo
