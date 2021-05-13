@@ -14,26 +14,31 @@ compare2=0;
 
 problem=0;
 
-echo -e run"\t"raw"\t"decoded"\t""\t"cooked"\t""\t""|\t"r_sum"\t"d_sum"\t"c_sum"|\t"dst;
+echo -e run"\t"raw"\t"decoded"\t"diff"\t"cooked"\t"diff"\t""|\t"r_sum"\t"d_sum"\t"c_sum"|\t"dst;
 
 for xx in `cat $1`
 do 
 count=`ls /mss/clas12/rg-b/data/clas_*$xx/*.evio.* |wc  | awk '{print$1'}`;
+# count=`ls /mss/clas12/rg-k/data/clas_*$xx/*.evio.* |wc  | awk '{print$1'}`;
 # ((sum=sum+count));
 # echo $xx $count	$sum;
 
-count1=`ls /cache/clas12/rg-b/production/decoded/6.5.6/$xx/ |wc  | awk '{print$1'}`;
+count1=`ls /mss/clas12/rg-b/production/decoded/6.5.6/$xx/ |wc  | awk '{print$1'}`;
+# count1=`ls /mss/clas12/rg-k/production/decoded/6b.2.0/$xx/ |wc  | awk '{print$1'}`;
+
 ((count1=count1*5));
 
-# count2=`ls /mss/clas12/rg-b/production/recon/spring2019/torus-1/pass1/v0/dst/recon/$xx/ |wc  | awk '{print$1'}`;
-# count2=`ls /mss/clas12/rg-b/production/recon/fall2019/torus+1/pass1/v1/dst/recon/$xx/ |wc  | awk '{print$1'}`;
-count2=`ls /mss/clas12/rg-b/production/recon/spring2020/torus-1/pass1/v0/dst/recon/$xx/ |wc  | awk '{print$1'}`;
+# count2=`ls /cache/clas12/rg-b/production/recon/spring2019/torus-1/pass1/v0/dst/recon/$xx/ |wc  | awk '{print$1'}`;
+count2=`ls /cache/clas12/rg-b/production/recon/fall2019/torus+1/pass1/v1/dst/recon/$xx/ |wc  | awk '{print$1'}`;
+# count2=`ls /mss/clas12/rg-b/production/recon/fall2019/torus-1/pass1/v1/dst/recon/$xx/ |wc  | awk '{print$1'}`;
+# count2=`ls /mss/clas12/rg-b/production/recon/spring2020/torus-1/pass1/v1/dst/recon/$xx/ |wc  | awk '{print$1'}`;
 ((count2=count2*5));
 
 
-# count3=`ls /volatile/clas12/rg-b/production/recon/spring2019/torus-1/pass1/v0/new/dst/train/*/ | grep $xx |wc  | awk '{print$1'}`;
-# count3=`ls /volatile/clas12/rg-b/production/recon/fall2019/torus+1/pass1/v1/dst/train/*/ | grep $xx |wc  | awk '{print$1'}`;
-count3=`ls /volatile/clas12/rg-b/production/recon/spring2020/torus-1/pass1/v1/dst/train/*/ | grep $xx |wc  | awk '{print$1'}`;
+# count3=`ls /cache/clas12/rg-b/production/recon/spring2019/torus-1/pass1/v0/dst/train/*/ | grep $xx |wc  | awk '{print$1'}`;
+# count3=`ls /cache/clas12/rg-b/production/recon/fall2019/torus+1/pass1/v1/dst/train/*/ | grep $xx |wc  | awk '{print$1'}`;
+count3=`ls /cache/clas12/rg-b/production/recon/fall2019/torus-1/pass1/v1/dst/train/*/ | grep $xx |wc  | awk '{print$1'}`;
+# count3=`ls /cache/clas12/rg-b/production/recon/spring2020/torus-1/pass1/v1/dst/train/*/ | grep $xx |wc  | awk '{print$1'}`;
 
 if [ $count -gt $count1 ]
   then
@@ -70,3 +75,10 @@ problem=0;
 done
 
 # echo "sum $sum";
+
+# find /cache/clas12/rg-b/production/recon/spring2019/torus-1/pass1/v0/dst/train /cache/clas12/rg-b/production/recon/fall2019/torus+1/pass1/v1/dst/train /cache/clas12/rg-b/production/recon/fall2019/torus-1/pass1/v1/dst/train /cache/clas12/rg-b/production/recon/spring2020/torus-1/pass1/v1/dst/train
+# 
+# 5.8T    /cache/clas12/rg-b/production/recon/spring2020/torus-1/pass1/v1/dst/train
+# 5.6T    /cache/clas12/rg-b/production/recon/fall2019/torus+1/pass1/v1/dst/train
+# 408G    /cache/clas12/rg-b/production/recon/fall2019/torus-1/pass1/v1/dst/train
+# 12T     /cache/clas12/rg-b/production/recon/spring2019/torus-1/pass1/v0/dst/train

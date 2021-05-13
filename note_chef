@@ -64,6 +64,10 @@ swif cancel -workflow workflowName
 sweep clean
 swif cancel -delete -workflow workflowName
 
+release slurm job manually
+scontrol show job slurm_id
+scontrol release slurm_id
+
 make time out double
 pause a workflow first, then run command below, then restart workflow. for a running workflow, it will cause running jobs get recalled
 swif modify-jobs -workflow rgb-dm-pass1v0-11250x36 -time mult 2 -names -regexp '.*'
