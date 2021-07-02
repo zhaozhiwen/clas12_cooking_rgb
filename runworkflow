@@ -569,17 +569,25 @@ do
 # tag=v25.20
 # clas12-workflow.py --runGroup rgb --tag ${tag} --model recana --inputs /cache/clas12/rg-b/production/decoded/${coatjava_decode}/011415 --runs 011415 --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /work/clas12/users/devita/clas12validation/clara-iss641-cndclustering --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_calib_pass0v25.20_20210423.yaml --trainYaml calib --trainSize 10 --postproc --recharge --submit
 
+# clas12-workflow.py --runGroup rgb --tag florian --model recana --inputs /mss/clas12/rg-b/production/decoded/6.5.6/011299 --runs 011299 --outDir /volatile/clas12/rg-b/production/recon/pass0/florian --coatjava 6.5.12 --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_calib_pass0vflorian_20210513.yaml --trainYaml calib --trainSize 10 --postproc --recharge --submit
+
+# clas12-workflow.py --runGroup rgb --tag cdveto --model ana --inputs  /cache/clas12/rg-b/production/recon/spring2020/torus-1/pass1/v1/dst/recon --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_tmp --outDir /volatile/clas12/rg-b/production/recon/pass0/cdveto --coatjava 6.5.12 --trainYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/train_dst_cdveto.yaml --trainSize 10 --submit
+
 # tag=v26.1
 # clas12-workflow.py --runGroup rgb --tag ${tag} --model recana --inputs /mss/clas12/rg-b/production/decoded/6.5.6/006366 --runs 006366 --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_calib_pass0v26.1_20201028.yaml --trainYaml calib --postproc --recharge --submit
 
 # clas12-workflow.py --runGroup rgb --tag rgkcnd --model recana --inputs /mss/clas12/rg-k/production/decoded/6b.2.0 --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_tmp --outDir /volatile/clas12/rg-b/production/recon/pass0/rgkcnd --clara /group/clas12/packages/clara/4.3.12_6.5.12 --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_calib_pass0rgkcnd_20210401.yaml --trainYaml calib --postproc --recharge --submit
 
-clas12-workflow.py --runGroup rgb --tag rgkadam --model ana --inputs /volatile/clas12/rg-b/production/recon/pass0/rgkcnd/dst/recon/ --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_tmp --outDir /volatile/clas12/rg-b/production/recon/pass0/rgkcnd/new --clara /group/clas12/packages/clara/4.3.12_6.5.12 --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_dst_pass0rgkcnd_20210401.yaml --trainYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/train_dst_rgkcnd.yaml --submit
+# clas12-workflow.py --runGroup rgb --tag rgkadam --model ana --inputs /volatile/clas12/rg-b/production/recon/pass0/rgkcnd/dst/recon/ --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_tmp --outDir /volatile/clas12/rg-b/production/recon/pass0/rgkcnd/new --clara /group/clas12/packages/clara/4.3.12_6.5.12 --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_dst_pass0rgkcnd_20210401.yaml --trainYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/train_dst_rgkcnd.yaml --submit
 
 # clas12-workflow.py --runGroup rgb --tag rgkadam --model recana --inputs /mss/clas12/rg-k/production/decoded/6b.2.0 --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_tmp --outDir /volatile/clas12/rg-b/production/recon/pass0/rgkcnd --clara /group/clas12/packages/clara/4.3.12_6.5.12 --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_dst_pass0rgkcnd_20210401.yaml --trainYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/train_dst_rgkcnd.yaml --postproc --recharge --submit
 
 # tag=v26.2
 # clas12-workflow.py --runGroup rgb --tag ${tag} --model recana --inputs /mss/clas12/rg-b/production/decoded/6.5.6/006366 --runs 006366 --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_calib_pass0v26.2_20201028.yaml --trainYaml calib --postproc --recharge --submit
+
+tag=v27.1
+clas12-workflow.py --runGroup rgb --tag ${tag} --model recana --inputs /cache/clas12/rg-b/production/decoded/6.5.6 --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_tmp --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/4.3.12_6.5.12 --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_calib_pass0v27.1_20210210.yaml --trainYaml calib --trainSize 10 --postproc --recharge --submit
+
 
 # tag=pass1v0
 # clas12-workflow.py --runGroup rgb --tag ${tag} --model decmrg --inputs /mss/clas12/rg-b/data --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_2020spring_decode3 --decDir /cache/clas12/rg-b/production/decoded/${coatjava_decode} --clara /group/clas12/packages/clara/${clara_decode}_${coatjava_decode} --mergeSize 5 --submit

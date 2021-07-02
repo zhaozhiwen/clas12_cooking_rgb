@@ -95,6 +95,8 @@ hipo-check-integrity.py /cache/clas12/asdf/*
 
 which will fail on first file with problem, which you then remove, log, and rerun.
 
+Hipo-utils -info gives the number of tag-0 events and tag-1 events. The former are the physics events that survive the skim conditions while the latter are the special events that contain scaler/helicity information. The latter ones are written out independently on the skim condition to ensure the train output has all information for normalization etc. If the skim condition is very tight, it can happen that you end up with mostly tag-1 events that have helicity/scaler,¡­banks only.
+
 == access clas online data =============================================================
 (do this only when data mover is not working or too slow)
 ssh hallgw
