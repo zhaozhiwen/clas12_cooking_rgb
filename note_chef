@@ -4,6 +4,19 @@ https://jeffersonlab-my.sharepoint.com/:x:/r/personal/baltzell_jlab_org/_layouts
 bad fall2019 evio file
 clas_011131.evio.00262
 
+==== Raffa email on 2022/07/27  ========================================
+
+As you can see from New rgb_spring2019 CCDB variation created for pass2, the new CVT and DC alignment constants were uploaded into CCDB and it is now possible to launch the pass0s with the latest coatjava release, 8.2.1.
+
+Because of changes to the default settings for some reconstruction services and the specific features of the Spring 2019 data related to cable swaps, new yaml files should be set up.
+
+ You can use as a reference the file at /home/clas12/users/devita/dcalign/spring2019/spring2019_pass0.yaml, considering the following notes:
+- the swap service is needed to handle the BMT cable swap that was found before pass1; when the swap service is in use, the global variation cannot be set and the CCDB variation  has to be set for each service;
+- since there were bank changes compared to previous releases, make sure to use the schemas from the 8.2.1 installation;
+- for RG-A, the CVT yaml setting 
+       targetMat: "LD2"
+should be commented out since RG-A has LH2 which is the default.
+
 ====do everything with clas12-workflow =============================================
 refer to 
 https://github.com/baltzell/clas12-workflow
@@ -13,6 +26,7 @@ module load clas12/dev
 
 module load workflow
 module load workflow/dev
+module load workflow/swif2
 module load workflow/0.8
 
 more $CLAS12WFLOW/README.md
@@ -67,6 +81,9 @@ swif cancel -delete -workflow workflowName
 release slurm job manually
 scontrol show job slurm_id
 scontrol release slurm_id
+
+fix problem_types  SITE_PREP_FAIL
+swif2 modify-jobs "rgb-ra-v28.19-6164x14" -disk add 10gb -problems SITE_PREP_FAIL
 
 make time out double
 pause a workflow first, then run command below, then restart workflow. for a running workflow, it will cause running jobs get recalled

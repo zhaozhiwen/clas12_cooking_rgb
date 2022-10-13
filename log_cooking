@@ -15,6 +15,10 @@ spring2020/torus-1/pass1/v1	6.5.6	4.3.12/6.5.12	rgb_dst_pass1v1_20210210.yaml	hi
 using clas12-workflow/dev for train_calib.yaml and post process when Charge and lifetime are transferred to REC::Event
 only calibration constants use timestamp, geometry constants use latest
 
+v28.x calibration cooking for spring2019, using rgb_spring2019 https://logbooks.jlab.org/entry/4020490
+
+v27.x some tests
+
 v26.x magfield test 
 
 v25.x calibration cooking for spring2020
@@ -37,6 +41,38 @@ v1  cooking during Spring 2019 run
 
 =====================================================================================================================
 version	 decode	cook		yaml					schema			timestamp			variation
+
+v28.21	 6.5.6	5.0.2/8.2.4	rgb_mon_pass0v28.21_20221010.yaml	default			10/10/2022-09:30:00	rgb_spring2019
+v28.20	 6.5.6	5.0.2/8.2.4	rgb_calib_pass0v28.20_20221008.yaml	default			10/08/2022-11:00:00	rgb_spring2019
+v28.19	 6.5.6	5.0.2/8.2.4	rgb_calib_pass0v28.19_20221003.yaml	default			10/03/2022-11:00:00	rgb_spring2019
+v28.18	 6.5.6	5.0.2/8.2.4	rgb_mon_pass0v28.18_20221003.yaml	default			10/03/2022-11:00:00	rgb_spring2019
+v28.17	 6.5.6	5.0.2/8.2.4	rgb_mon_pass0v28.17_20221002.yaml	default			10/02/2022-17:00:00	rgb_spring2019
+v28.16	 6.5.6	5.0.2/8.2.4	rgb_calib_pass0v28.16_20221001.yaml	default			10/01/2022-11:00:00	rgb_spring2019
+v28.15	 6.5.6	5.0.2/8.2.4	rgb_calib_pass0v28.15_20220929.yaml	default			09/29/2022-17:00:00	rgb_spring2019
+v28.14	 6.5.6	5.0.2/8.2.4	rgb_mon_pass0v28.14_20220929.yaml	default			09/29/2022-17:00:00	rgb_spring2019
+v28.13	 6.5.6	5.0.2/8.2.4	rgb_mon_pass0v28.13_20220927.yaml	default			09/27/2022-14:00:00	rgb_spring2019
+v28.12	 6.5.6	5.0.2/8.2.4	rgb_calib_pass0v28.12_20220923.yaml	default			09/23/2022-11:00:00	rgb_spring2019
+v28.11	 6.5.6	5.0.2/8.2.4	rgb_mon_pass0v28.11_20220922.yaml	default			09/22/2022-17:00:00	rgb_spring2019
+v28.10	 6.5.6	5.0.2/8.2.4	rgb_calib_pass0v28.10_20220921.yaml	default			09/21/2022-11:00:00	rgb_spring2019
+v28.9	 6.5.6	5.0.2/8.2.4	rgb_mon_pass0v28.9_20220920.yaml	default			09/20/2022-15:30:00	rgb_spring2019
+v28.8	 6.5.6	5.0.2/8.2.4	rgb_mon_pass0v28.8_20220914.yaml	default			09/14/2022-22:00:00	rgb_spring2019
+v28.7	 6.5.6	5.0.2/8.2.4	rgb_mon_pass0v28.7_20220912.yaml	default			09/12/2022-22:00:00	rgb_spring2019
+v28.6	 6.5.6	5.0.2/8.2.4	rgb_mon_pass0v28.6_20220902.yaml	default			09/02/2022-11:00:00	rgb_spring2019
+v28.5	 8.3.0	5.0.2/8.3.0	rgb_calib_pass0v28.5_20220902.yaml	default			09/02/2022-09:00:00	rgb_spring2019
+v28.4	 6.5.6	5.0.2/8.2.4	rgb_mon_pass0v28.4_20220823.yaml	default			08/23/2022-11:00:00	rgb_spring2019
+v28.3	 6.5.6	5.0.2/8.2.2	rgb_calib_pass0v28.3_20220814.yaml	default			08/14/2022-11:00:00	rgb_spring2019
+v28.2	 6.5.6	5.0.2/8.2.2	rgb_mon_pass0v28.2_20220814.yaml	default			08/14/2022-11:00:00	rgb_spring2019
+v28.1	 6.5.6	5.0.2/8.2.1	rgb_calib_pass0v28.1_20220805.yaml	default			08/05/2022-11:00:00	rgb_spring2019
+v28.0	 6.5.6	5.0.2/8.2.1	rgb_mon_pass0v28.0_20220727.yaml	default			07/27/2022-11:00:00	rgb_spring2019
+
+v27.10	 same	5.0.2/clara-iss908-dcJitterV2ti	rgb_calib_pass0v27.10_20220807.yaml	default			08/07/2022-11:00:00	rga_fall2018
+v27.9	 same	5.0.2/clara-iss908-dcJitterV2	rgb_calib_pass0v27.9_20220807.yaml	default			08/07/2022-11:00:00	rga_fall2018
+v27.8	 same	5.0.2/clara-iss908-dcJitter	rgb_calib_pass0v27.8_20220725.yaml	default			07/25/2022-11:00:00	rga_fall2018
+v27.7	 6.5.6	5.0.2/clara-iss831	rgb_mon_pass0v27.7_20220615.yaml	default			06/15/2022-09:00:00	rga_fall2018
+v27.6	 6.5.6	5.0.2/8.0.0	rgb_calib_pass0v27.6_20220429.yaml	default			04/29/2022-11:00:00	rga_fall2018
+v27.5	 6.5.6	4.3.12/6.5.12	rgb_calib_pass0v27.5_20220124.yaml	default			01/24/2021-11:00:00	rga_fall2018
+v27.4	 6.5.6	4.3.12/6.5.12	rgb_calib_pass0v27.4_20211201.yaml	default			12/01/2021-11:00:00	rga_fall2018
+v27.2	 6.5.6	4.3.12/6.5.12	rgb_dst_pass0v27.2_20211012.yaml	default			10/12/2021-11:00:00	rga_fall2018
 v27.1	 6.5.6	4.3.12/6.5.12	rgb_calib_pass0v27.1_20210210.yaml	default			02/10/2021-11:00:00	rga_fall2018
 
 v26.2	 6.5.6	4.3.12/6.5.12	rgb_calib_pass0v26.2_20201028.yaml	default			10/28/2020-14:00:00	rga_fall2018
