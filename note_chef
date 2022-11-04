@@ -1,5 +1,5 @@
 Nathan's cooking speed record and run info
-https://jeffersonlab-my.sharepoint.com/:x:/r/personal/baltzell_jlab_org/_layouts/15/Doc.aspx?sourcedoc=%7B64E93D4D-7357-4B20-97F0-292DF482BAFA%7D&file=CLAS12%20%40%20JLab%20Batch.xlsx&action=default&mobileredirect=true
+https://jeffersonlab-my.sharepoint.com/:x:/g/personal/baltzell_jlab_org/EU096WRXcyBLl_ApLfSCuvoBiwsPFfBN_0enCzU3dFV6rw?e=ec9M3E
 
 bad fall2019 evio file
 clas_011131.evio.00262
@@ -71,6 +71,7 @@ swif-status.py --details --workflow workflowName
 
 retry
 swif-status.py --retry --workflow workflowName
+swif-status.py --retry  (retry all workflow)
 
 cancel jobs
 swif cancel -workflow workflowName
@@ -83,9 +84,15 @@ scontrol show job slurm_id
 scontrol release slurm_id
 
 fix problem_types  SITE_PREP_FAIL
-swif2 modify-jobs "rgb-ra-v28.19-6164x14" -disk add 10gb -problems SITE_PREP_FAIL
+swif-status.py --problems --workflow rgb-ra-v28.24-6224x5 |grep job_attempt_problem_details (see disk needed)
+if results is like "job_attempt_problem_details": "Requested disk reservation (79,000,000,000) is less than size of inputs (100,572,392,844)"
+add 25GB disk by the following
+swif2 modify-jobs "rgb-ra-v28.24-6224x5" -disk add 25gb -problems SITE_PREP_FAIL
 
-make time out double
+fix problem type SLURM_FAILED with corrupt file verified by "hipo-util -test"
+swif2 retry-jobs rgb-ra-v28.22_8.3.2-6449x15 -refresh-input /lustre/expphy/volatile/clas12/rg-b/production/recon/pass0/v28.22_8.3.2/dst/recon/006455/rec_clas_006455.evio.00275-00279.hipo 8577763
+
+make timeout double
 pause a workflow first, then run command below, then restart workflow. for a running workflow, it will cause running jobs get recalled
 swif modify-jobs -workflow rgb-dm-pass1v0-11250x36 -time mult 2 -names -regexp '.*'
 
@@ -96,6 +103,18 @@ crontab swif.cron to install it and it will retry all jobs every 30m
 crontab -e to edit
 crontab -l to list
 crontab -r to remove
+
+As a result,  "swif-status.py --retry" now takes arguments corresponding to problem types.  The cronjobs stay as is for now, i.e. no arguments to the --retry option.
+Currently, these will now never be retried from swif-status.py (nor our automated cronjobs) unless explicitly requested:
+SLURM_INPUT_FAIL
+SITE_PREP_FAIL
+SLURM_FAILED***
+And these will always be retried, regardless whether requested:
+SLURM_NODE_FAIL
+SLURM_CANCELLED
+SLURM_TIMEOUT
+
+https://clasweb.jlab.org/wiki/index.php/CLAS12_Chef_Documentation#tab=Tips
 
 == file check ==================
 

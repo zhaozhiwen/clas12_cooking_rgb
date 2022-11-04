@@ -42,6 +42,13 @@ v1  cooking during Spring 2019 run
 =====================================================================================================================
 version	 decode	cook		yaml					schema			timestamp			variation
 
+v28.28	 6.5.6	5.0.2/8c.3.2	rgb_calib_pass0v28.28_20221028.yaml	default			10/28/2022-11:00:00	rgb_spring2019
+v28.27	 6.5.6	5.0.2/8.3.2-8c.3.2	rgb_mon_pass0v28.23_20221026.yaml	default			10/26/2022-06:00:00	rgb_spring2019
+v28.26	 6.5.6	5.0.2/8.3.2-8c.3.2	rgb_mon_pass0v28.23_20221025.yaml	default			10/25/2022-11:00:00	rgb_spring2019
+v28.25	 6.5.6	5.0.2/8c.3.2	rgb_calib_pass0v28.25_20221019.yaml	default			10/19/2022-17:00:00	rgb_spring2019
+v28.24	 6.5.6	5.0.2/8c.3.2	rgb_calib_pass0v28.24_20221019.yaml	default			10/19/2022-17:00:00	rgb_spring2019
+v28.23	 6.5.6	5.0.2/8.3.2-8c.3.2	rgb_mon_pass0v28.23_20221019.yaml	default			10/19/2022-17:00:00	rgb_spring2019
+v28.22	 6.5.6	5.0.2/8.3.2-8c.3.2	rgb_dst_pass0v28.22_20221014.yaml	default			10/14/2022-11:00:00	rgb_spring2019
 v28.21	 6.5.6	5.0.2/8.2.4	rgb_mon_pass0v28.21_20221010.yaml	default			10/10/2022-09:30:00	rgb_spring2019
 v28.20	 6.5.6	5.0.2/8.2.4	rgb_calib_pass0v28.20_20221008.yaml	default			10/08/2022-11:00:00	rgb_spring2019
 v28.19	 6.5.6	5.0.2/8.2.4	rgb_calib_pass0v28.19_20221003.yaml	default			10/03/2022-11:00:00	rgb_spring2019
