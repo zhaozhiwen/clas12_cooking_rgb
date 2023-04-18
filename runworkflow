@@ -11,7 +11,13 @@ coatjava_decode=6.5.6
 clara_cook=5.0.2
 # clara_cook=4.3.12
 
-coatjava_cook=8c.3.2
+coatjava_cook=8.7.1
+# coatjava_cook=8.7.0
+# coatjava_cook=8.6.0
+# coatjava_cook=8.5.0
+# coatjava_cook=8c.4.0
+# coatjava_cook=8.4.0
+# coatjava_cook=8c.3.2
 # coatjava_cook=8.3.2
 # coatjava_cook=8.3.0
 # coatjava_cook=8.2.4
@@ -736,8 +742,137 @@ do
 # tag=v28.27_8.3.2
 # clas12-workflow.py --runGroup rgb --tag ${tag} --model rec --inputs "/mss/clas12/rg-b/production/decoded/6.5.6/*/*evio.000[4,5]*" --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_tmp --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_mon_pass0v28.27_20221026.yaml --recharge --threads 32 --reconSize 2 --submit 
 
-tag=v28.28
-clas12-workflow.py --runGroup rgb --tag ${tag} --model recana --inputs "/mss/clas12/rg-b/production/decoded/6.5.6/*/*" --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_tmp --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_calib_pass0v28.28_20221028.yaml --trainYaml calib --recharge --submit 
+# tag=v28.28
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model recana --inputs "/mss/clas12/rg-b/production/decoded/6.5.6/*/*" --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_tmp --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_calib_pass0v28.28_20221028.yaml --trainYaml calib --recharge --submit 
+
+# tag=v28.29_new
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model recana --inputs "/mss/clas12/rg-b/production/decoded/6.5.6/*/*" --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_tmp --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_calib_pass0v28.29_20221028.yaml --trainYaml calib --recharge --submit 
+
+# tag=v28.30
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model rec --inputs "/mss/clas12/rg-b/production/decoded/6.5.6/*/*evio.000[4,5]*" --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_2019spring_mon --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_mon_pass0v28.30_20221111.yaml --recharge --threads 32 --reconSize 2 --submit 
+
+# tag=v28.31
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model recana --inputs "/mss/clas12/rg-b/production/decoded/6.5.6/*/*" --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_tmp --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_calib_pass0v28.31_20221117.yaml --trainYaml calib --recharge --submit 
+
+# tag=v28.32
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model rec --inputs "/mss/clas12/rg-b/production/decoded/6.5.6/*/*evio.000[4,5]*" --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_2019spring_mon --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_mon_pass0v28.32_20221125.yaml --recharge --reconSize 2 --submit 
+
+# tag=v28.33
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model rec --inputs "/mss/clas12/rg-b/production/decoded/6.5.6/*/*evio.000[4]*" --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_2019spring_mon --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_mon_pass0v28.33_20221201.yaml --recharge --reconSize 2 --submit 
+
+# tag=v28.34_8c.4.0
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model recana --inputs "/mss/clas12/rg-b/production/decoded/6.5.6/*/*" --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_tmp --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_dst_pass0v28.34_20221206.yaml --trainYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/train_dst_20210109.yaml --recharge --submit 
+
+# tag=v28.34_8.4.0
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model recana --inputs "/mss/clas12/rg-b/production/decoded/6.5.6/*/*" --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_tmp --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_dst_pass0v28.34_20221206.yaml --trainYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/train_dst_20210109.yaml --ccdbsqlite /work/clas12/rg-b/ccdb/ccdb_2022-12-06-20-52.sqlite --recharge --submit 
+
+# tag=v28.35
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model rec --inputs "/mss/clas12/rg-b/production/decoded/6.5.6/*/*evio.000[4,5]*" --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_2019spring_mon --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_mon_pass0v28.35_20221206.yaml --ccdbsqlite /work/clas12/rg-b/ccdb/ccdb_2022-12-06-20-52.sqlite --recharge --reconSize 2 --submit 
+
+# tag=v28.36
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model rec --inputs "/mss/clas12/rg-b/production/decoded/6.5.6/*/*evio.000[4,5]*" --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_2019spring_mon --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_mon_pass0v28.36_20221212.yaml --ccdbsqlite /work/clas12/rg-b/ccdb/ccdb_2022-12-12-21-42.sqlite --recharge --reconSize 2 --submit 
+
+# tag=v28.37_8c.4.0
+# tag=v28.37_8.4.0
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model recana --inputs "/mss/clas12/rg-b/production/decoded/6.5.6/*/*evio.000*" --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_tmp --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_dst_pass0v28.37_20221212.yaml --trainYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/train_dst_20210109.yaml --ccdbsqlite /work/clas12/rg-b/ccdb/ccdb_2022-12-12-21-42.sqlite --recharge --submit 
+
+# tag=v28.38
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model rec --inputs "/mss/clas12/rg-b/production/decoded/6.5.6/*/*evio.000[4,5]*" --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_tmp --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_mon_pass0v28.38_20221216.yaml --ccdbsqlite /work/clas12/rg-b/ccdb/ccdb_2022-12-16-11-57.sqlite --recharge --reconSize 2 --submit 
+
+# tag=v28.39_new
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model rec --inputs "/mss/clas12/rg-b/production/decoded/6.5.6/*/*evio.000[4,5]*" --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_tmp --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_cvt_pass0v28.39_20230104.yaml --ccdbsqlite /work/clas12/rg-b/ccdb/ccdb_2022-12-16-11-57.sqlite --recharge --reconSize 2 --submit 
+
+# tag=v28.40
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model recana --inputs "/mss/clas12/rg-b/production/decoded/6.5.6/*/*" --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_tmp --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_dst_pass0v28.40_20230120.yaml --trainYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/train_dst_20210109.yaml --ccdbsqlite /work/clas12/rg-b/ccdb/ccdb_2023-01-20-17-26.sqlite --recharge --denoise --submit 
+
+# tag=v28.41
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model recana --inputs "/mss/clas12/rg-b/production/decoded/6.5.6/*/*" --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_tmp --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_dst_pass0v28.41_20230127.yaml --trainYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/train_dst_20210109.yaml --ccdbsqlite /work/clas12/rg-b/ccdb/ccdb_2023-01-27-12-32.sqlite --recharge --denoise --submit 
+
+# tag=v28.42
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model recana --inputs "/mss/clas12/rg-b/production/decoded/6.5.6/*/*" --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_tmp --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_calib_pass0v28.42_20230127.yaml --trainYaml calib --ccdbsqlite /work/clas12/rg-b/ccdb/ccdb_2023-01-27-12-32.sqlite --recharge --denoise --submit 
+
+# tag=v28.43
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model rec --inputs "/mss/clas12/rg-b/production/decoded/6.5.6/*/*evio.0004*" --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_2019spring_mon --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_mon_pass0v28.43_20230204.yaml --ccdbsqlite /work/clas12/rg-b/ccdb/ccdb_2023-02-04-11-12.sqlite --recharge --reconSize 2 --denoise --submit 
+
+# tag=v28.44
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model rec --inputs "/mss/clas12/rg-b/production/decoded/6.5.6/*/*evio.0004*" --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_2019spring_mon --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_mon_pass0v28.44_20230206.yaml --ccdbsqlite /work/clas12/rg-b/ccdb/ccdb_2023-02-06-23-08.sqlite --recharge --reconSize 2 --denoise --submit 
+
+# tag=v28.45
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model recana --inputs "/mss/clas12/rg-b/production/decoded/6.5.6/*/*" --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_tmp --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_dst_pass0v28.45_20230206.yaml --trainYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/train_dst_20210109.yaml --ccdbsqlite /work/clas12/rg-b/ccdb/ccdb_2023-02-06-23-08.sqlite --recharge --denoise --submit 
+
+# tag=v28.46_yesdenoise
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model rec --inputs "/mss/clas12/rg-b/production/decoded/6.5.6/*/*evio.000[4,5]*" --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_tmp --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_mon_pass0v28.46_20230206.yaml --recharge --reconSize 2 --denoise --submit 
+
+# tag=v28.46_nodenoise
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model rec --inputs "/mss/clas12/rg-b/production/decoded/6.5.6/*/*evio.000[4,5]*" --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_tmp --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_mon_pass0v28.46_20230206.yaml --recharge --reconSize 2 --submit 
+
+# tag=v28.47
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model recana --inputs "/mss/clas12/rg-b/production/decoded/6.5.6/*/*" --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_tmp --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_dst_pass0v28.47_20230228.yaml --trainYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/train_dst_20210109.yaml --recharge --denoise --submit 
+
+# tag=v28.48
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model recana --inputs "/mss/clas12/rg-b/production/decoded/6.5.6/*/*" --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_tmp --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_dst_pass0v28.48_20230302.yaml --trainYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/train_dst_20210109.yaml --recharge --denoise --submit 
+
+
+# tag=v28.49
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model recana --inputs "/mss/clas12/rg-b/production/decoded/6.5.6/*/*" --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_tmp --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_dst_pass0v28.49_20230329.yaml --trainYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/train_dst_20210109.yaml --recharge --denoise --submit 
+
+# tag=v28.50
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model rec --inputs "/mss/clas12/rg-b/production/decoded/6.5.6/*/*evio.000[4,5]*" --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_2019spring_mon --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_mon_pass0v28.50_20230329.yaml --recharge --reconSize 2 --denoise --submit 
+
+# tag=v28.51
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model rec --inputs "/mss/clas12/rg-b/production/decoded/6.5.6/*/*evio.000[4,5]*" --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_2019spring_mon --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_mon_pass0v28.51_20230410.yaml --recharge --reconSize 2 --denoise --submit 
+
+# tag=v28.52
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model recana --inputs "/mss/clas12/rg-b/production/decoded/6.5.6/*/*" --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_tmp --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_calib_pass0v28.52_20230410.yaml --trainYaml calib --recharge --denoise --submit 
+
+# tag=v28.53
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model rec --inputs "/mss/clas12/rg-b/production/decoded/6.5.6/*/*evio.000[4,5]*" --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_2019spring_mon --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_mon_pass0v28.53_20230413.yaml --recharge --reconSize 2 --denoise --submit 
+
+# tag=v28.54
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model rec --inputs "/mss/clas12/rg-b/production/decoded/6.5.6/*/*evio.000[4,5]*" --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_2019spring_mon --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_mon_pass0v28.54_20230414.yaml --recharge --reconSize 2 --denoise --submit 
+
+# tag=v28.55
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model recana --inputs "/mss/clas12/rg-b/production/decoded/6.5.6/*/*" --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_tmp --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_dst_pass0v28.55_20230414.yaml --trainYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/train_dst_20210109.yaml --recharge --denoise --submit 
+
+# # tag=v28.56
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model recana --inputs "/mss/clas12/rg-b/production/decoded/6.5.6/*/*" --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_tmp --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_dst_pass0v28.56_20230414.yaml --trainYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/train_dst_20210109.yaml --recharge --denoise --submit 
+
+# tag=v29.1
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model rec --inputs "/mss/clas12/rg-b/production/decoded/6.5.6/*/*evio.000[4,5]*" --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_tmp --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_mon_pass0v29.1_20221129.yaml --recharge --reconSize 2 --submit 
+
+# tag=v29.2
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model rec --inputs "/mss/clas12/rg-b/production/decoded/6.5.6/*/*evio.0004*" --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_2019fall_2020spring_mon --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_mon_pass0v29.2_20221216.yaml --ccdbsqlite /work/clas12/rg-b/ccdb/ccdb_2022-12-16-11-57.sqlite --recharge --reconSize 2 --submit 
+
+# tag=v29.3
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model rec --inputs "/mss/clas12/rg-b/production/decoded/6.5.6/*/*evio.0004*" --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_2019fall_2020spring_mon --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_mon_pass0v29.3_20230104.yaml --ccdbsqlite /work/clas12/rg-b/ccdb/ccdb_2023-01-04-13-44.sqlite --recharge --reconSize 2 --submit 
+
+# tag=v29.4
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model recana --inputs "/mss/clas12/rg-b/production/decoded/6.5.6/*/*" --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_tmp --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_dst_pass0v29.4_20230104.yaml --trainYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/train_dst_20210109.yaml --ccdbsqlite /work/clas12/rg-b/ccdb/ccdb_2023-01-04-13-44.sqlite --recharge --submit 
+
+# tag=v29.5
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model rec --inputs "/mss/clas12/rg-b/production/decoded/6.5.6/*/*evio.0004*" --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_2019fall_2020spring_mon --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_mon_pass0v29.5_20230210.yaml --recharge --reconSize 2  --denoise --submit 
+
+# tag=v29.6
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model recana --inputs "/mss/clas12/rg-b/production/decoded/6.5.6/*/*" --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_tmp --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_dst_pass0v29.6_20230309.yaml --trainYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/train_dst_20210109.yaml --recharge --denoise --submit 
+
+
+# tag=v29.7
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model recana --inputs "/mss/clas12/rg-b/production/decoded/6.5.6/*/*" --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_tmp --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_dst_pass0v29.7_20230315.yaml --trainYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/train_dst_20210109.yaml --recharge --denoise --submit 
+
+# tag=v29.8
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model recana --inputs "/mss/clas12/rg-b/production/decoded/6.5.6/*/*evio.000[4,5]*" --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_tmp --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_calib_pass0v29.8_20230405.yaml --trainYaml calib --recharge --denoise --submit 
+
+# tag=v29.9
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model recana --inputs "/mss/clas12/rg-b/production/decoded/6.5.6/*/*evio.000[4,5]*" --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_tmp --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_calib_pass0v29.9_20230409.yaml --trainYaml calib --recharge --denoise --submit 
+
+# tag=v29.10
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model rec --inputs "/mss/clas12/rg-b/production/decoded/6.5.6/*/*evio.0004*" --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_2019fall_2020spring_mon --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_mon_pass0v29.10_20230411.yaml --recharge --reconSize 2 --denoise --submit 
+
+tag=v29.11
+clas12-workflow.py --runGroup rgb --tag ${tag} --model rec --inputs "/mss/clas12/rg-b/production/decoded/6.5.6/*/*evio.0004*" --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_2019fall_2020spring_mon --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_cook}_${coatjava_cook} --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_mon_pass0v29.11_20230417.yaml --ccdbsqlite /volatile/clas12/carman/ccdb/ccdb_2023-04-16.sqlite --recharge --reconSize 2 --denoise --submit 
+
+# tag=decode
+# clas12-workflow.py --runGroup rgb --tag ${tag} --model decmrg --inputs "/mss/clas12/rg-b/data/clas_01148*/*" --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_tmp --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --decDir /volatile/clas12/rg-b/production/decoded/${coatjava_decode} --clara /group/clas12/packages/clara/4.3.12_6.5.6 --mergeSize 5 --submit
 
 # tag=recover
 # clas12-workflow.py --runGroup rgb --tag ${tag} --model decmrg --inputs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/filelist_unrecov_20220922_decode_gone_raw_list --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_all_mon --outDir /volatile/clas12/rg-b/production/recon/pass0/${tag} --clara /group/clas12/packages/clara/${clara_decode}_${coatjava_decode} --mergeSize 5 --submit

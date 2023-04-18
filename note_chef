@@ -23,6 +23,8 @@ https://github.com/baltzell/clas12-workflow
 
 source /group/clas12/packages/setup.csh
 module load clas12/dev
+module load clas12/3.2
+module load clas12/pro
 
 module load workflow
 module load workflow/dev
@@ -64,6 +66,7 @@ run
 swif run -workflow rgb_decode_R6223x1_x1200
 
 check
+swif2 list
 swif-status.py 
 swif-status.py | grep workflow_name
 swif-status.py --workflow workflowName
@@ -91,6 +94,8 @@ swif2 modify-jobs "rgb-ra-v28.24-6224x5" -disk add 25gb -problems SITE_PREP_FAIL
 
 fix problem type SLURM_FAILED with corrupt file verified by "hipo-util -test"
 swif2 retry-jobs rgb-ra-v28.22_8.3.2-6449x15 -refresh-input /lustre/expphy/volatile/clas12/rg-b/production/recon/pass0/v28.22_8.3.2/dst/recon/006455/rec_clas_006455.evio.00275-00279.hipo 8577763
+
+On the truncated output file problem for a succesfull job, that results in SLURM_FAILED for a downstream job, I added an --exitStats option to swif-stats.py that will print the exit codes.  #101 is the bad guy to watchout for;  it means the input file for a job is corrupt/truncated.
 
 make timeout double
 pause a workflow first, then run command below, then restart workflow. for a running workflow, it will cause running jobs get recalled
@@ -258,6 +263,11 @@ done
 
 #check database
 https://clasweb.jlab.org/cgi-bin/ccdb/show_request?request=/calibration/htcc/gain:6213:default:2019-02-14_09-40-09
+
+#make sqlite from ccdb
+module load clas12/pro
+cd /work/clas12/rg-b/ccdb
+/group/clas12/packages/local/bin/clas12-ccdb-mysql2sqlite.py ccdb.sqlite
 
 farm.scaling  multiples of 4 for farm18 and multiples of 2 for other to match their NUMA sockets
 

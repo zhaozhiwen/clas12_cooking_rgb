@@ -3,12 +3,16 @@
 clas12 run group b (rgb) cooking note,log,script
 
 ##  files  
-* runlist_2019spring,          production runs with full target and full current
-* runlist_2019spring_mon,      run with files 40-49 from runlist_2019spring
-* runlist_2019spring_special,  calibration run etc
-* filter_pid11.java,          e- skim
-* filter_FT.java             forward tagger skim
-* filter_trackPairs.java     muon skim
+* log_cooking		log of cooking condition
+* note_chef		cooking note and trick
+* runworkflow           command used for cooking
+* rgb_*.yaml		cooking yaml
+* train_*.yaml		train yaml for grape
+* runlist_*		list of runs
+* bankSplit_*		script to make special schema
+* tool_*		script to check things
+* counting		count of event and disk space
+* filter_*.java		script to make skim before grape is available
 
 ## conatct
 by Zhiwen Zhao  zwzhao at jlab.org

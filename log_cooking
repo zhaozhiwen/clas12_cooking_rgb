@@ -3,13 +3,13 @@ for CLAS12 cooking, a version is defined by software, schema file, yaml file, cc
 ***** pass1 *****************************************************************************************
 version	 			decode	cook		cook_yaml			schema				timestamp		variation	train_yaml
 
-spring2019/torus-1/pass1/v0	6.5.6	4.3.12/6.5.8	rgb_dst_pass1v0_20200610.yaml	hipo4_6.5.8_20200610	06/10/2020-18:00:00	rga_fall2018	train_dst_20200610.yaml
+spring2019/torus-1/pass1/v0	6.5.6	4.3.12/6.5.8	rgb_dst_pass1v0_20200610.yaml	bankSplit_6.5.8_20200610.py	06/10/2020-18:00:00	rga_fall2018	train_dst_20200610.yaml
 
-fall2019/torus+1/pass1/v1	6.5.6	4.3.12/6.5.12	rgb_dst_pass1v1_20201125.yaml	hipo4_6.5.12_20201028	11/25/2020-11:00:00	rga_fall2018	train_dst_20210109.yaml
+fall2019/torus+1/pass1/v1	6.5.6	4.3.12/6.5.12	rgb_dst_pass1v1_20201125.yaml	bankSplit_6.5.12_20201028.py	11/25/2020-11:00:00	rga_fall2018	train_dst_20210109.yaml
 
-fall2019/torus-1/pass1/v1	6.5.6	4.3.12/6.5.12	rgb_dst_pass1v1_20201125.yaml	hipo4_6.5.12_20201028	11/25/2020-11:00:00	rga_fall2018	train_dst_20210109.yaml
+fall2019/torus-1/pass1/v1	6.5.6	4.3.12/6.5.12	rgb_dst_pass1v1_20201125.yaml	bankSplit_6.5.12_20201028.py	11/25/2020-11:00:00	rga_fall2018	train_dst_20210109.yaml
 
-spring2020/torus-1/pass1/v1	6.5.6	4.3.12/6.5.12	rgb_dst_pass1v1_20210210.yaml	hipo4_6.5.12_20201028	02/10/2021-11:00:00	rga_fall2018	train_dst_20210109.yaml
+spring2020/torus-1/pass1/v1	6.5.6	4.3.12/6.5.12	rgb_dst_pass1v1_20210210.yaml	bankSplit_6.5.12_20201028.py	02/10/2021-11:00:00	rga_fall2018	train_dst_20210109.yaml
 
 ***** pass0 *****************************************************************************************
 using clas12-workflow/dev for train_calib.yaml and post process when Charge and lifetime are transferred to REC::Event
@@ -40,132 +40,172 @@ v17 cooking during Fall 2019 run
 v1  cooking during Spring 2019 run
 
 =====================================================================================================================
-version	 decode	cook		yaml					schema			timestamp			variation
+version	 decode	cook		yaml					schema		variation
 
-v28.28	 6.5.6	5.0.2/8c.3.2	rgb_calib_pass0v28.28_20221028.yaml	default			10/28/2022-11:00:00	rgb_spring2019
-v28.27	 6.5.6	5.0.2/8.3.2-8c.3.2	rgb_mon_pass0v28.23_20221026.yaml	default			10/26/2022-06:00:00	rgb_spring2019
-v28.26	 6.5.6	5.0.2/8.3.2-8c.3.2	rgb_mon_pass0v28.23_20221025.yaml	default			10/25/2022-11:00:00	rgb_spring2019
-v28.25	 6.5.6	5.0.2/8c.3.2	rgb_calib_pass0v28.25_20221019.yaml	default			10/19/2022-17:00:00	rgb_spring2019
-v28.24	 6.5.6	5.0.2/8c.3.2	rgb_calib_pass0v28.24_20221019.yaml	default			10/19/2022-17:00:00	rgb_spring2019
-v28.23	 6.5.6	5.0.2/8.3.2-8c.3.2	rgb_mon_pass0v28.23_20221019.yaml	default			10/19/2022-17:00:00	rgb_spring2019
-v28.22	 6.5.6	5.0.2/8.3.2-8c.3.2	rgb_dst_pass0v28.22_20221014.yaml	default			10/14/2022-11:00:00	rgb_spring2019
-v28.21	 6.5.6	5.0.2/8.2.4	rgb_mon_pass0v28.21_20221010.yaml	default			10/10/2022-09:30:00	rgb_spring2019
-v28.20	 6.5.6	5.0.2/8.2.4	rgb_calib_pass0v28.20_20221008.yaml	default			10/08/2022-11:00:00	rgb_spring2019
-v28.19	 6.5.6	5.0.2/8.2.4	rgb_calib_pass0v28.19_20221003.yaml	default			10/03/2022-11:00:00	rgb_spring2019
-v28.18	 6.5.6	5.0.2/8.2.4	rgb_mon_pass0v28.18_20221003.yaml	default			10/03/2022-11:00:00	rgb_spring2019
-v28.17	 6.5.6	5.0.2/8.2.4	rgb_mon_pass0v28.17_20221002.yaml	default			10/02/2022-17:00:00	rgb_spring2019
-v28.16	 6.5.6	5.0.2/8.2.4	rgb_calib_pass0v28.16_20221001.yaml	default			10/01/2022-11:00:00	rgb_spring2019
-v28.15	 6.5.6	5.0.2/8.2.4	rgb_calib_pass0v28.15_20220929.yaml	default			09/29/2022-17:00:00	rgb_spring2019
-v28.14	 6.5.6	5.0.2/8.2.4	rgb_mon_pass0v28.14_20220929.yaml	default			09/29/2022-17:00:00	rgb_spring2019
-v28.13	 6.5.6	5.0.2/8.2.4	rgb_mon_pass0v28.13_20220927.yaml	default			09/27/2022-14:00:00	rgb_spring2019
-v28.12	 6.5.6	5.0.2/8.2.4	rgb_calib_pass0v28.12_20220923.yaml	default			09/23/2022-11:00:00	rgb_spring2019
-v28.11	 6.5.6	5.0.2/8.2.4	rgb_mon_pass0v28.11_20220922.yaml	default			09/22/2022-17:00:00	rgb_spring2019
-v28.10	 6.5.6	5.0.2/8.2.4	rgb_calib_pass0v28.10_20220921.yaml	default			09/21/2022-11:00:00	rgb_spring2019
-v28.9	 6.5.6	5.0.2/8.2.4	rgb_mon_pass0v28.9_20220920.yaml	default			09/20/2022-15:30:00	rgb_spring2019
-v28.8	 6.5.6	5.0.2/8.2.4	rgb_mon_pass0v28.8_20220914.yaml	default			09/14/2022-22:00:00	rgb_spring2019
-v28.7	 6.5.6	5.0.2/8.2.4	rgb_mon_pass0v28.7_20220912.yaml	default			09/12/2022-22:00:00	rgb_spring2019
-v28.6	 6.5.6	5.0.2/8.2.4	rgb_mon_pass0v28.6_20220902.yaml	default			09/02/2022-11:00:00	rgb_spring2019
-v28.5	 8.3.0	5.0.2/8.3.0	rgb_calib_pass0v28.5_20220902.yaml	default			09/02/2022-09:00:00	rgb_spring2019
-v28.4	 6.5.6	5.0.2/8.2.4	rgb_mon_pass0v28.4_20220823.yaml	default			08/23/2022-11:00:00	rgb_spring2019
-v28.3	 6.5.6	5.0.2/8.2.2	rgb_calib_pass0v28.3_20220814.yaml	default			08/14/2022-11:00:00	rgb_spring2019
-v28.2	 6.5.6	5.0.2/8.2.2	rgb_mon_pass0v28.2_20220814.yaml	default			08/14/2022-11:00:00	rgb_spring2019
-v28.1	 6.5.6	5.0.2/8.2.1	rgb_calib_pass0v28.1_20220805.yaml	default			08/05/2022-11:00:00	rgb_spring2019
-v28.0	 6.5.6	5.0.2/8.2.1	rgb_mon_pass0v28.0_20220727.yaml	default			07/27/2022-11:00:00	rgb_spring2019
+v29.11	 6.5.6	5.0.2/8.7.1	rgb_mon_pass0v29.11_20230417.yaml	default		rgb_fall2019
+v29.10	 6.5.6	5.0.2/8.7.0	rgb_mon_pass0v29.10_20230411.yaml	default		rgb_fall2019
+v29.9	 6.5.6	5.0.2/8.7.0	rgb_calib_pass0v29.9_20230409.yaml	default		rgb_fall2019
+v29.8	 6.5.6	5.0.2/8.7.0	rgb_calib_pass0v29.8_20230405.yaml	default		rgb_fall2019
+v29.7	 6.5.6	5.0.2/8.6.0	rgb_calib_pass0v29.7_20230315.yaml	default		rgb_fall2019
+v29.6	 6.5.6	5.0.2/8.6.0	rgb_dst_pass0v29.6_20230309.yaml	default		rgb_spring2019
+v29.5	 6.5.6	5.0.2/8.5.0	rgb_mon_pass0v29.5_20230210.yaml	default		rgb_spring2019
+v29.4	 6.5.6	5.0.2/8c.4.0	rgb_dst_pass0v29.4_20230104.yaml	default		rgb_spring2019
+v29.3	 6.5.6	5.0.2/8c.3.2	rgb_mon_pass0v29.3_20230104.yaml	default		rgb_spring2019
+v29.2	 6.5.6	5.0.2/8c.4.0	rgb_mon_pass0v29.2_20221216.yaml	default		rgb_spring2019
+v29.1	 6.5.6	5.0.2/8c.3.2	rgb_mon_pass0v29.1_20221129.yaml	default		rgb_spring2019
 
-v27.10	 same	5.0.2/clara-iss908-dcJitterV2ti	rgb_calib_pass0v27.10_20220807.yaml	default			08/07/2022-11:00:00	rga_fall2018
-v27.9	 same	5.0.2/clara-iss908-dcJitterV2	rgb_calib_pass0v27.9_20220807.yaml	default			08/07/2022-11:00:00	rga_fall2018
-v27.8	 same	5.0.2/clara-iss908-dcJitter	rgb_calib_pass0v27.8_20220725.yaml	default			07/25/2022-11:00:00	rga_fall2018
-v27.7	 6.5.6	5.0.2/clara-iss831	rgb_mon_pass0v27.7_20220615.yaml	default			06/15/2022-09:00:00	rga_fall2018
-v27.6	 6.5.6	5.0.2/8.0.0	rgb_calib_pass0v27.6_20220429.yaml	default			04/29/2022-11:00:00	rga_fall2018
-v27.5	 6.5.6	4.3.12/6.5.12	rgb_calib_pass0v27.5_20220124.yaml	default			01/24/2021-11:00:00	rga_fall2018
-v27.4	 6.5.6	4.3.12/6.5.12	rgb_calib_pass0v27.4_20211201.yaml	default			12/01/2021-11:00:00	rga_fall2018
-v27.2	 6.5.6	4.3.12/6.5.12	rgb_dst_pass0v27.2_20211012.yaml	default			10/12/2021-11:00:00	rga_fall2018
-v27.1	 6.5.6	4.3.12/6.5.12	rgb_calib_pass0v27.1_20210210.yaml	default			02/10/2021-11:00:00	rga_fall2018
+v28.56	 6.5.6	5.0.2/8.5.0	rgb_mon_pass0v28.56_20230414.yaml	default		rgb_spring2019
+v28.55	 6.5.6	5.0.2/8.7.1	rgb_mon_pass0v28.55_20230414.yaml	default		rgb_spring2019
+v28.54	 6.5.6	5.0.2/8.7.1	rgb_mon_pass0v28.54_20230414.yaml	default		rgb_spring2019
+v28.53	 6.5.6	5.0.2/8.7.1	rgb_mon_pass0v28.53_20230413.yaml	default		rgb_spring2019
+v28.52	 6.5.6	5.0.2/8.7.0	rgb_calib_pass0v28.52_20230410.yaml	default		rgb_spring2019
+v28.51	 6.5.6	5.0.2/8.7.0	rgb_mon_pass0v28.51_20230410.yaml	default		rgb_spring2019
+v28.50	 6.5.6	5.0.2/8.7.0	rgb_mon_pass0v28.50_20230329.yaml	default		rgb_spring2019
+v28.49	 6.5.6	5.0.2/8.7.0	rgb_dst_pass0v28.49_20230329.yaml	default		rgb_spring2019
+v28.48	 6.5.6	5.0.2/8.6.0	rgb_dst_pass0v28.48_20230302.yaml	default		rgb_spring2019
+v28.47	 6.5.6	5.0.2/8.6.0	rgb_dst_pass0v28.47_20230228.yaml	default		rgb_spring2019
+v28.46	 6.5.6	5.0.2/8.5.0	rgb_mon_pass0v28.46_20230206.yaml	default		rgb_spring2019
+v28.45	 6.5.6	5.0.2/8.5.0	rgb_dst_pass0v28.45_20230206.yaml	default		rgb_spring2019
+v28.44	 6.5.6	5.0.2/8.5.0	rgb_mon_pass0v28.44_20230206.yaml	default		rgb_spring2019
+v28.43	 6.5.6	5.0.2/8.5.0	rgb_mon_pass0v28.43_20230204.yaml	default		rgb_spring2019
+v28.42	 6.5.6	5.0.2/8.5.0	rgb_calib_pass0v28.41_20230127.yaml	default		rgb_spring2019
+v28.41	 6.5.6	5.0.2/8.5.0	rgb_dst_pass0v28.41_20230127.yaml	default		rgb_spring2019
+v28.40	 6.5.6	5.0.2/8.5.0	rgb_dst_pass0v28.40_20230120.yaml	default		rgb_spring2019
+v28.39	 6.5.6	5.0.2/8c.4.0	rgb_cvt_pass0v28.39_20230104.yaml	default		rgb_spring2019
+v28.38	 6.5.6	5.0.2/8c.4.0	rgb_mon_pass0v28.38_20221216.yaml	default		rgb_spring2019
+v28.37	 6.5.6	5.0.2/8.4.0-8c.4.0	rgb_dst_pass0v28.37_20221212.yaml	default	rgb_spring2019
+v28.36	 6.5.6	5.0.2/8c.4.0	rgb_mon_pass0v28.36_20221212.yaml	default		rgb_spring2019
+v28.35	 6.5.6	5.0.2/8c.4.0	rgb_mon_pass0v28.35_20221206.yaml	default		rgb_spring2019
+v28.34	 6.5.6	5.0.2/8.4.0-8c.4.0	rgb_dst_pass0v28.34_20221206.yaml	default	rgb_spring2019
+v28.33	 6.5.6	5.0.2/8c.3.2	rgb_mon_pass0v28.33_20221201.yaml	default		rgb_spring2019
+v28.32	 6.5.6	5.0.2/8c.3.2	rgb_mon_pass0v28.32_20221125.yaml	default		rgb_spring2019
+v28.31	 6.5.6	5.0.2/8c.3.2	rgb_calib_pass0v28.31_20221117.yaml	default		rgb_spring2019
+v28.30	 6.5.6	5.0.2/8c.3.2	rgb_mon_pass0v28.30_20221111.yaml	default		rgb_spring2019
+v28.29	 6.5.6	5.0.2/8c.3.2	rgb_calib_pass0v28.29_20221028.yaml	default		rgb_spring2019
+v28.28	 6.5.6	5.0.2/8c.3.2	rgb_calib_pass0v28.28_20221028.yaml	default		rgb_spring2019
+v28.27	 6.5.6	5.0.2/8.3.2-8c.3.2	rgb_mon_pass0v28.23_20221026.yaml	default	rgb_spring2019
+v28.26	 6.5.6	5.0.2/8.3.2-8c.3.2	rgb_mon_pass0v28.23_20221025.yaml	default	rgb_spring2019
+v28.25	 6.5.6	5.0.2/8c.3.2	rgb_calib_pass0v28.25_20221019.yaml	default		rgb_spring2019
+v28.24	 6.5.6	5.0.2/8c.3.2	rgb_calib_pass0v28.24_20221019.yaml	default		rgb_spring2019
+v28.23	 6.5.6	5.0.2/8.3.2-8c.3.2	rgb_mon_pass0v28.23_20221019.yaml	default	rgb_spring2019
+v28.22	 6.5.6	5.0.2/8.3.2-8c.3.2	rgb_dst_pass0v28.22_20221014.yaml	default	rgb_spring2019
+v28.21	 6.5.6	5.0.2/8.2.4	rgb_mon_pass0v28.21_20221010.yaml	default		rgb_spring2019
+v28.20	 6.5.6	5.0.2/8.2.4	rgb_calib_pass0v28.20_20221008.yaml	default		rgb_spring2019
+v28.19	 6.5.6	5.0.2/8.2.4	rgb_calib_pass0v28.19_20221003.yaml	default		rgb_spring2019
+v28.18	 6.5.6	5.0.2/8.2.4	rgb_mon_pass0v28.18_20221003.yaml	default		rgb_spring2019
+v28.17	 6.5.6	5.0.2/8.2.4	rgb_mon_pass0v28.17_20221002.yaml	default		rgb_spring2019
+v28.16	 6.5.6	5.0.2/8.2.4	rgb_calib_pass0v28.16_20221001.yaml	default		rgb_spring2019
+v28.15	 6.5.6	5.0.2/8.2.4	rgb_calib_pass0v28.15_20220929.yaml	default		rgb_spring2019
+v28.14	 6.5.6	5.0.2/8.2.4	rgb_mon_pass0v28.14_20220929.yaml	default		rgb_spring2019
+v28.13	 6.5.6	5.0.2/8.2.4	rgb_mon_pass0v28.13_20220927.yaml	default		rgb_spring2019
+v28.12	 6.5.6	5.0.2/8.2.4	rgb_calib_pass0v28.12_20220923.yaml	default		rgb_spring2019
+v28.11	 6.5.6	5.0.2/8.2.4	rgb_mon_pass0v28.11_20220922.yaml	default		rgb_spring2019
+v28.10	 6.5.6	5.0.2/8.2.4	rgb_calib_pass0v28.10_20220921.yaml	default		rgb_spring2019
+v28.9	 6.5.6	5.0.2/8.2.4	rgb_mon_pass0v28.9_20220920.yaml	default		rgb_spring2019
+v28.8	 6.5.6	5.0.2/8.2.4	rgb_mon_pass0v28.8_20220914.yaml	default		rgb_spring2019
+v28.7	 6.5.6	5.0.2/8.2.4	rgb_mon_pass0v28.7_20220912.yaml	default		rgb_spring2019
+v28.6	 6.5.6	5.0.2/8.2.4	rgb_mon_pass0v28.6_20220902.yaml	default		rgb_spring2019
+v28.5	 8.3.0	5.0.2/8.3.0	rgb_calib_pass0v28.5_20220902.yaml	default		rgb_spring2019
+v28.4	 6.5.6	5.0.2/8.2.4	rgb_mon_pass0v28.4_20220823.yaml	default		rgb_spring2019
+v28.3	 6.5.6	5.0.2/8.2.2	rgb_calib_pass0v28.3_20220814.yaml	default		rgb_spring2019
+v28.2	 6.5.6	5.0.2/8.2.2	rgb_mon_pass0v28.2_20220814.yaml	default		rgb_spring2019
+v28.1	 6.5.6	5.0.2/8.2.1	rgb_calib_pass0v28.1_20220805.yaml	default		rgb_spring2019
+v28.0	 6.5.6	5.0.2/8.2.1	rgb_mon_pass0v28.0_20220727.yaml	default		rgb_spring2019
 
-v26.2	 6.5.6	4.3.12/6.5.12	rgb_calib_pass0v26.2_20201028.yaml	default			10/28/2020-14:00:00	rga_fall2018
-v26.1	 6.5.6	4.3.12/6.5.12	rgb_calib_pass0v26.1_20201028.yaml	default			10/28/2020-14:00:00	rga_fall2018
+v27.10	 same	5.0.2/clara-iss908-dcJitterV2ti	rgb_calib_pass0v27.10_20220807.yaml	default		rga_fall2018
+v27.9	 same	5.0.2/clara-iss908-dcJitterV2	rgb_calib_pass0v27.9_20220807.yaml	default		rga_fall2018
+v27.8	 same	5.0.2/clara-iss908-dcJitter	rgb_calib_pass0v27.8_20220725.yaml	default		rga_fall2018
+v27.7	 6.5.6	5.0.2/clara-iss831	rgb_mon_pass0v27.7_20220615.yaml	default		rga_fall2018
+v27.6	 6.5.6	5.0.2/8.0.0	rgb_calib_pass0v27.6_20220429.yaml	default		rga_fall2018
+v27.5	 6.5.6	4.3.12/6.5.12	rgb_calib_pass0v27.5_20220124.yaml	default		rga_fall2018
+v27.4	 6.5.6	4.3.12/6.5.12	rgb_calib_pass0v27.4_20211201.yaml	default		rga_fall2018
+v27.2	 6.5.6	4.3.12/6.5.12	rgb_dst_pass0v27.2_20211012.yaml	default		rga_fall2018
+v27.1	 6.5.6	4.3.12/6.5.12	rgb_calib_pass0v27.1_20210210.yaml	default		rga_fall2018
 
-v25.20	 6.5.6	clara-iss641-cndclustering	rgb_calib_pass0v25.20_20210423.yaml	default			04/23/2021-10:00:00	rga_fall2018
-v25.19	 6.5.6	clara-iss641-cndclustering	rgb_calib_pass0v25.19_20210202.yaml	default			02/02/2021-10:00:00	rga_fall2018
-v25.18	 6.5.6	4.3.12/6.5.12	rgb_mon_pass0v25.18_20210125.yaml	default			01/25/2021-16:00:00	rga_fall2018
-v25.17	 6.5.6	4.3.12/6.5.12	rgb_dst_pass0v25.17_20210106.yaml	hipo4_6.5.12_20201028	01/06/2021-16:00:00	rga_fall2018
-v25.16	 6.5.6	4.3.12/6.5.12	rgb_calib_pass0v25.16_20210106.yaml	default			01/06/2021-16:00:00	rga_fall2018
-v25.15	 6.5.6	4.3.12/6.5.12	rgb_mon_pass0v25.15_20210106.yaml	default			01/06/2021-16:00:00	rga_fall2018
-v25.14	 6.5.6	4.3.12/6.5.12	rgb_mon_pass0v25.14_20210106.yaml	default			01/06/2021-16:00:00	rga_fall2018
-v25.13	 6.5.6	4.3.12/6.5.12	rgb_mon_pass0v25.13_20201230.yaml	default			12/30/2020-16:00:00	rga_fall2018
-v25.12	 6.5.6	4.3.12/6.5.12	rgb_calib_pass0v25.12_20201227.yaml	default			12/27/2020-10:00:00	rga_fall2018
-v25.11	 6.5.6	4.3.12/6.5.12	rgb_mon_pass0v25.11_20201227.yaml	default			12/27/2020-10:00:00	rga_fall2018
-v25.10	 6.5.6	4.3.12/6.5.12	rgb_mon_pass0v25.10_20201222.yaml	default			12/22/2020-17:00:00	rga_fall2018
-v25.9	 6.5.6	4.3.12/6.5.12	rgb_calib_pass0v25.9_20201218.yaml	default			12/18/2020-14:00:00	rga_fall2018
-v25.8	 6.5.6	4.3.12/6.5.12	rgb_mon_pass0v25.8_20201216.yaml	default			12/16/2020-14:00:00	rga_fall2018
-v25.7	 6.5.6	4.3.12/6.5.12	rgb_calib_pass0v25.7_20201210.yaml	default			12/10/2020-14:00:00	rga_fall2018
-v25.6	 6.5.6	4.3.12/6.5.12	rgb_mon_pass0v25.6_20201122.yaml	default			11/22/2020-19:00:00	rga_fall2018
-v25.5	 6.5.6	4.3.12/6.5.12	rgb_calib_pass0v25.5_20201118.yaml	default			11/18/2020-14:00:00	rga_fall2018
-v25.4	 6.5.6	4.3.12/6.5.8	rgb_calib_pass0v25.4_20201028.yaml	default			10/28/2020-14:00:00	rga_fall2018
-v25.3	 6.5.6	4.3.12/6.5.8	rgb_calib_pass0v25.3_20201027.yaml	default			10/27/2020-12:00:00	rga_fall2018
-v25.2	 6.5.6	4.3.12/6.5.8	rgb_calib_pass0v25.2_20201025.yaml	default			10/25/2020-11:00:00	rga_fall2018
-v25.1	 6.5.6	4.3.12/6.5.8	rgb_mon_pass0v25.1_20201014.yaml	default			10/14/2020-11:00:00	rga_fall2018
+v26.2	 6.5.6	4.3.12/6.5.12	rgb_calib_pass0v26.2_20201028.yaml	default		rga_fall2018
+v26.1	 6.5.6	4.3.12/6.5.12	rgb_calib_pass0v26.1_20201028.yaml	default		rga_fall2018
 
-v24.20	 6.5.6	4.3.12/6.5.8	rgb_mon_pass0v24.20_20201110.yaml	default			11/10/2020-16:00:00	rga_fall2018
-v24.19	 6.5.6	4.3.12/6.5.8	rgb_mon_pass0v24.19_20201109.yaml	default			11/09/2020-10:00:00	rga_fall2018
-v24.18	 6.5.6	4.3.12/6.5.8	rgb_calib_pass0v24.18_20201030.yaml	default			10/30/2020-18:00:00	rga_fall2018
-v24.17	 6.5.6	4.3.12/6.5.12	rgb_dst_pass0v24.17_20201030.yaml	hipo4_6.5.12_20201028	10/30/2020-18:00:00	rga_fall2018
-v24.16	 6.5.6	4.3.12/6.5.12	rgb_mon_pass0v24.16_20201030.yaml	default			10/30/2020-18:00:00	rga_fall2018
-v24.15	 6.5.6	4.3.12/6.5.8	rgb_mon_pass0v24.15_20201030.yaml	default			10/30/2020-18:00:00	rga_fall2018
-v24.14	 6.5.6	4.3.12/6.5.8	rgb_mon_pass0v24.14_20201030.yaml	default			10/30/2020-18:00:00	rga_fall2018
-v24.13	 6.5.6	4.3.12/6.5.12	rgb_dst_pass0v24.13_20201028.yaml	hipo4_6.5.12_20201028	10/28/2020-18:00:00	rga_fall2018
-v24.12	 6.5.6	4.3.12/6.5.8	rgb_mon_pass0v24.12_20201023.yaml	default			10/23/2020-15:00:00	rga_fall2018
-v24.11	 6.5.6	4.3.12/6.5.8	rgb_mon_pass0v24.11_20201023.yaml	default			10/23/2020-15:00:00	rga_fall2018
-v24.10	 6.5.6	4.3.12/6.5.8	rgb_mon_pass0v24.10_20201016.yaml	default			10/16/2020-17:00:00	rga_fall2018
-v24.9	 6.5.6	4.3.12/6.5.8	rgb_calib_pass0v24.9_20201013.yaml	default			10/13/2020-15:00:00	rga_fall2018
-v24.8	 6.5.6	4.3.12/6.5.8	rgb_mon_pass0v24.8_20201007.yaml	default			10/07/2020-11:00:00	rga_fall2018
-v24.7	 6.5.6	4.3.12/6.5.8	rgb_calib_pass0v24.7_20200913.yaml	default			09/13/2020-11:00:00	rga_fall2018
-v24.6	 6.5.6	4.3.12/6.5.8	rgb_mon_pass0v24.6_20200913.yaml	default			09/13/2020-11:00:00	rga_fall2018
-v24.5	 6.5.6	4.3.12/6.5.8	rgb_calib_pass0v24.5_20200902.yaml	default			09/02/2020-10:00:00	rga_fall2018
-v24.4	 6.5.6	4.3.12/6.5.8	rgb_calib_pass0v24.4_20200821.yaml	default			08/21/2020-09:00:00	rga_fall2018
-v24.3	 6.5.6	4.3.12/6.5.8	rgb_dst_pass0v24.3_20200709.yaml	hipo4_6.5.8_20200610	07/09/2020-09:30:00	rga_fall2018
-v24.2	 6.5.6	4.3.12/6.5.8	rgb_calib_pass0v24.2_20200709.yaml	default			07/09/2020-09:30:00	rga_fall2018
-v24.1	 6.5.6	4.3.12/6.5.8	rgb_mon_pass0v24.1_20200619.yaml 	default			06/19/2020-10:00:00	rga_fall2018
+v25.20	 6.5.6	clara-iss641-cndclustering	rgb_calib_pass0v25.20_20210423.yaml	default		rga_fall2018
+v25.19	 6.5.6	clara-iss641-cndclustering	rgb_calib_pass0v25.19_20210202.yaml	default		rga_fall2018
+v25.18	 6.5.6	4.3.12/6.5.12	rgb_mon_pass0v25.18_20210125.yaml	default				rga_fall2018
+v25.17	 6.5.6	4.3.12/6.5.12	rgb_dst_pass0v25.17_20210106.yaml	hipo4_6.5.12_20201028		rga_fall2018
+v25.16	 6.5.6	4.3.12/6.5.12	rgb_calib_pass0v25.16_20210106.yaml	default		rga_fall2018
+v25.15	 6.5.6	4.3.12/6.5.12	rgb_mon_pass0v25.15_20210106.yaml	default		rga_fall2018
+v25.14	 6.5.6	4.3.12/6.5.12	rgb_mon_pass0v25.14_20210106.yaml	default		rga_fall2018
+v25.13	 6.5.6	4.3.12/6.5.12	rgb_mon_pass0v25.13_20201230.yaml	default		rga_fall2018
+v25.12	 6.5.6	4.3.12/6.5.12	rgb_calib_pass0v25.12_20201227.yaml	default		rga_fall2018
+v25.11	 6.5.6	4.3.12/6.5.12	rgb_mon_pass0v25.11_20201227.yaml	default		rga_fall2018
+v25.10	 6.5.6	4.3.12/6.5.12	rgb_mon_pass0v25.10_20201222.yaml	default		rga_fall2018
+v25.9	 6.5.6	4.3.12/6.5.12	rgb_calib_pass0v25.9_20201218.yaml	default		rga_fall2018
+v25.8	 6.5.6	4.3.12/6.5.12	rgb_mon_pass0v25.8_20201216.yaml	default		rga_fall2018
+v25.7	 6.5.6	4.3.12/6.5.12	rgb_calib_pass0v25.7_20201210.yaml	default		rga_fall2018
+v25.6	 6.5.6	4.3.12/6.5.12	rgb_mon_pass0v25.6_20201122.yaml	default		rga_fall2018
+v25.5	 6.5.6	4.3.12/6.5.12	rgb_calib_pass0v25.5_20201118.yaml	default		rga_fall2018
+v25.4	 6.5.6	4.3.12/6.5.8	rgb_calib_pass0v25.4_20201028.yaml	default		rga_fall2018
+v25.3	 6.5.6	4.3.12/6.5.8	rgb_calib_pass0v25.3_20201027.yaml	default		rga_fall2018
+v25.2	 6.5.6	4.3.12/6.5.8	rgb_calib_pass0v25.2_20201025.yaml	default		rga_fall2018
+v25.1	 6.5.6	4.3.12/6.5.8	rgb_mon_pass0v25.1_20201014.yaml	default		rga_fall2018
 
-v23.3	 6.5.6	4.3.12/6.5.8	rgb_dst_pass0v23.4_20200610.yaml	hipo4_6.5.8_20200610	06/10/2020-18:00:00	rga_fall2018
-v23.3	 6.5.6	4.3.12/6c.5.7n	rgb_calib_pass0v23.3_20200526.yaml	default			05/26/2020-16:00:00	rga_fall2018
-v23.2	 6.5.6	4.3.12/6c.5.7	rgb_dst_pass0v23.2_20200515.yaml	hipo4_6c.5.7_20200515	05/15/2020-11:00:00	rga_fall2018
-v23.1	 6.5.6	4.3.12/6c.5.7	rgb_calib_pass0v23.1_20200515.yaml	default			05/15/2020-11:00:00	rga_fall2018
+v24.20	 6.5.6	4.3.12/6.5.8	rgb_mon_pass0v24.20_20201110.yaml	default		rga_fall2018
+v24.19	 6.5.6	4.3.12/6.5.8	rgb_mon_pass0v24.19_20201109.yaml	default		rga_fall2018
+v24.18	 6.5.6	4.3.12/6.5.8	rgb_calib_pass0v24.18_20201030.yaml	default		rga_fall2018
+v24.17	 6.5.6	4.3.12/6.5.12	rgb_dst_pass0v24.17_20201030.yaml	hipo4_6.5.12_20201028	rga_fall2018
+v24.16	 6.5.6	4.3.12/6.5.12	rgb_mon_pass0v24.16_20201030.yaml	default		rga_fall2018
+v24.15	 6.5.6	4.3.12/6.5.8	rgb_mon_pass0v24.15_20201030.yaml	default		rga_fall2018
+v24.14	 6.5.6	4.3.12/6.5.8	rgb_mon_pass0v24.14_20201030.yaml	default		rga_fall2018
+v24.13	 6.5.6	4.3.12/6.5.12	rgb_dst_pass0v24.13_20201028.yaml	hipo4_6.5.12_20201028	rga_fall2018
+v24.12	 6.5.6	4.3.12/6.5.8	rgb_mon_pass0v24.12_20201023.yaml	default		rga_fall2018
+v24.11	 6.5.6	4.3.12/6.5.8	rgb_mon_pass0v24.11_20201023.yaml	default		rga_fall2018
+v24.10	 6.5.6	4.3.12/6.5.8	rgb_mon_pass0v24.10_20201016.yaml	default		rga_fall2018
+v24.9	 6.5.6	4.3.12/6.5.8	rgb_calib_pass0v24.9_20201013.yaml	default		rga_fall2018
+v24.8	 6.5.6	4.3.12/6.5.8	rgb_mon_pass0v24.8_20201007.yaml	default		rga_fall2018
+v24.7	 6.5.6	4.3.12/6.5.8	rgb_calib_pass0v24.7_20200913.yaml	default		rga_fall2018
+v24.6	 6.5.6	4.3.12/6.5.8	rgb_mon_pass0v24.6_20200913.yaml	default		rga_fall2018
+v24.5	 6.5.6	4.3.12/6.5.8	rgb_calib_pass0v24.5_20200902.yaml	default		rga_fall2018
+v24.4	 6.5.6	4.3.12/6.5.8	rgb_calib_pass0v24.4_20200821.yaml	default		rga_fall2018
+v24.3	 6.5.6	4.3.12/6.5.8	rgb_dst_pass0v24.3_20200709.yaml	hipo4_6.5.8_20200610	rga_fall2018
+v24.2	 6.5.6	4.3.12/6.5.8	rgb_calib_pass0v24.2_20200709.yaml	default		rga_fall2018
+v24.1	 6.5.6	4.3.12/6.5.8	rgb_mon_pass0v24.1_20200619.yaml 	default		rga_fall2018
 
-v22.4	 6c.5.4	4.3.12/6c.5.4	rgb_calib_pass0v22.4_20200506.yaml	default			05/06/2020-11:00:00	rga_fall2018
-v22.3	 6c.5.4	4.3.12/6c.5.4	rgb_calib_pass0v22.3_20200429.yaml	default			04/29/2020-21:00:00	rga_fall2018
-v22.2	 6c.5.4	4.3.12/6c.5.4	rgb_dst_pass0v22.2_20200417.yaml	hipo4_6c.5.4_20200417	04/17/2020-12:00:00	rga_fall2018
-v22.1	 6b.5.1	4.3.12/6c.5.5	rgb_dst_pass0v22.1_20200417.yaml	hipo4_6c.5.5_20200417	04/17/2020-12:00:00	rga_fall2018
+v23.3	 6.5.6	4.3.12/6.5.8	rgb_dst_pass0v23.4_20200610.yaml	hipo4_6.5.8_20200610	rga_fall2018
+v23.3	 6.5.6	4.3.12/6c.5.7n	rgb_calib_pass0v23.3_20200526.yaml	default		rga_fall2018
+v23.2	 6.5.6	4.3.12/6c.5.7	rgb_dst_pass0v23.2_20200515.yaml	hipo4_6c.5.7_20200515	rga_fall2018
+v23.1	 6.5.6	4.3.12/6c.5.7	rgb_calib_pass0v23.1_20200515.yaml	default		rga_fall2018
 
-v21.8.2	 6b.5.1	4.3.12/6c.5.7n	rgb_mon_pass0v21.8.2_20200526.yaml	default			05/26/2020-16:00:00	rga_fall2018
-v21.8.1	 6b.5.1	4.3.12/6c.5.7	rgb_mon_pass0v21.8.1_20200522.yaml	default			05/22/2020-11:00:00	rga_fall2018
-v21.7.5	 6b.5.1	4.3.12/6c.5.4	rgb_mon_pass0v21.7.5_20200511.yaml	default			05/11/2020-23:00:00	rga_fall2018
-v21.7.4	 6b.5.1	4.3.12/6c.5.4	rgb_mon_pass0v21.7.4_20200506.yaml	default			05/06/2020-14:00:00	rga_fall2018
-v21.7.3	 6b.5.1	4.3.12/6c.5.4	rgb_mon_pass0v21.7.3_20200504.yaml	default			05/04/2020-17:30:00	rga_fall2018
-v21.7.2	 6b.5.1	4.3.12/6c.5.4	rgb_mon_pass0v21.7.2_20200501.yaml	default			05/01/2020-18:00:00	rga_fall2018
-v21.7.1	 6b.5.1	4.3.12/6c.5.4	rgb_mon_pass0v21.7.1_20200425.yaml	default			04/25/2020-14:00:00	rga_fall2018
-v21.6.3	 6b.5.1	4.3.12/6c.5.4	rgb_mon_pass0v21.6.3_20200418.yaml	default			04/18/2020-11:00:00	rga_fall2018
-v21.6.2	 6b.5.1	4.3.12/6c.5.5	rgb_mon_pass0v21.6.2_20200416.yaml	default			04/16/2020-17:00:00	rga_fall2018
-v21.6.1	 6b.5.1	4.3.12/6c.5.4	rgb_mon_pass0v21.6.1_20200406.yaml	default			04/06/2020-9:00:00	rga_fall2018
-v21.5.13 6b.5.1	4.3.12/6c.5.4	rgb_calib_pass0v21.5.13_20200512.yaml 	default			05/12/2020-09:30:00	rga_fall2018
-v21.5.12 6b.5.1	4.3.12/6c.5.4	rgb_calib_pass0v21.5.12_20200509.yaml 	default			05/09/2020-09:30:00	rga_fall2018
-v21.5.11 6b.5.1	4.3.12/6c.5.4	rgb_calib_pass0v21.5.11_20200506.yaml 	default			05/06/2020-14:00:00	rga_fall2018
-v21.5.10 6b.5.1	4.3.12/6c.5.4	rgb_calib_pass0v21.5.10_20200430.yaml 	default			04/30/2020-17:00:00	rga_fall2018
-v21.5.9	 6b.5.1	4.3.12/6c.5.4	rgb_calib_pass0v21.5.9_20200428.yaml	default			04/28/2020-12:00:00	rga_fall2018
-v21.5.8	 6b.5.1	4.3.12/6c.5.4	rgb_calib_pass0v21.5.8_20200425.yaml	default			04/25/2020-14:00:00	rga_fall2018
-v21.5.7	 6b.5.1	4.3.12/6c.5.4	rgb_calib_pass0v21.5.7_20200424.yaml	default			04/24/2020-9:00:00	rga_fall2018
-v21.5.6	 6b.5.1	4.3.12/6c.5.4	rgb_calib_pass0v21.5.6_20200421.yaml	default			04/21/2020-12:00:00	rga_fall2018
-v21.5.5	 6b.5.1	4.3.12/6c.5.5	rgb_calib_pass0v21.5.6_20200417.yaml	default			04/17/2020-11:00:00	rga_fall2018
-v21.5.4	 6b.5.1	4.3.12/6c.5.5	rgb_calib_pass0v21.5.4_20200415.yaml	default			04/15/2020-11:00:00	rga_fall2018
-v21.5.3	 6b.5.1	4.3.12/6c.5.4	rgb_calib_pass0v21.5.3_20200414.yaml	default			04/14/2020-11:00:00	rga_fall2018
-v21.5.2	 6b.5.1	4.3.12/6c.5.4	rgb_calib_pass0v21.5.2_20200320.yaml	default			03/20/2020-11:00:00	rga_fall2018
-v21.5.1	 6b.5.1	4.3.12/6c.5.4	rgb_calib_pass0v21.5.1_20200317.yaml	default			03/17/2020-18:00:00	rga_fall2018
-v21.4.2	 6b.5.1	4.3.12/6c.5.4	rgb_calib_pass0v21.4.2_20200331.yaml	default			03/31/2020-12:00:00	rga_fall2018
-v21.4.1	 6b.5.1	4.3.12/6b.5.2	rgb_calib_pass0v21.4.1_20200302.yaml	default			03/02/2020-12:00:00	rga_fall2018
-v21.3.2	 6b.5.1	4.3.12/6c.5.4	rgb_mon_pass0v21.3.2_20200318.yaml	default			03/18/2020-12:00:00	rga_fall2018
-v21.3.1	 6b.5.1	4.3.12/6c.5.4	rgb_mon_pass0v21.3.1_20200313.yaml	default			03/13/2020-12:00:00	rga_fall2018
-v21.2.1	 6b.5.1	4.3.12/6c.5.4	rgb_calib_pass0v21.2.1_20200307.yaml	default			03/07/2020-12:00:00	rga_fall2018
-v21.2	 6b.5.1	4.3.12/6b.5.1	rgb_calib_pass0v21.2_20200221.yaml	default			02/21/2020-17:00:00	rga_fall2018
+v22.4	 6c.5.4	4.3.12/6c.5.4	rgb_calib_pass0v22.4_20200506.yaml	default		rga_fall2018
+v22.3	 6c.5.4	4.3.12/6c.5.4	rgb_calib_pass0v22.3_20200429.yaml	default		rga_fall2018
+v22.2	 6c.5.4	4.3.12/6c.5.4	rgb_dst_pass0v22.2_20200417.yaml	hipo4_6c.5.4_20200417	rga_fall2018
+v22.1	 6b.5.1	4.3.12/6c.5.5	rgb_dst_pass0v22.1_20200417.yaml	hipo4_6c.5.5_20200417	rga_fall2018
+
+v21.8.2	 6b.5.1	4.3.12/6c.5.7n	rgb_mon_pass0v21.8.2_20200526.yaml	default		rga_fall2018
+v21.8.1	 6b.5.1	4.3.12/6c.5.7	rgb_mon_pass0v21.8.1_20200522.yaml	default		rga_fall2018
+v21.7.5	 6b.5.1	4.3.12/6c.5.4	rgb_mon_pass0v21.7.5_20200511.yaml	default		rga_fall2018
+v21.7.4	 6b.5.1	4.3.12/6c.5.4	rgb_mon_pass0v21.7.4_20200506.yaml	default		rga_fall2018
+v21.7.3	 6b.5.1	4.3.12/6c.5.4	rgb_mon_pass0v21.7.3_20200504.yaml	default		rga_fall2018
+v21.7.2	 6b.5.1	4.3.12/6c.5.4	rgb_mon_pass0v21.7.2_20200501.yaml	default		rga_fall2018
+v21.7.1	 6b.5.1	4.3.12/6c.5.4	rgb_mon_pass0v21.7.1_20200425.yaml	default		rga_fall2018
+v21.6.3	 6b.5.1	4.3.12/6c.5.4	rgb_mon_pass0v21.6.3_20200418.yaml	default		rga_fall2018
+v21.6.2	 6b.5.1	4.3.12/6c.5.5	rgb_mon_pass0v21.6.2_20200416.yaml	default		rga_fall2018
+v21.6.1	 6b.5.1	4.3.12/6c.5.4	rgb_mon_pass0v21.6.1_20200406.yaml	default		rga_fall2018
+v21.5.13 6b.5.1	4.3.12/6c.5.4	rgb_calib_pass0v21.5.13_20200512.yaml 	default		rga_fall2018
+v21.5.12 6b.5.1	4.3.12/6c.5.4	rgb_calib_pass0v21.5.12_20200509.yaml 	default		rga_fall2018
+v21.5.11 6b.5.1	4.3.12/6c.5.4	rgb_calib_pass0v21.5.11_20200506.yaml 	default		rga_fall2018
+v21.5.10 6b.5.1	4.3.12/6c.5.4	rgb_calib_pass0v21.5.10_20200430.yaml 	default		rga_fall2018
+v21.5.9	 6b.5.1	4.3.12/6c.5.4	rgb_calib_pass0v21.5.9_20200428.yaml	default		rga_fall2018
+v21.5.8	 6b.5.1	4.3.12/6c.5.4	rgb_calib_pass0v21.5.8_20200425.yaml	default		rga_fall2018
+v21.5.7	 6b.5.1	4.3.12/6c.5.4	rgb_calib_pass0v21.5.7_20200424.yaml	default		rga_fall2018
+v21.5.6	 6b.5.1	4.3.12/6c.5.4	rgb_calib_pass0v21.5.6_20200421.yaml	default		rga_fall2018
+v21.5.5	 6b.5.1	4.3.12/6c.5.5	rgb_calib_pass0v21.5.6_20200417.yaml	default		rga_fall2018
+v21.5.4	 6b.5.1	4.3.12/6c.5.5	rgb_calib_pass0v21.5.4_20200415.yaml	default		rga_fall2018
+v21.5.3	 6b.5.1	4.3.12/6c.5.4	rgb_calib_pass0v21.5.3_20200414.yaml	default		rga_fall2018
+v21.5.2	 6b.5.1	4.3.12/6c.5.4	rgb_calib_pass0v21.5.2_20200320.yaml	default		rga_fall2018
+v21.5.1	 6b.5.1	4.3.12/6c.5.4	rgb_calib_pass0v21.5.1_20200317.yaml	default		rga_fall2018
+v21.4.2	 6b.5.1	4.3.12/6c.5.4	rgb_calib_pass0v21.4.2_20200331.yaml	default		rga_fall2018
+v21.4.1	 6b.5.1	4.3.12/6b.5.2	rgb_calib_pass0v21.4.1_20200302.yaml	default		rga_fall2018
+v21.3.2	 6b.5.1	4.3.12/6c.5.4	rgb_mon_pass0v21.3.2_20200318.yaml	default		rga_fall2018
+v21.3.1	 6b.5.1	4.3.12/6c.5.4	rgb_mon_pass0v21.3.1_20200313.yaml	default		rga_fall2018
+v21.2.1	 6b.5.1	4.3.12/6c.5.4	rgb_calib_pass0v21.2.1_20200307.yaml	default		rga_fall2018
+v21.2	 6b.5.1	4.3.12/6b.5.1	rgb_calib_pass0v21.2_20200221.yaml	default		rga_fall2018
 =====================================================================================================================
 
 == v20  ==============================================================
