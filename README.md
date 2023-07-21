@@ -14,5 +14,5 @@ clas12 run group b (rgb) cooking note,log,script
 * counting		count of event and disk space
 * filter_*.java		script to make skim before grape is available
 
-## conatct
+## contact
 by Zhiwen Zhao  zwzhao at jlab.org

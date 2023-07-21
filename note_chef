@@ -22,14 +22,11 @@ refer to
 https://github.com/baltzell/clas12-workflow
 
 source /group/clas12/packages/setup.csh
-module load clas12/dev
-module load clas12/3.2
 module load clas12/pro
+module load clas12/4.1
+module load clas12/3.4
 
 module load workflow
-module load workflow/dev
-module load workflow/swif2
-module load workflow/0.8
 
 more $CLAS12WFLOW/README.md
 clas12-workflow.py -h
@@ -60,10 +57,15 @@ check rcdb
 python $CLAS12WFLOW/lib/clas12/RcdbManager.py 11014
 
 import
-swif import -file rgb_decode_R6223x1_x1200.json
+swif2 import -file rgb_decode_R6223x1_x1200.json
 
 run
 swif run -workflow rgb_decode_R6223x1_x1200
+
+swif2 notify rgb-ra-v29.19-11101x15 -when done -email zwzhao@jlab.org
+swif2 notify my-workflow [-clear] -when done [-email bob@dobbs.com <mailto:bob@dobbs.com>]
+This will cause swif to send an email to bob@dobbs.com <mailto:bob@dobbs.com> when the workflow named my-workflow is done.  If you omit -email it will assume workflow_user@jlab.org.  You can call multiple times to specify multiple email addresses.  You can use -clear to remove any previously requested notification for specified condition / email.  I intend to add other conditions in the future.   Pleaes give it a try and let me know how it goes.
+Also, if you call this after a notification has already been sent, it will reset the status field indicating the notification was sent and it will be resent if/when the condition holds.
 
 check
 swif2 list
@@ -77,10 +79,10 @@ swif-status.py --retry --workflow workflowName
 swif-status.py --retry  (retry all workflow)
 
 cancel jobs
-swif cancel -workflow workflowName
+swif2 cancel -workflow workflowName
 
 sweep clean
-swif cancel -delete -workflow workflowName
+swif2 cancel -delete -workflow workflowName
 
 release slurm job manually
 scontrol show job slurm_id

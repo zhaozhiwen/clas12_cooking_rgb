@@ -28,16 +28,18 @@ count1=`ls /mss/clas12/rg-b/production/decoded/6.5.6/$xx/ |wc  | awk '{print$1'}
 # count1=`ls /mss/clas12/rg-k/production/decoded/6b.2.0/$xx/ |wc  | awk '{print$1'}`;
 ((count1=count1*5));
 
+count2=`ls /cache/clas12/rg-b/production/recon/spring2019/torus-1/pass2/v0/dst/recon/$xx/ |wc  | awk '{print$1'}`;
 # count2=`ls /volatile/clas12/rg-b/production/recon/pass0/v28.22_8c.3.2/dst/recon/$xx/ |wc  | awk '{print$1'}`;
-count2=`ls /cache/clas12/rg-b/production/recon/spring2019/torus-1/pass1/v0/dst/recon/$xx/ |wc  | awk '{print$1'}`;
+# count2=`ls /cache/clas12/rg-b/production/recon/spring2019/torus-1/pass1/v0/dst/recon/$xx/ |wc  | awk '{print$1'}`;
 # count2=`ls /cache/clas12/rg-b/production/recon/fall2019/torus+1/pass1/v1/dst/recon/$xx/ |wc  | awk '{print$1'}`;
 # count2=`ls /cache/clas12/rg-b/production/recon/fall2019/torus-1/pass1/v1/dst/recon/$xx/ |wc  | awk '{print$1'}`;
 # count2=`ls /cache/clas12/rg-b/production/recon/spring2020/torus-1/pass1/v1/dst/recon/$xx/ |wc  | awk '{print$1'}`;
 ((count2=count2*5));
 
 
+count3=`ls /cache/clas12/rg-b/production/recon/spring2019/torus-1/pass2/v0/dst/train/*/ | grep $xx |wc  | awk '{print$1'}`;
 # count3=`ls /volatile/clas12/rg-b/production/recon/pass0/v28.22_8c.3.2/dst/train/*/  | grep $xx |wc  | awk '{print$1'}`;
-count3=`ls /cache/clas12/rg-b/production/recon/spring2019/torus-1/pass1/v0/dst/train/*/ | grep $xx |wc  | awk '{print$1'}`;
+# count3=`ls /cache/clas12/rg-b/production/recon/spring2019/torus-1/pass1/v0/dst/train/*/ | grep $xx |wc  | awk '{print$1'}`;
 # count3=`ls /cache/clas12/rg-b/production/recon/fall2019/torus+1/pass1/v1/dst/train/*/ | grep $xx |wc  | awk '{print$1'}`;
 # count3=`ls /cache/clas12/rg-b/production/recon/fall2019/torus-1/pass1/v1/dst/train/*/ | grep $xx |wc  | awk '{print$1'}`;
 # count3=`ls /cache/clas12/rg-b/production/recon/spring2020/torus-1/pass1/v1/dst/train/*/ | grep $xx |wc  | awk '{print$1'}`;
