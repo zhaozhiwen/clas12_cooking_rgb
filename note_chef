@@ -4,6 +4,27 @@ https://jeffersonlab-my.sharepoint.com/:x:/g/personal/baltzell_jlab_org/EU096WRX
 bad fall2019 evio file
 clas_011131.evio.00262
 
+==== timeline =======================================================
+
+cd /work/clas12/rg-b/offline_monitoring/output
+mkdir rgb_v29.38.1
+cd rgb_v29.38.1
+
+old
+../../clas12-timeline_commit3c00e3d_20230911/bin/slurm-mon12.sh rgb_v29.38.1 ../pass0/v29.38.1/mon/recon/*
+../../clas12-timeline_commit3c00e3d_20230911/bin/detectors.sh rgb v29.38.1 plots | cat > log_run
+mv log_run rgb_v29.38.1
+mv rgb_v29.38.1 ../www/v29.38.1_org
+../../clas12-timeline_commit3c00e3d_20230911/bin/qa.sh rgb/pass0/v29.38.1_org
+mv ../www/v29.38.1_org_qa ../www/v29.38.1
+
+new
+module load clas12/pro
+../../bin/run-monitoring.sh -d v1 --submit --focus-detectors -o ./ --rundir ../pass0/v29.38.1/mon/recon/
+../../bin/run-detectors-timelines.sh -i timeline_detectors -d v1 
+mv /w/hallb-scshelf2102/clas12/rg-b/offline_monitoring/clas12-timeline/outfiles ./
+../../bin/deploy-timelines.sh -d v1 -i outfiles/v1/timeline_web -t rgb/pass0
+
 ==== Raffa email on 2022/07/27  ========================================
 
 As you can see from New rgb_spring2019 CCDB variation created for pass2, the new CVT and DC alignment constants were uploaded into CCDB and it is now possible to launch the pass0s with the latest coatjava release, 8.2.1.

@@ -1,9 +1,15 @@
 for CLAS12 cooking, a version is defined by software, schema file, yaml file, ccdb variation and timestamp
 
 ***** pass2 *****************************************************************************************
-version	 			decode	cook		cook_yaml			schema	variation	train_yaml
+version	 			decode	cook		cook_yaml				schema	variation	train_yaml
 
-spring2019/torus-1/pass2/v0	6.5.6	5.0.2/9.0.1	rgb_dst_pass2v0_20230525.yaml	default	rgb_spring2019	train_dst_20210109.yaml
+spring2019/torus-1/pass2/v0	6.5.6	5.0.2/9.0.1	rgb_dst_pass2v0_20230525.yaml		default	rgb_spring2019	train_dst_20210109.yaml
+
+fall2019/torus+1/pass1/v1	6.5.6	5.0.2/10.0.3	rgb_dst_pass2v1_2019fall_20231204.yaml	default	rgb_fall2019	train_dst_20210109.yaml
+
+fall2019/torus-1/pass1/v1	6.5.6	5.0.2/10.0.3	rgb_dst_pass2v1_2019fall_20231204.yaml	default	rgb_fall2019	train_dst_20210109.yaml
+
+spring2020/torus-1/pass1/v1	6.5.6	5.0.2/10.0.3	rgb_dst_pass2v1_2020spring_20231204.yaml	default	rgb_spring2020	train_dst_20210109.yaml
 
 ***** pass1 *****************************************************************************************
 version	 			decode	cook		cook_yaml			schema	timestamp		variation	train_yaml
@@ -47,6 +53,34 @@ v1  cooking during Spring 2019 run
 =====================================================================================================================
 version	 decode	cook		yaml					schema		variation
 
+v29.49	 6.5.6	5.0.2/10.0.3	rgb_mon_pass0v29.49_20231117.yaml	default		rgb_fall2019
+v29.48	 6.5.6	5.0.2/10.0.3	rgb_mon_pass0v29.48_20231117.yaml	default		rgb_spring2020
+v29.47	 6.5.6	5.0.2/10.0.3	rgb_mon_pass0v29.47_20231107.yaml	default		rgb_spring2020
+v29.46	 6.5.6	5.0.2/10.0.3	rgb_mon_pass0v29.46_20231107.yaml	default		rgb_fall2019
+v29.45	 6.5.6	5.0.2/10.0.3	rgb_mon_pass0v29.45_20231027.yaml	default		rgb_fall2019
+v29.44	 6.5.6	5.0.2/10.0.3	rgb_mon_pass0v29.44_20231024.yaml	default		rgb_fall2019
+v29.43	 6.5.6	5.0.2/10.0.3	rgb_mon_pass0v29.43_20231013.yaml	default		rgb_fall2019
+v29.42	 6.5.6	5.0.2/10.0.3	rgb_dst_pass0v29.42_20231009.yaml	default		rgb_fall2019
+v29.41	 6.5.6	5.0.2/10.0.3	rgb_calib_pass0v29.41_20231009.yaml	default		rgb_fall2019
+v29.40	 6.5.6	5.0.2/10.0.3	rgb_mon_pass0v29.40_20231004.yaml	default		rgb_fall2019
+v29.39	 6.5.6	5.0.2/10.0.3	rgb_mon_pass0v29.39_20230928.yaml	default		rgb_fall2019
+v29.38	 6.5.6	5.0.2/10.0.3	rgb_mon_pass0v29.38_20230928.yaml	default		rgb_fall2019
+v29.37	 6.5.6	5.0.2/10.0.3	rgb_dcalign_pass0v29.37_20230922.yaml	default		rgb_fall2019
+v29.36	 6.5.6	5.0.2/10.0.2	rgb_mon_pass0v29.36_20230922.yaml	default		rgb_fall2019
+v29.35	 6.5.6	5.0.2/10.0.2	rgb_calib_pass0v29.35_20230922.yaml	default		rgb_fall2019
+v29.34	 6.5.6	5.0.2/10.0.2	rgb_mon_pass0v29.34_20230912.yaml	default		rgb_fall2019
+v29.33	 6.5.6	5.0.2/10.0.2	rgb_mon_pass0v29.33_20230908.yaml	default		rgb_fall2019
+v29.32	 6.5.6	5.0.2/10.0.2	rgb_calib_pass0v29.32_20230906.yaml	default		rgb_fall2019
+v29.31	 6.5.6	5.0.2/10.0.2	rgb_dst_pass0v29.31_20230904.yaml	default		rgb_fall2019
+v29.30	 6.5.6	5.0.2/9.0.1	rgb_calib_pass0v29.30_20230830.yaml	default		rgb_fall2019
+v29.29	 6.5.6	5.0.2/9.0.1	rgb_calib_pass0v29.29_20230825.yaml	default		rgb_fall2019
+v29.28	 6.5.6	5.0.2/9.0.1	rgb_calib_pass0v29.28_20230822.yaml	default		rgb_fall2019
+v29.27	 6.5.6	5.0.2/9.0.1	rgb_mon_pass0v29.27_20230818.yaml	default		rgb_fall2019
+v29.26	 6.5.6	5.0.2/9.0.1	rgb_calib_pass0v29.26_20230811.yaml	default		rgb_fall2019
+v29.25	 6.5.6	5.0.2/9.0.1	rgb_calib_pass0v29.25_20230803.yaml	default		rgb_fall2019
+v29.24	 6.5.6	5.0.2/9.0.1	rgb_mon_pass0v29.24_20230803.yaml	default		rgb_fall2019
+v29.23	 6.5.6	5.0.2/9.0.1	rgb_mon_pass0v29.23_20230726.yaml	default		rgb_fall2019
+v29.22	 6.5.6	5.0.2/9.0.1	rgb_mon_pass0v29.22_20230721.yaml	default		rgb_fall2019
 v29.21	 6.5.6	5.0.2/9.0.1	rgb_mon_pass0v29.21_20230709.yaml	default		rgb_fall2019
 v29.20	 6.5.6	5.0.2/9.0.1	rgb_mon_pass0v29.20_20230607.yaml	default		rgb_fall2019
 v29.19	 6.5.6	5.0.2/9.0.1	rgb_calib_pass0v29.19_20230606.yaml	default		rgb_fall2019
