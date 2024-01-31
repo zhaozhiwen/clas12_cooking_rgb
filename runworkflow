@@ -1183,10 +1183,10 @@ do
 # --submit
 
 
-pass=pass2
-tag=v1
-index=0
-clas12-workflow.py --runGroup rgb --tag 2019fall_$pass\_$index --model recana --inputs /mss/clas12/rg-b/production/decoded/6.5.6 --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_2019fall_pass2_cook$index --outDir /cache/clas12/rg-b/production/recon/fall2019/torus-1/$pass/$tag --workDir /volatile/clas12/rg-b/production/recon/fall2019/torus-1/$pass/$tag --clara /group/clas12/packages/clara/5.0.2_10.0.3 --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_dst_pass2v1_2019fall_20231204.yaml --trainYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/train_dst_20210109.yaml --ccdbsqlite /work/clas12/rg-b/ccdb/ccdb_2023-12-04-10-41.sqlite --denoise --recharge 
+# pass=pass2
+# tag=v1
+# index=0
+# clas12-workflow.py --runGroup rgb --tag 2019fall_$pass\_$index --model recana --inputs /mss/clas12/rg-b/production/decoded/6.5.6 --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_2019fall_pass2_cook$index --outDir /cache/clas12/rg-b/production/recon/fall2019/torus-1/$pass/$tag --workDir /volatile/clas12/rg-b/production/recon/fall2019/torus-1/$pass/$tag --clara /group/clas12/packages/clara/5.0.2_10.0.3 --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_dst_pass2v1_2019fall_20231204.yaml --trainYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/train_dst_20210109.yaml --ccdbsqlite /work/clas12/rg-b/ccdb/ccdb_2023-12-04-10-41.sqlite --denoise --recharge 
 # --submit
 
 # pass=pass2
@@ -1201,6 +1201,14 @@ clas12-workflow.py --runGroup rgb --tag 2019fall_$pass\_$index --model recana --
 # clas12-workflow.py --runGroup rgb --tag 2020spring_$pass\_$index --model recana --inputs /mss/clas12/rg-b/production/decoded/6.5.6 --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_2020spring_pass2_cook$index --outDir /cache/clas12/rg-b/production/recon/spring2020/torus-1/$pass/$tag --workDir /volatile/clas12/rg-b/production/recon/spring2020/torus-1/$pass/$tag --clara /group/clas12/packages/clara/5.0.2_10.0.3 --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_dst_pass2v1_2020spring_20231204.yaml --trainYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/train_dst_20210109.yaml --ccdbsqlite /work/clas12/rg-b/ccdb/ccdb_2023-12-04-10-41.sqlite --denoise --recharge 
 # --submit
 
+
+# clas12-workflow.py --runGroup rgb --tag tmp4 --model decmrg --inputs "/mss/clas12/rg-b/data/clas_011158/*evio.0130*" --runs 011158 --outDir /volatile/clas12/rg-b/production/recon/tmp --clara /group/clas12/packages/clara/4.3.12_6.5.6 --mergeSize 5 --submit
+
+# clas12-workflow.py --runGroup rgb --tag fix --model rec --inputs /work/clas12/rg-b/fix/new --runs 011158 --outDir  /volatile/clas12/rg-b/production/recon/tmp --clara /group/clas12/packages/clara/5.0.2_10.0.3 --reconYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/rgb_dst_pass2v1_2019fall_20231204.yaml --ccdbsqlite /work/clas12/rg-b/ccdb/ccdb_2023-12-04-10-41.sqlite --denoise --recharge --submit
+
+# clas12-workflow.py --runGroup rgb --tag train1 --model ana --inputs /mss/clas12/rg-b/production/recon/fall2019/torus+1/pass2/v1/dst/recon --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_tmp --outDir  /volatile/clas12/rg-b/production/recon/tmp --clara /group/clas12/packages/clara/5.0.2_10.0.3 --trainYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/train_dst_20210109.yaml --submit
+
+clas12-workflow.py --runGroup rgb --tag train2 --model ana --inputs /mss/clas12/rg-b/production/recon/spring2020/torus-1/pass2/v1/dst/recon --runs /home/clas12-1/users/zwzhao/clas12_cooking_rgb/runlist_tmp --outDir  /volatile/clas12/rg-b/production/recon/tmp --clara /group/clas12/packages/clara/5.0.2_10.0.3 --trainYaml /home/clas12-1/users/zwzhao/clas12_cooking_rgb/train_dst_20210109.yaml --submit
 
 # get 0004 file on cache correct, but output name as 0000
 # possible fix from Nathan, i.e. move the 4 right by one character to be inside the parentheses
