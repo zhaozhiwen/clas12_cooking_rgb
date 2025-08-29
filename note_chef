@@ -38,6 +38,17 @@ Because of changes to the default settings for some reconstruction services and 
        targetMat: "LD2"
 should be commented out since RG-A has LH2 which is the default.
 
+===== recovery ============
+
+My understanding is that the CLAS12 collaboration's usage of CCDB prior to my database permissions changes a couple years ago rendered RG-X's pass1 not realistically reproducible.  That's the crux of it.  Any attempts at reconciling that are really flawed, and CCDB has everything necessary to prevent this, but it was bypassed.  Unfortunately, that wasn't realized before the work was done to configure the workflows to reproduce that data.  So that's the state, that pass1 data really isn't reproducible and so isn't publishable.
+-Nathan
+
+old sqlite file location
+https://clasweb.jlab.org/clas12offline/sqlite/ccdb/clas12tags/ 
+/scigroup/cvmfs/hallb/clas12/soft/noarch/data/ccdb/
+
+"ccdb_4.4.0.sqlite - Aug 21, 2020" works for rgb Spring19 pass1v0
+
 ====do everything with clas12-workflow =============================================
 refer to 
 https://github.com/baltzell/clas12-workflow
@@ -74,6 +85,15 @@ swif run -workflow asdf
 no need to stop crontab retry because it doesn't affect paused workflow
 ****************************
 
+jasmine list-files -tape 803771
+jasmine list-files -tape 803771 | awk -F \| '{print$1}' | grep rg-b | grep train
+
+tape-regenerate -tape 803771 b rec
+filelist_missing_20240508_rec
+
+tape-regenerate -tape 803771 b ana 
+filelist_missing_20240508_ana
+
 check rcdb
 python $CLAS12WFLOW/lib/clas12/RcdbManager.py 11014
 
@@ -81,7 +101,7 @@ import
 swif2 import -file rgb_decode_R6223x1_x1200.json
 
 run
-swif run -workflow rgb_decode_R6223x1_x1200
+swif2 run -workflow rgb_decode_R6223x1_x1200
 
 swif2 notify rgb-ra-v29.19-11101x15 -when done -email zwzhao@jlab.org
 swif2 notify my-workflow [-clear] -when done [-email bob@dobbs.com <mailto:bob@dobbs.com>]
@@ -145,6 +165,9 @@ SLURM_TIMEOUT
 https://clasweb.jlab.org/wiki/index.php/CLAS12_Chef_Documentation#tab=Tips
 
 == file check ==================
+
+#!/bin/bash
+for x in `cat filelist_missing_20240702_dec` ; do ls $x >> file-without-globs.txt ; done
 
 #!/bin/bash
 touch log
